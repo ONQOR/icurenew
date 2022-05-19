@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_cohorts",
+  "info": {
+    "displayName": "Cohort",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "works": {
+      "displayName": "work",
+      "type": "component",
+      "repeatable": true,
+      "component": "pls.work",
+      "required": false
+    },
+    "newer": {
+      "displayName": "new",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.new"
+    }
+  }
+}

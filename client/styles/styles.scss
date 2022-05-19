@@ -1,0 +1,104 @@
+// imports
+@import "variables";
+@import "blog";
+@import "nav";
+@import "footer";
+// imports components
+@import "components/case-studies";
+@import "components/cohort";
+@import "components/contact";
+@import "components/features";
+@import "components/herosmall";
+@import "components/home";
+@import "components/icons";
+@import "components/journey";
+@import "components/maps";
+@import "components/media";
+@import "components/points";
+@import "components/tabs";
+@import "components/text-img";
+@import "components/text";
+@import "components/slick";
+@import "components/clients";
+@import "components/quote";
+@import "components/basic";
+@import "components/tabs-alt";
+
+// fonts
+// h1, h2, h3, h4, h5, h6 {
+
+// }
+h1 {
+    font-size: 55px;
+}
+h2 {
+    font-size: 44px;
+}
+h3 {
+    font-size: 35px;
+}
+h4 {
+    font-size: 28px;
+}
+p {
+    font-size: 18px;
+}
+span {
+    font-size: 16px;
+}
+label {
+    font-size: 16px;
+}
+input {
+    border: 1px solid $purpleLight;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+textarea {
+    padding: 14px;
+    min-height: 150px;
+    border: 1px solid $purpleLight;
+    border-radius: 4px;
+    font-size: 16px;
+}
+input[type="submit"] {
+    background-color: #6C30DB;
+    padding: 12px 48px;
+    width: fit-content;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: ease 0.2s;
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: $purple;
+        transition: ease 0.2s;
+    }
+}
+
+button {
+    padding: 12px 48px;
+    width: fit-content;
+}
+
+// layout
+.container {
+    position: relative;
+    max-width: 1164px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.center {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.sb {
+    justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_clients",
+  "info": {
+    "displayName": "Clients",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.heroSmall {
+    height: auto;
+    padding: 200px 0 124px 0;
+    background: radial-gradient(circle at right bottom, rgba(136, 66, 189, 1) 0%, rgba(52, 27, 97, 1) 100%);
+    .container {
+        max-width: 1100px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    h1 {
+        color: white; 
+        font-size: 50px;
+        max-width: 570px;
+    }
+    p {
+        font-size: 18px;
+        color: white; 
+        margin: 20px 0;
+        max-width: 570px;
+    }
+}

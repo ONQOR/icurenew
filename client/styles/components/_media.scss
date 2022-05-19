@@ -1,0 +1,20 @@
+.media {
+    padding: 100px 0;
+    .container {
+        flex-direction: column;
+    }
+    h2 {
+        color: black; 
+        margin-bottom: 50px;
+    }
+    span {
+        font-size: 18px;
+        color: black; 
+    }
+    img {
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+}

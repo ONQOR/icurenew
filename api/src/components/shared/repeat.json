@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_repeats",
+  "info": {
+    "displayName": "repeat",
+    "icon": "angle-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

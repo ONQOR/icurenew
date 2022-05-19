@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_bars",
+  "info": {
+    "displayName": "bar",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}

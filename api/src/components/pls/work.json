@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pls_works",
+  "info": {
+    "displayName": "work",
+    "icon": "arrow-alt-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

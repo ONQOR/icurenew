@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_slices_features",
+  "info": {
+    "displayName": "features",
+    "icon": "search-plus",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

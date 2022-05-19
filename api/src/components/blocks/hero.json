@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_slices_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "pizza-slice",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "text": {
+      "type": "string"
+    },
+    "btnText": {
+      "type": "string"
+    },
+    "featuredText": {
+      "type": "string"
+    },
+    "iconOne": {
+      "type": "string"
+    },
+    "iconTwo": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "repeater": {
+      "displayName": "repeat",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repeat"
+    }
+  }
+}

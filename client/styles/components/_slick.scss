@@ -1,0 +1,51 @@
+.slick {
+    @include padding;
+    background: $gradient;
+    color: white;
+    &__slider {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100vw;
+        .slick-dots {
+            bottom: -75px;
+            .slick-active button:before {
+                color: lightblue;
+            }
+            button::before {
+                color: white;
+            }
+        }
+        .slick-prev {
+            left: 100px;
+            z-index: 3;
+        }
+        .slick-next {
+            right: 100px;
+            z-index: 3;
+        }
+        .item {
+            .container {
+                align-items: unset;
+            }
+            &__left {
+                margin: 0 15px;
+                width: 27%;
+                border-right: 1px solid white;
+                div {
+                    text-align: left;
+                    img {
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        background-color: $purpleLight;
+                    }
+                }
+            }
+            &__right {
+                width: 60%;
+                margin: 0 15px;
+            }
+        }
+    }
+}

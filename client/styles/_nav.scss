@@ -1,0 +1,16 @@
+.nav {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    h1 {
+        color: white;
+    }
+    &__nav {
+        margin: auto;
+        transform: translateX(-72.5px);
+        a {
+            color: white !important;
+            margin: 40px !important;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_hero_smalls",
+  "info": {
+    "displayName": "Hero Small",
+    "icon": "angle-double-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

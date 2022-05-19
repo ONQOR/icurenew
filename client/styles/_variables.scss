@@ -1,0 +1,11 @@
+// colors
+$gradient: radial-gradient(circle at right bottom, rgba(136, 66, 189, 1) 0%, rgba(52, 27, 97, 1) 100%);
+$purpleLight: #6C30DB46;
+$purpleDark: #341B61;
+$purplePastel: #fbf6ff;
+$purple: #6C30DB;
+
+// mixins
+@mixin padding {
+    padding: 100px 0;
+}

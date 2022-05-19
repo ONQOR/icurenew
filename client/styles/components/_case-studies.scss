@@ -1,0 +1,53 @@
+.caseStudies {
+    padding: 100px 0;
+    .item {
+        width: 20%;
+    }
+    .title {
+        width: 100%;
+        margin: 0 0 65px 40%;
+        h1 {
+            color: black; 
+            font-size: 55px;
+        }
+    }
+    .colOne {
+        transform: translateY(-200px);
+    }
+    .colOne, .colTwo {
+        width: 27%;
+        display: flex;
+        flex-wrap: wrap;
+        .case {
+            width: 270px;
+            height: 270px;
+            position: relative;
+            margin: 0 24px 24px 0;
+            h3 {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: white;
+            } 
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .colThree {
+        width: 46%;
+    }
+    p {
+        font-size: 18px; 
+        max-width: 470px;
+        margin: 0 0 0 100px;
+    }
+    img {
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+}

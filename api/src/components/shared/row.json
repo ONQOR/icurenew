@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_rows",
+  "info": {
+    "displayName": "row",
+    "icon": "balance-scale"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "btnText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.maps {
+    &__container__title {
+        width: 100%;
+        padding: 100px 15px 50px 15px !important;
+        flex-direction: column;
+    }
+    &__container {
+        width: 100%;
+        @include padding;
+        background-color: $purpleLight;
+        .container {
+            z-index: 3;
+            overflow: visible;
+            justify-content: end;
+        }
+    }
+    &__box {
+        max-width: 550px;
+        background: radial-gradient(circle at right bottom, rgba(136, 66, 189, 1) 0%, rgba(52, 27, 97, 1) 100%);
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        z-index: 3;
+        p {
+            color: white;
+            margin: 23px 0 0 0;
+        }
+        &__boxbox {
+            display: flex;
+            align-items: center;
+            padding: 0 0 22px 0;
+            border-bottom: 1px solid grey;
+            &__circle {
+                width: 75px;
+                height: 75px;
+                background-color: grey;
+                border-radius: 50%;
+                margin-right: 25px;
+            }
+            &__text {
+                color: white;
+                margin-right: 30px;
+                span {
+                    font-size: 16px;
+                }
+                h3 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

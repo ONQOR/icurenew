@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_slicks",
+  "info": {
+    "displayName": "Slick",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

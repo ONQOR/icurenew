@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_tabs_alts",
+  "info": {
+    "displayName": "TabsAlt",
+    "icon": "arrow-circle-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

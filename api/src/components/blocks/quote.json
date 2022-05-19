@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_quotes",
+  "info": {
+    "displayName": "Quote",
+    "icon": "arrow-alt-circle-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}

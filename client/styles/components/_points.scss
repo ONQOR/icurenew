@@ -1,0 +1,23 @@
+.points {
+    @include padding;
+    &__title {
+        width: 100%;
+        text-align: center;
+        h2,p,span {
+            max-width: 471px;
+            margin: auto;
+        }
+    }
+    &__item {
+        margin: 150px 0 0 0;
+        width: 31%;
+        img {
+            width: 60px;
+            height: 60px;
+            background-color: $purpleLight;
+        }
+        h3 {
+            margin: 20px 0;
+        }
+    }
+}

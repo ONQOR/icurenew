@@ -1,0 +1,61 @@
+.cohort {
+    padding: 100px 0;
+    .title {
+        text-align: center;
+        max-width: 571px;
+        h2 {
+            font-size: 44px;
+        }
+        span { 
+            font-size: 16px;
+        }
+    }
+    .row {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 45px;
+        margin: 55px 0 0 0;
+        &:hover {
+            box-shadow: 0px 10px 20px #1D1D1D1A;
+            cursor: pointer;
+        }
+        .index {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            .subTitle {
+                font-size: 16px;
+            }
+            .date {
+                font-size: 35px;
+            }
+            .places {
+                font-size: 16px;
+            }
+        }
+        .text {
+            width: max-content;
+            padding: 0;
+            h3 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .btn {
+            width: max-content;
+            button {
+                padding: 10px 40px;
+                border: 1px solid #6C30DB;
+                background-color: #6C30DB;
+                color: white;
+            }
+        }
+    }
+}
+

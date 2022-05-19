@@ -1,0 +1,16 @@
+.basic {
+    @include padding;
+    .container {
+        flex-direction: column;
+        max-width: 768px;
+    }
+    img {
+        width: 100%;
+        background-color: $purpleLight;
+        height: 500px;
+        margin: 150px 0 0;
+    }
+    h2 {
+        margin: 0 0 48px 0;
+    }
+}   

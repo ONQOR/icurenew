@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_case_studies",
+  "info": {
+    "displayName": "Case Studies",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

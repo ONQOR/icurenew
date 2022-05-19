@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_tabs",
+  "info": {
+    "displayName": "Tabs",
+    "icon": "angle-double-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_icons",
+  "info": {
+    "displayName": "icons",
+    "icon": "arrow-circle-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

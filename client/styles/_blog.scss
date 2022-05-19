@@ -1,0 +1,19 @@
+.blog {
+    background-color: transparent;
+    width: 100%;
+    .container {
+        max-width: 1100px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto; 
+    }
+    h1 {
+        color: white;
+    }
+    &__nav {
+        margin-left: auto;
+        a {
+            color: white !important;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}
