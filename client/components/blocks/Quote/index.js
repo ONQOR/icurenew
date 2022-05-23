@@ -8,7 +8,7 @@ const Quote= ({ }) => {
         <div className="container sb center">
             <p>“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no”</p>
             <img />
-            <h3>Heading 3</h3>
+            <h4>Heading 3</h4>
             <span>Job Role</span> 
         </div> 
     </section>

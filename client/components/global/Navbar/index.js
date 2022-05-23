@@ -8,7 +8,7 @@ const Navigation = ({ navigation, pageData, type, logo, title  }) => {
   return (
     <header className="nav">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <h1>iCURe</h1>
+        <Logo />
         {/* <h2>{delve(navigation, 'title')}</h2> */}
         <Nav
           links={delve(navigation, 'links')}

@@ -1,14 +1,11 @@
 import delve from 'dlv';
 import { useState } from 'react';
 import { getStrapiMedia } from '../../../utils';
+import Map from './maps';
+import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
 
 const Maps = ({ image, caption, value, text, subTitle, title }) => {
-
-const [toggleState, setToggle] = useState(1)
-const handleClick = (index) => {
-  setToggle(index)
-  console.log(index)
-}
+const WrappedMap = withScriptjs(withGoogleMap(Map)) 
 
   return (
     <section className="maps">
@@ -33,14 +30,23 @@ const handleClick = (index) => {
               </div>
             {/* text */}
             <p>{text}</p>
-            
+            <button>Visible Website</button>
           </div>
         </div> 
       </div>
-      
+      <div style={{ width: '100vw', height: '100vh' }}>
+      <WrappedMap 
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`}
+        loadingElement={<div style={{ height: '100%' }}/>}
+        containerElement={<div style={{ height: '100%' }}/>}
+        mapElement={<div style={{ height: '100%' }}/>}
+      />
+      </div>
+
     </section>
   ); 
 };
+
 
 Maps.defaultProps = {};
 

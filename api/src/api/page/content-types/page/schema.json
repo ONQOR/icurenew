@@ -61,7 +61,9 @@
         "blocks.text",
         "blocks.slick", 
         "blocks.clients",
-        "blocks.tabs-alt"
+        "blocks.tabs-alt",
+        "blocks.timeline",
+        "blocks.hero-alt"
       ],
       "pluginOptions": {
         "i18n": {

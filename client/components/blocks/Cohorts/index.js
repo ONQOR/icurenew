@@ -9,8 +9,7 @@ const Cohort = ({  cards, work, title, newer, }) => {
         <div className="title">
           <h2>{title}</h2>
         </div>
-      <h1>start</h1>
-      <h1>finish</h1>
+
       {newer &&
         newer.map((item, index) => (
           <div className="features__item" key={`feature-${index}`}>
@@ -29,7 +28,7 @@ const Cohort = ({  cards, work, title, newer, }) => {
               <h3>ICURe Main</h3>
             </div>
             <div className="btn">
-              <button>Request More Details</button>
+              <button>Click to Apply</button>
             </div>
           </div>
           {/* end */}
@@ -44,7 +43,7 @@ const Cohort = ({  cards, work, title, newer, }) => {
               <h3>ICURe Main</h3>
             </div>
             <div className="btn">
-              <button>Request More Details</button>
+              <button>Click to Apply</button>
             </div>
           </div>
           {/* end */}
@@ -59,7 +58,7 @@ const Cohort = ({  cards, work, title, newer, }) => {
               <h3>ICURe Main</h3>
             </div>
             <div className="btn">
-              <button>Request More Details</button>
+              <button>Click to Apply</button>
             </div>
           </div>
           {/* end */}
@@ -74,7 +73,7 @@ const Cohort = ({  cards, work, title, newer, }) => {
               <h3>ICURe Main</h3>
             </div>
             <div className="btn">
-              <button>Request More Details</button>
+              <button>Click to Apply</button>
             </div>
           </div>
           {/* end */}

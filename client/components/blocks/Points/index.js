@@ -14,21 +14,21 @@ const Points = ({ image }) => {
         <div className="points__item">
             <img
             />
-            <h3>heading 32</h3>
+            <h4>heading 32</h4>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
         </div>
 
         <div className="points__item">
             <img
             />
-            <h3>heading 32</h3>
+            <h4>heading 32</h4>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
         </div>
 
         <div className="points__item">
             <img
             />
-            <h3>heading 32</h3>
+            <h4>heading 32</h4>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
         </div>
 
@@ -36,21 +36,21 @@ const Points = ({ image }) => {
       <div className="points__item">
             <img
             />
-            <h3>heading 32</h3>
+            <h4>heading 32</h4>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
         </div>
 
         <div className="points__item">
             <img
             />
-            <h3>heading 32</h3>
+            <h4>heading 32</h4>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
         </div>
 
         <div className="points__item">
             <img
             />
-            <h3>heading 32</h3>
+            <h4>heading 32</h4>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
         </div>
 

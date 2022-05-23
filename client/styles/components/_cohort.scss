@@ -22,6 +22,16 @@
         &:hover {
             box-shadow: 0px 10px 20px #1D1D1D1A;
             cursor: pointer;
+            .text {
+                span {
+                    opacity: 1;
+                }
+            }
+            .index {
+                .subTitle {
+                    opacity: 1;
+                }
+            }
         }
         .index {
             width: max-content;
@@ -29,6 +39,7 @@
             flex-direction: column;
             .subTitle {
                 font-size: 16px;
+                opacity: 0;
             }
             .date {
                 font-size: 35px;
@@ -46,14 +57,26 @@
             p {
                 font-size: 18px;
             }
+            span {
+                opacity: 0;
+            }
         }
         .btn {
             width: max-content;
             button {
-                padding: 10px 40px;
-                border: 1px solid #6C30DB;
                 background-color: #6C30DB;
+                padding: 12px 48px;
+                width: fit-content;
                 color: white;
+                font-size: 18px;
+                border-radius: 4px;
+                transition: ease 0.2s;
+                // &:hover {
+                //     cursor: pointer;
+                //     background-color: white;
+                //     color: $purple;
+                //     transition: ease 0.2s;
+                // }
             }
         }
     }

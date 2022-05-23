@@ -27,6 +27,8 @@ import Clients from '../../blocks/Clients';
 import Quote from '../../blocks/Quote';
 import Basic from '../../blocks/Basic';
 import TabsAlt from '../../blocks/TabsAlt';
+import Timeline from '../../blocks/Timline';
+import HeroAlt from '../../blocks/HeroAlt';
 
 const getBlockComponent = ({ __component, ...rest }, index) => {
   let Block;
@@ -118,6 +120,12 @@ const getBlockComponent = ({ __component, ...rest }, index) => {
       break;
     case 'blocks.tabs-alt':
       Block = TabsAlt;
+      break;
+    case 'blocks.hero-alt':
+      Block = HeroAlt;
+      break;
+    case 'blocks.timeline':
+      Block = Timeline;
       break;
   }
 

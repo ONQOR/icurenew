@@ -21,7 +21,8 @@
                 color: black;
             }
             button::before {
-                color: blue;
+                color: $purple;
+                font-size: 16px;
             }
         }
     }

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_hero_alts",
+  "info": {
+    "displayName": "Hero Alt",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
