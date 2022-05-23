@@ -2,6 +2,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React, { Component } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare, faCoffee, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Slick = ({title}) => {
     const settings = {
@@ -11,7 +13,7 @@ const Slick = ({title}) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        className: 'slick__slider'
+        className: 'slick__slider',
       };
 
     return (
@@ -24,7 +26,7 @@ const Slick = ({title}) => {
                         <div className="item__left">
                             <div>
                                 <img/>
-                                <h3>Heading 3</h3>
+                                <h4>Heading 3</h4>
                                 <span>caption</span>
                             </div>
                         </div>
@@ -63,7 +65,6 @@ const Slick = ({title}) => {
                         </div>
                     </div>
                 </div>
-
                 </Slider>
             </div>
         </div>

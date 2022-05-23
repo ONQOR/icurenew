@@ -1,14 +1,14 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
 
-const CaseStudies = ({ image, title }) => {
+const CaseStudies = ({ image, title, caption }) => {
 
   return (
     <section className="caseStudies">
         <div className="container">
             <div className="title">
-                <span>Our Case Studies</span>
-                <h1>Turn our success into your success…</h1>
+                <span>{caption}</span>
+                <h1>{title}</h1>
             </div>
 
             <div className="colOne">
@@ -18,7 +18,13 @@ const CaseStudies = ({ image, title }) => {
                         alt={delve(image, "data.attributes.alternativeText")}
                         className="relative mx-auto shadow-lg rounded-lg w-auto"
                         />
-                        <h3>case study 1</h3>
+                        <h4>case study 1</h4>
+                        <div className='case__filter'></div>
+                    <div className='case--hover'>
+                        <h5>title</h5>
+                        <span>caption</span>
+                        <span className='case--hover__time'>6 min</span>
+                    </div>
                     </div>
                 <div className="case">
                     <img
@@ -26,7 +32,13 @@ const CaseStudies = ({ image, title }) => {
                         alt={delve(image, "data.attributes.alternativeText")}
                         className="relative mx-auto shadow-lg rounded-lg w-auto"
                     />
-                    <h3>case study 1</h3>
+                    <h4>case study 1</h4>
+                    <div className='case__filter'></div>
+                    <div className='case--hover'>
+                        <h5>title</h5>
+                        <span>caption</span>
+                        <span className='case--hover__time'>6 min</span>
+                    </div>
                 </div>
             </div>
 
@@ -37,7 +49,13 @@ const CaseStudies = ({ image, title }) => {
                         alt={delve(image, "data.attributes.alternativeText")}
                         className="relative mx-auto shadow-lg rounded-lg w-auto"
                         />
-                        <h3>case study 1</h3>
+                        <h4>case study 1</h4>
+                        <div className='case__filter'></div>
+                    <div className='case--hover'>
+                        <h5>title</h5>
+                        <span>caption</span>
+                        <span className='case--hover__time'>6 min</span>
+                    </div>
                     </div>
                 <div className="case">
                     <img
@@ -45,7 +63,13 @@ const CaseStudies = ({ image, title }) => {
                         alt={delve(image, "data.attributes.alternativeText")}
                         className="relative mx-auto shadow-lg rounded-lg w-auto"
                     />
-                    <h3>case study 1</h3>
+                    <h4>case study 1</h4>
+                    <div className='case__filter'></div>
+                    <div className='case--hover'>
+                        <h5>title</h5>
+                        <span>caption</span>
+                        <span className='case--hover__time'>6 min</span>
+                    </div>
                 </div>
             </div>
 

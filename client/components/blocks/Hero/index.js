@@ -13,7 +13,6 @@ const Hero = ({ header, text, btnText, featuredText, images, imageo, image, repe
       <div className="hero__left">
         <h1>{titlee}</h1>
         <p>{text}</p>
-        <button>{btnText}</button>
         <span>{featuredText}</span>
         <img
           src={getStrapiMedia(delve(images, "data.attributes.url"))}

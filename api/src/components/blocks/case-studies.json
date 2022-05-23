@@ -2,12 +2,26 @@
   "collectionName": "components_blocks_case_studies",
   "info": {
     "displayName": "Case Studies",
-    "icon": "american-sign-language-interpreting"
+    "icon": "american-sign-language-interpreting",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

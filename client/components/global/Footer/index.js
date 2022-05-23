@@ -1,11 +1,15 @@
 import delve from 'dlv';
+import { getStrapiMedia } from '../../../utils'; 
 
-const Footer = ({ tagline, text, label, btnText }) => {
+const Footer = ({ tagline, text, label, btnText, image }) => {
   return (
 			<footer className="footer">	 
         <div className="footer__container">
           {/* news col 1 */}
           <div className="footer__news">
+              <img
+                src={getStrapiMedia(delve(image, "data.attributes.url"))}
+              />
 							<p>	Subscribe to ICURe Newsletter</p>
               <p>Sign up to our newsletter to stay updated with everything ICURe related!</p>
               <label>Email Address</label>
@@ -34,10 +38,8 @@ const Footer = ({ tagline, text, label, btnText }) => {
 					</div>
           {/* showcases col 4 */}
           <div className="footer__showcases">
-            <h4>Socials</h4>
+            <h4>Social</h4>
             <ul className="menu_footer_showcases">
-              <li>hello </li>
-              <li>hello </li>
               <li>hello </li>
             </ul>
 					</div>

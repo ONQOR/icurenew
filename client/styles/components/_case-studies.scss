@@ -23,16 +23,73 @@
             height: 270px;
             position: relative;
             margin: 0 24px 24px 0;
-            h3 {
+            overflow: hidden;
+            background-color: $purpleLight;
+            transition: ease 0.2s;
+            h4 {
                 position: absolute;
                 bottom: 20px;
                 left: 20px;
                 color: white;
+                transition: ease 0.2s;
+                z-index: 2;
             } 
             img {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
+                transition: ease 0.2s;
+                z-index: 1;
+                &:hover {
+                    cursor: pointer;
+                    transition: ease 0.2s;
+                }
+            }
+            &:hover {
+                h4 {
+                    transform: translateX(-120%);
+                    transition: ease 0.2s;
+                }
+                .case--hover, .case__filter {
+                    transform: translateX(0%);
+                    transition: ease 0.2s;
+                    cursor: pointer;
+                }
+            }
+            &__filter {
+                transform: translateX(100%);
+                transition: ease 0.2s;
+                background-color: $purple;
+                opacity: 0.5;
+                z-index: 3;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            &--hover {
+                transform: translateX(100%);
+                transition: ease 0.2s;
+                color: white;
+                z-index: 4;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                h5 {
+                    font-size: 28px
+                }
+                &__time {
+                    background-color: red;
+                    border-radius: 20px;
+                    padding: 0px 8px;
+                    width: max-content;
+                    margin: 5px 0 0 0; 
+                }
             }
         }
     }

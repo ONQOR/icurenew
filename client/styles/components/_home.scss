@@ -1,6 +1,6 @@
 .hero {
     height: auto;
-    padding: 200px 0 200px 0;
+    padding: 200px 0 100px 0;
     background: radial-gradient(circle at right bottom, rgba(136, 66, 189, 1) 0%, rgba(52, 27, 97, 1) 100%);
     h1 {
         color: white; 
@@ -14,7 +14,7 @@
     button {
         background-color: white;
         border: 1px solid white;
-        color: #6C30DB;
+        color: $purple;
         padding: 12px 48px;
         font-size: 18px;
         border-radius: 4px;
@@ -50,7 +50,7 @@
         }
         .featured {
             max-height: 68px;
-            margin: 10px auto 100px 0;
+            margin: 10px auto 120px 0;
             max-width: 500px;
         }
         &__box { 

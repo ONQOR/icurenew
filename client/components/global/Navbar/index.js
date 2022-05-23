@@ -1,5 +1,8 @@
 import delve from 'dlv';
 import Nav from './nav';
+import Cta from './cta';
+import LocalSwitch from './localSwitch';
+import Logo from './logo'
 
 const Navigation = ({ navigation, pageData, type, logo, title  }) => {
   return (
@@ -11,6 +14,16 @@ const Navigation = ({ navigation, pageData, type, logo, title  }) => {
           links={delve(navigation, 'links')}
           locale={delve(pageData, 'attributes.locale')}
         />
+
+        {delve(navigation, 'rightButton') && (
+          <div className="flex">
+            <Cta
+              href={delve(navigation, 'rightButton.href')}
+              target={delve(navigation, 'rightButton.target')}
+              label={delve(navigation, 'rightButton.label')}
+            />
+          </div>
+        )}
       </div>
     </header>
   );

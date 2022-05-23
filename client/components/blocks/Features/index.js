@@ -14,7 +14,7 @@ const Features = ({ cards, title, image }) => {
                 src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
                 alt={delve(item, "image.data.attributes.alternativeText")}
               />
-              <h3>{delve(item, "title")}</h3>
+              <h4>{delve(item, "title")}</h4>
               <p>{delve(item, "text")}</p>
           </div>
         ))}
