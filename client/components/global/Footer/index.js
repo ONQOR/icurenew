@@ -1,7 +1,8 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
+import Nav from './nav';
 
-const Footer = ({ tagline, text, label, btnText, image }) => {
+const Footer = ({ pageData, navigation, image }) => {
   return (
 			<footer className="footer">	 
         <div className="footer__container">
@@ -22,9 +23,10 @@ const Footer = ({ tagline, text, label, btnText, image }) => {
           <div  className="footer__nav">
             <h4>Sitemap</h4>
 						<ul id="menu_footer_showcases">
-              <li>hello </li>
-              <li>hello </li>
-              <li>hello </li>
+              {/* <Nav
+                links={delve(navigation, 'links')}
+                locale={delve(pageData, 'attributes.locale')}
+              /> */}
             </ul>
 					</div>
           {/* showcases col 3 */}
