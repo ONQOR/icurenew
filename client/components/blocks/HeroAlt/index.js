@@ -5,7 +5,7 @@ const HeroAlt = ({ header, featuredText, text, images,imageo, image }) => {
   const titlee = delve(header, 'title');
   console.log("heloo");
    return (
-    <section className="hero">
+    <section className="hero-alt">
     <div className="container sb">
 
       {/* left */}
@@ -29,6 +29,17 @@ const HeroAlt = ({ header, featuredText, text, images,imageo, image }) => {
             <span>start date</span>
             <h3>2019</h3>
           </div>
+
+          <div>
+            <span>start date</span>
+            <h3>2019</h3>
+          </div>
+
+          <div>
+            <span>start date</span>
+            <h3>2019</h3>
+          </div>
+
         </div>
         {/* left button */}
         <button>Visit website</button>

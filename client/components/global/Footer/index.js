@@ -23,10 +23,10 @@ const Footer = ({ pageData, navigation, image }) => {
           <div  className="footer__nav">
             <h4>Sitemap</h4>
 						<ul id="menu_footer_showcases">
-              {/* <Nav
+              <Nav
                 links={delve(navigation, 'links')}
                 locale={delve(pageData, 'attributes.locale')}
-              /> */}
+              />
             </ul>
 					</div>
           {/* showcases col 3 */}
