@@ -1,4 +1,37 @@
 .timeline {
     @include padding;
     background: $gradient;
+    color: white;
+    position: relative;
+    .container {
+        max-width: 1164px;
+        flex-direction: column;
+    }
+    h2 {
+        width: 100%;
+    }
+    &__shape {
+        display: flex;
+        max-width: 1164px;
+        flex-direction: column;
+        justify-content: flex-start;
+        &__text {
+            justify-content: flex-start;
+            width: max-content;
+            align-items: center;
+        }
+        &-vertical {
+            background-color: white;
+            width: 10px;
+            height: 120px;
+            position: absolute;
+        }
+        &-horozontal {
+            background-color: white;
+            width: 10px;
+            height: 60px;
+            position: absolute;
+            transform: rotate(90deg) translateY(25px);
+        }
+    }
 }
