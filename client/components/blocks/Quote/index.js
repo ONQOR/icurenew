@@ -1,15 +1,17 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Quote= ({ }) => {
+const Quote= ({ image, title, caption, text}) => {
 
    return (
     <section className="quote">
         <div className="container sb center">
-            <p>“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no”</p>
-            <img />
-            <h4>Heading 3</h4>
-            <span>Job Role</span> 
+            <p>{text}</p>
+            <img
+              src={getStrapiMedia(delve(image, "data.attributes.url"))}
+            />
+            <h4>{title}</h4>
+            <span>{caption}</span> 
         </div> 
     </section>
    )

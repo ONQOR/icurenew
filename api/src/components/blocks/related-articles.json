@@ -7,15 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "header": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.header"
-    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
     }
   }
 }

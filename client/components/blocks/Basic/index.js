@@ -1,14 +1,18 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Basic= ({ }) => {
+const Basic= ({ title, text, image}) => {
 
    return (
     <section className="basic">
         <div className="container sb center">
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ,Lorem ipsum dolor sit amet, consetetur</p>
-            <img />
+            <h2>{title}</h2>
+            <p>{text}</p>
+            <img
+              src={getStrapiMedia(delve(image, "data.attributes.url"))}
+              alt={delve(image, "data.attributes.alternativeText")}
+              className="relative mx-auto shadow-lg rounded-lg w-auto"
+            />
         </div> 
     </section>
    )

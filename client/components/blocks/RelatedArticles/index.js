@@ -1,18 +1,18 @@
 import ArticleCard from '../../pages/blog/ArticleCard';
-import Container from '../../shared/Container';
-import Header from '../../shared/Header';
 
-const RelatedArticles = ({ header, articles }) => {
+const RelatedArticles = ({ articles, text, title }) => {
   return (
       <div className="related-articles">
-        <div className="container center">
-        <h2>title</h2>
-          <div className="related-articles__articles sb">
-            {articles &&
-              articles.data.map((article, index) => (
-                <ArticleCard {...article.attributes} key={index} />
-              ))}
+        <div className="container center related-articles__articles sb">
+          <div className='related-articles__articles__title center'>
+            <h2>{title}</h2>
+            <p>{text}</p>
           </div>
+    
+          {articles &&
+            articles.data.map((article, index) => (
+              <ArticleCard {...article.attributes} key={index} />
+            ))}
         </div>
       </div>
   );

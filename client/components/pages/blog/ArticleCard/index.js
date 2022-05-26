@@ -6,6 +6,7 @@ const ArticleCard = ({ slug, title, category, seo, locale, image }) => {
   const description = delve(seo, "metaDescription");
 
   return (
+    <div className="articles__articles-item">
     <Link href={`/blog/${slug}?lang=${locale}`}>
     <a className="">
       {/* <svg
@@ -20,7 +21,6 @@ const ArticleCard = ({ slug, title, category, seo, locale, image }) => {
         <path d="M5 12h14"></path>
         <path d="M12 5l7 7-7 7"></path>
       </svg> */}
-    <div className="related-articles__articles-item">
       <span className="">
         {delve(category, "data.attributes.name")}
       </span>
@@ -33,9 +33,9 @@ const ArticleCard = ({ slug, title, category, seo, locale, image }) => {
         {title}
       </h4>
       <p className="">{description}</p>
-    </div>
-    </a>
+      </a>
     </Link>
+    </div>
   );
 };
 

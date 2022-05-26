@@ -1,8 +1,13 @@
 import delve from 'dlv';
 
 const Cohort = ({  cards, work, title, newer, }) => {
-  console.log(title)
-  console.log(newer)
+  console.log(title);
+  console.log(newer);
+
+  // newer.forEach(element => {
+  //   console.log('newr', element);
+  // })
+
   return (
     <section className="cohort">
       <div className="container">

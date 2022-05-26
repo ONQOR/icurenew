@@ -2,6 +2,11 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
 const Features = ({ cards, title, image }) => {
+
+  cards.forEach(element => {
+    console.log('elm', element);
+  });
+
   return (
     <div className="features">
       <div className="container sb">
