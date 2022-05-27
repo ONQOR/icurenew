@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_cohorts",
+  "info": {
+    "displayName": "Cohort",
+    "icon": "arrow-alt-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}

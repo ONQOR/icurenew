@@ -2,19 +2,24 @@
   "collectionName": "components_blocks_points",
   "info": {
     "displayName": "Points",
-    "icon": "angle-right"
+    "icon": "angle-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.point"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
     }
   }
 }

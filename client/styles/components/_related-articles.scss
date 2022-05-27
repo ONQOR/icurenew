@@ -1,7 +1,7 @@
 .related-articles {
     @include padding;
     h2 {
-        margin: 24px auto;
+        margin: 0 auto 24px auto;
         width: 100%;
     }
     &__articles {

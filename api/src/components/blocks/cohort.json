@@ -10,12 +10,10 @@
     "title": {
       "type": "string"
     },
-    "newer": {
-      "displayName": "new",
+    "cards": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.new",
-      "required": true
+      "component": "shared.cohort"
     }
   }
 }

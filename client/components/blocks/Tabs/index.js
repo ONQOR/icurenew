@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import delve from 'dlv';
+import { getStrapiMedia } from '../../../utils';
 
-const Tabs = ({title}) => {
+const Tabs = ({cards, title, caption, text }) => {
 
   const [toggleState, setToggle] = useState(1)
   const handleClick = (index) => {
@@ -11,9 +13,9 @@ const Tabs = ({title}) => {
     <section className="tabs">
       <div className="container center">
         <div className="tabs__top">
-          <span>ICURe Customers</span>
+          <span>{caption}</span>
           <h2>{title}</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+          <p>{text}</p>
         </div>
 
         <div className="tabs__tab">
@@ -24,41 +26,21 @@ const Tabs = ({title}) => {
           </div>
         </div>
 
-        <div className={toggleState === 1 ? "tabs__content--active" : "tabs__content"}>
-          <div className="tabs__content__left">
-            <h2>Is ICURe right for you?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-          </div>     
-          <div className="tabs__content__right">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg"
-            />
-          </div>
-        </div>
-
-        <div className={toggleState === 2 ? "tabs__content--active" : "tabs__content"}>
-          <div className="tabs__content__left">
-            <h2>Is ICURe right for you?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-          </div>     
-          <div className="tabs__content__right">
-            <img
-              src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"
-            />
-          </div>
-        </div>
-
-        <div className={toggleState === 3 ? "tabs__content--active" : "tabs__content"}>
-          <div className="tabs__content__left">
-            <h2>Is ICURe right for you?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-          </div>     
-          <div className="tabs__content__right">
-            <img
-              src="https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_1280.jpg"
-            />
-          </div>
-        </div>
+        {cards &&
+        cards.map((item, index) => (
+            <div className={toggleState === index + 1 ? "tabs__content--active" : "tabs__content"} key={`feature-${index}`}>
+              <div className="tabs__content__left">
+                <h2>{delve(item, "title")}</h2>
+                <p>{delve(item, "text")}</p>
+              </div>     
+              <div className="tabs__content__right">
+                <img
+                  src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+                  alt={delve(item, "image.data.attributes.alternativeText")}
+                />
+              </div>
+            </div>
+        ))}
 
       </div> 
     </section>

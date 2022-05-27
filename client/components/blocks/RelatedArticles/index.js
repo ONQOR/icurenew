@@ -1,10 +1,11 @@
 import ArticleCard from '../../pages/blog/ArticleCard';
 
-const RelatedArticles = ({ articles, text, title }) => {
+const RelatedArticles = ({ articles, text, title, caption }) => {
   return (
       <div className="related-articles">
         <div className="container center related-articles__articles sb">
           <div className='related-articles__articles__title center'>
+            <span>{caption}</span>
             <h2>{title}</h2>
             <p>{text}</p>
           </div>

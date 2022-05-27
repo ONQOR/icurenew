@@ -2,11 +2,32 @@
   "collectionName": "components_blocks_tabs",
   "info": {
     "displayName": "Tabs",
-    "icon": "angle-double-down"
+    "icon": "angle-double-down",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tab"
+    },
+    "tabOne": {
+      "type": "string"
+    },
+    "tabTwo": {
+      "type": "string"
+    },
+    "tabThree": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "text": {
       "type": "string"
     }
   }

@@ -1,58 +1,29 @@
+import delve from 'dlv';
+import { getStrapiMedia } from '../../../utils';
 
-const Points = ({ image }) => {
+const Points = ({ title, text, caption, cards }) => {
 
   return (
     <section className="points">
       <div className="container sb">
         <div className="points__title">
-            <span>Caption</span>
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <span>{caption}</span>
+            <h2>{title}</h2>
+            <p>{text}</p>
         </div>
 
         {/* col */}
-        <div className="points__item">
-            <img
-            />
-            <h4>heading 32</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-        </div>
-
-        <div className="points__item">
-            <img
-            />
-            <h4>heading 32</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-        </div>
-
-        <div className="points__item">
-            <img
-            />
-            <h4>heading 32</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-        </div>
-
-      {/* col */}
-      <div className="points__item">
-            <img
-            />
-            <h4>heading 32</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-        </div>
-
-        <div className="points__item">
-            <img
-            />
-            <h4>heading 32</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-        </div>
-
-        <div className="points__item">
-            <img
-            />
-            <h4>heading 32</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-        </div>
+        {cards &&
+        cards.map((item, index) => (
+              <div className="points__item" key={`feature-${index}`}>
+                  <img
+                    src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+                    alt={delve(item, "image.data.attributes.alternativeText")}
+                  />
+                 <h4>{delve(item, "title")}</h4>
+                 <p>{delve(item, "text")}</p>
+             </div>
+        ))}
 
       </div> 
     </section>

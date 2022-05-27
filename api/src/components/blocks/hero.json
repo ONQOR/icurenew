@@ -48,11 +48,10 @@
         "audios"
       ]
     },
-    "repeater": {
-      "displayName": "repeat",
+    "cards": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.repeat"
+      "component": "shared.image"
     }
   }
 }

@@ -1,10 +1,9 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
-import Image from './image';
 
-const Hero = ({ header, text, btnText, featuredText, images, imageo, image, repeater}) => {
+const Hero = ({ header, text, featuredText, images, image, cards}) => {
   const titlee = delve(header, 'title');
-  console.log("heloo");
+
    return (
     <section className="hero">
     <div className="container sb">
@@ -18,26 +17,24 @@ const Hero = ({ header, text, btnText, featuredText, images, imageo, image, repe
           src={getStrapiMedia(delve(images, "data.attributes.url"))}
           className="featured"
         />
-        <Image repeater={repeater}/>
         <div className="hero__left__box">
-          <div className="hero__left__box__boxbox">
-            <img
-              src={getStrapiMedia(delve(imageo, "data.attributes.url"))}
-            />
-            <div className="hero__left__box__boxbox__text">
-              <span>Projects Supported</span>
-              <h3>300</h3>
-            </div>
-          </div>
-          <div className="hero__left__box__boxbox">
-            <img />
-  
-            <div className="hero__left__box__boxbox__text">
-              <span>Return on Investment</span>
-              <h3>100K</h3>
-            </div>
-          </div>
+          
+        {cards &&
+        cards.map((item, index) => (
+              <div className="hero__left__box__boxbox" key={`feature-${index}`}>
+                <img
+                  src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+                  alt={delve(item, "image.data.attributes.alternativeText")}
+                />
+                <div className="hero__left__box__boxbox__text">
+                  <span>{delve(item, "title")}</span>
+                  <h3>{delve(item, "text")}</h3>
+                </div>
+              </div>
+        ))}
+
         </div>
+
       </div>
 
       {/* right */}

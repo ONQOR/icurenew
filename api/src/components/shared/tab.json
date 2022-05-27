@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_tabs",
+  "info": {
+    "displayName": "tab",
+    "icon": "arrow-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

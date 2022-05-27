@@ -1,24 +1,15 @@
 {
-  "collectionName": "components_blocks_hero_alts",
+  "collectionName": "components_shared_slides",
   "info": {
-    "displayName": "Hero Alt",
-    "icon": "arrow-right",
-    "description": ""
+    "displayName": "Slide",
+    "icon": "atom"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "cards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.info"
-    },
     "caption": {
-      "type": "string"
-    },
-    "text": {
       "type": "string"
     },
     "image": {

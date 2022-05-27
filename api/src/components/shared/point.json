@@ -1,21 +1,12 @@
 {
-  "collectionName": "components_blocks_hero_alts",
+  "collectionName": "components_shared_points",
   "info": {
-    "displayName": "Hero Alt",
-    "icon": "arrow-right",
-    "description": ""
+    "displayName": "Point",
+    "icon": "ankh"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "cards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.info"
-    },
-    "caption": {
       "type": "string"
     },
     "text": {

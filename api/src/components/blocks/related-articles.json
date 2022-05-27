@@ -17,6 +17,9 @@
     },
     "text": {
       "type": "string"
+    },
+    "caption": {
+      "type": "string"
     }
   }
 }
