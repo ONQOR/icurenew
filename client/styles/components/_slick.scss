@@ -19,6 +19,12 @@
         .slick-prev {
             left: 100px;
             z-index: 3;
+            @media screen and (max-width: 768px) {
+                top: 120%;
+            }
+            @media screen and (max-width: 375px) {
+                display: none !important;
+            }
             &:before {
                 font-family: unset;
                 font-size: 24px;
@@ -32,6 +38,12 @@
         .slick-next {
             right: 100px;
             z-index: 3;
+            @media screen and (max-width: 768px) {
+                top: 120%;
+            }
+            @media screen and (max-width: 375px) {
+                display: none !important;
+            }
             &:before {
                 font-family: unset;
                 font-size: 24px;
@@ -44,11 +56,47 @@
         .item {
             .container {
                 align-items: unset;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column-reverse;
+                }
             }
             &__left {
                 margin: 0 15px;
                 width: 27%;
                 border-right: 1px solid white;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    border-right: 0;
+                    padding-top: 40px;
+                    margin-top: 40px;
+                    border-top: 1px solid white;
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    span {
+                        margin: 0 0 0 37px;
+                        text-align: left;
+                    }
+                }
+                @media screen and (max-width: 375px) {
+                    width: 100%;
+                    border-right: 0;
+                    padding-top: 40px;
+                    margin-top: 40px;
+                    border-top: 1px solid white;
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                    span {
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
                 div {
                     text-align: left;
                     img {
@@ -63,6 +111,9 @@
             &__right {
                 width: 60%;
                 margin: 0 15px;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
             }
         }
     }

@@ -6,6 +6,19 @@
     .title {
         width: 100%;
         margin: 0 0 65px 40%;
+        @media screen and (max-width: 768px) {
+            margin: 0 0 65px 0;
+            text-align: center;
+            p {
+                display: block;
+                margin: 20px auto 0;
+            }
+        }
+        @media screen and (min-width: 768px) {
+           p {
+               display: none;
+           }
+        }
         h1 {
             color: black; 
             font-size: 55px;
@@ -13,11 +26,19 @@
     }
     .colOne {
         transform: translateY(-200px);
+        @media screen and (max-width: 768px) {
+            transform: translateY(0px);
+            justify-content: center;
+        }
     }
     .colOne, .colTwo {
         width: 27%;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            justify-content: center;
+        }
         .case {
             width: 270px;
             height: 270px;
@@ -95,6 +116,10 @@
     }
     .colThree {
         width: 46%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            display: none;
+        }
     }
     p {
         font-size: 18px; 

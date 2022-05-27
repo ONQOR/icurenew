@@ -10,18 +10,12 @@
     "title": {
       "type": "string"
     },
-    "works": {
-      "displayName": "work",
-      "type": "component",
-      "repeatable": true,
-      "component": "pls.work",
-      "required": false
-    },
     "newer": {
       "displayName": "new",
       "type": "component",
       "repeatable": true,
-      "component": "shared.new"
+      "component": "shared.new",
+      "required": true
     }
   }
 }

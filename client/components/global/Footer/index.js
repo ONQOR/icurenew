@@ -39,7 +39,7 @@ const Footer = ({ pageData, navigation, image }) => {
             </ul>
 					</div>
           {/* showcases col 4 */}
-          <div className="footer__showcases">
+          <div className="footer__socials">
             <h4>Social</h4>
             <ul className="menu_footer_showcases">
               <li>hello </li>

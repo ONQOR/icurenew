@@ -26,8 +26,10 @@ const Slick = ({title}) => {
                         <div className="item__left">
                             <div>
                                 <img/>
-                                <h4>Heading 3</h4>
-                                <span>caption</span>
+                                <span>
+                                    <h4>Heading 3</h4>
+                                    <p>caption</p>
+                                </span>
                             </div>
                         </div>
                         <div className="item__right">

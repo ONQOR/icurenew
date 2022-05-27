@@ -7,9 +7,20 @@
         img {
             max-width: 170%;
         }
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
     &__left {
         width: 45%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+            h2, p {
+                text-align: center;
+            }
+        }
         h2 {
             font-size: 44px;
             margin: 0 0 25px 0;

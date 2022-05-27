@@ -1,6 +1,6 @@
 import delve from 'dlv';
 
-const Cohort = ({  cards, work, title, newer, }) => {
+const Cohort = ({ title, newer, }) => {
   console.log(title);
   console.log(newer);
 
@@ -24,6 +24,7 @@ const Cohort = ({  cards, work, title, newer, }) => {
         ))}
         {/* start  */}
           <div className="row">
+            {/* desk */}
             <div className="index">
               <span className="subTitle">Next cohort commences</span>
               <span className="date">5 April 2022</span>
@@ -32,43 +33,25 @@ const Cohort = ({  cards, work, title, newer, }) => {
               <span>Next cohort commences</span>
               <h3>ICURe Main</h3>
             </div>
-            <div className="btn">
-              <button>Click to Apply</button>
-            </div>
-          </div>
-          {/* end */}
-                  {/* start  */}
-                  <div className="row">
-            <div className="index">
-              <span className="subTitle">Next cohort commences</span>
-              <span className="date">5 April 2022</span>
-            </div>
-            <div className="text">
-              <span>Next cohort commences</span>
-              <h3>ICURe Main</h3>
+            {/* mob */}
+            <div className="">
+              <div className="index-mob">
+                <span className="subTitle">Next cohort commences</span>
+                <span className="date">5 April 2022</span>
+              </div>
+              <div className="text-mob">
+                <span>Next cohort commences</span>
+                <h3>ICURe Main</h3>
+              </div>
             </div>
             <div className="btn">
               <button>Click to Apply</button>
             </div>
           </div>
           {/* end */}
-                  {/* start  */}
-                  <div className="row">
-            <div className="index">
-              <span className="subTitle">Next cohort commences</span>
-              <span className="date">5 April 2022</span>
-            </div>
-            <div className="text">
-              <span>Next cohort commences</span>
-              <h3>ICURe Main</h3>
-            </div>
-            <div className="btn">
-              <button>Click to Apply</button>
-            </div>
-          </div>
-          {/* end */}
-          {/* start  */}
+                      {/* start  */}
           <div className="row">
+            {/* desk */}
             <div className="index">
               <span className="subTitle">Next cohort commences</span>
               <span className="date">5 April 2022</span>
@@ -76,6 +59,71 @@ const Cohort = ({  cards, work, title, newer, }) => {
             <div className="text">
               <span>Next cohort commences</span>
               <h3>ICURe Main</h3>
+            </div>
+            {/* mob */}
+            <div className="">
+              <div className="index-mob">
+                <span className="subTitle">Next cohort commences</span>
+                <span className="date">5 April 2022</span>
+              </div>
+              <div className="text-mob">
+                <span>Next cohort commences</span>
+                <h3>ICURe Main</h3>
+              </div>
+            </div>
+            <div className="btn">
+              <button>Click to Apply</button>
+            </div>
+          </div>
+          {/* end */}
+                        {/* start  */}
+          <div className="row">
+            {/* desk */}
+            <div className="index">
+              <span className="subTitle">Next cohort commences</span>
+              <span className="date">5 April 2022</span>
+            </div>
+            <div className="text">
+              <span>Next cohort commences</span>
+              <h3>ICURe Main</h3>
+            </div>
+            {/* mob */}
+            <div className="">
+              <div className="index-mob">
+                <span className="subTitle">Next cohort commences</span>
+                <span className="date">5 April 2022</span>
+              </div>
+              <div className="text-mob">
+                <span>Next cohort commences</span>
+                <h3>ICURe Main</h3>
+              </div>
+            </div>
+            <div className="btn">
+              <button>Click to Apply</button>
+            </div>
+          </div>
+          {/* end */}
+                 {/* start  */}
+                 <div className="row">
+            {/* desk */}
+            <div className="index">
+              <span className="subTitle">Next cohort commences</span>
+              <span className="date">5 April 2022</span>
+            </div>
+            <div className="text">
+              <span>Next cohort commences</span>
+              <h3>ICURe Main</h3>
+            </div>
+            {/* mob */}
+            <div className="">
+              <div className="index-mob">
+                <span className="subTitle">Next cohort commences</span>
+                <span className="date">5 April 2022</span>
+              </div>
+              <div className="text-mob">
+                <span>Next cohort commences</span>
+                <h3>ICURe Main</h3>
+              </div>
             </div>
             <div className="btn">
               <button>Click to Apply</button>

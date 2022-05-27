@@ -2,10 +2,20 @@
     @include padding;
     h2 {
         width: 100%;
+        @media screen and (max-width: 375px) {
+            text-align: center;
+        }
     }
     &__item {
         width: 23.5%;
         margin: 48px 0 0;
+        @media screen and (max-width: 768px) {
+            width: 48%;
+        }
+        @media screen and (max-width: 375px) {
+            width: 100%;
+            text-align: center;
+        }
         h4 {
             margin: 16px 0 15px 0;
         }

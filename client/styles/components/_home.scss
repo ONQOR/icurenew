@@ -30,8 +30,14 @@
         width: 40%;
         align-items: center;
         display: flex;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
         img {
             max-width: 170%;
+        }
+        @media screen and (max-width: 375px) {
+            display: none;
         }
     }
     // left
@@ -40,6 +46,14 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            img {
+                margin: 10px auto 53px auto !important;
+            }
+        }
         button {
             width: max-content;
             margin: 26px 0 50px;
