@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "cards": {
       "type": "component",
       "repeatable": true,
