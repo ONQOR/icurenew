@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Logo = ({ button, locale }) => {
   return (
     <Link href={`${delve(button, 'href')}?lang=${locale || 'en'}`}>
-      <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <a className="nav__logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

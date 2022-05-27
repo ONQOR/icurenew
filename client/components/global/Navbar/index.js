@@ -3,27 +3,42 @@ import Nav from './nav';
 import Cta from './cta';
 import LocalSwitch from './localSwitch';
 import Logo from './logo'
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-const Navigation = ({ navigation, pageData, type, logo, title  }) => {
+const Navigation = ({ navigation, pageData  }) => {
+  const [showMenu, setShowMenu] = useState(false)
+  
   return (
     <header className="nav">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <div className="container center">
         <Logo />
-        {/* <h2>{delve(navigation, 'title')}</h2> */}
-        <Nav
-          links={delve(navigation, 'links')}
-          locale={delve(pageData, 'attributes.locale')}
-        />
-
-        {delve(navigation, 'rightButton') && (
-          <div className="flex">
-            <Cta
-              href={delve(navigation, 'rightButton.href')}
-              target={delve(navigation, 'rightButton.target')}
-              label={delve(navigation, 'rightButton.label')}
+        <div className={showMenu === true ? "active default" : "desk default"}>
+          <div>
+            <Nav
+              links={delve(navigation, 'links')}
+              locale={delve(pageData, 'attributes.locale')}
             />
           </div>
-        )}
+          <div>
+            {delve(navigation, 'rightButton') && (
+              <div className="flex">
+                <Cta
+                  href={delve(navigation, 'rightButton.href')}
+                  target={delve(navigation, 'rightButton.target')}
+                  label={delve(navigation, 'rightButton.label')}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+       
+        <FontAwesomeIcon
+          icon={faBars}
+          onClick={() => setShowMenu(!showMenu)}
+          className='nav__hamburger'
+        />
       </div>
     </header>
   );
