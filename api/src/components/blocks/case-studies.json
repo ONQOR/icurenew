@@ -28,6 +28,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
     }
   }
 }

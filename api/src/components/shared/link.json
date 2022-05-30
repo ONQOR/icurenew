@@ -26,12 +26,15 @@
       "default": false,
       "required": false
     },
-    "hasChildren": {
-      "type": "boolean",
-      "default": false
-    },
-    "isChild": {
-      "type": "boolean"
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

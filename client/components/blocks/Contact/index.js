@@ -1,14 +1,14 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Contact = ({ image }) => {
+const Contact = ({ image, title, text }) => {
 
   return (
     <section className="contact">
         <div className="container sb">
             <div className="contact__left">
-                <h2>Get In Contact</h2>
-                <p>Book your place/find out more information about the lean launch/ICURe Main/post programme support</p>
+                <h2>{title}</h2>
+                <p>{text}</p>
                 <div>
                     <label>Name</label>
                     <input></input>
