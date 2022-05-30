@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_timelines",
+  "info": {
+    "displayName": "timeline",
+    "icon": "at"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

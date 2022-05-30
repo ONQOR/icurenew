@@ -2,12 +2,18 @@
   "collectionName": "components_blocks_timelines",
   "info": {
     "displayName": "Timeline",
-    "icon": "arrow-left"
+    "icon": "arrow-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.timeline"
     }
   }
 }

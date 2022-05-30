@@ -2,7 +2,7 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
 const HeroAlt = ({ image, cards, title, text, caption }) => {
-
+console.log(cards)
    return (
     <section className="hero-alt">
     <div className="container sb">
