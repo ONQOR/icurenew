@@ -1,7 +1,8 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
 import Nav from './nav';
-import Columns from './columns';
+import Columns from './columns'; 
+import LogoDark from './logo-dark';
 
 const Footer = ({ pageData, navigation, image, footer }) => {
   return (
@@ -9,9 +10,7 @@ const Footer = ({ pageData, navigation, image, footer }) => {
         <div className="footer__container">
           {/* news col 1 */}
           <div className="footer__news">
-              <img
-                src={getStrapiMedia(delve(image, "data.attributes.url"))}
-              />
+              <LogoDark />
 							<p>	Subscribe to ICURe Newsletter</p>
               <p>Sign up to our newsletter to stay updated with everything ICURe related!</p>
               <label>Email Address</label>

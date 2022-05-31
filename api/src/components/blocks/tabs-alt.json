@@ -2,12 +2,21 @@
   "collectionName": "components_blocks_tabs_alts",
   "info": {
     "displayName": "TabsAlt",
-    "icon": "arrow-circle-left"
+    "icon": "arrow-circle-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tabcontent"
     }
   }
 }

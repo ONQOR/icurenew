@@ -2,7 +2,7 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import { useState } from 'react';
 
-const TabsAlt = ({ TabsAlt, title, text }) => {
+const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
 
   const [toggleState, setToggleState] = useState(1)
   const handleClick = (index) => {
@@ -14,8 +14,8 @@ const TabsAlt = ({ TabsAlt, title, text }) => {
     <section className="tabs-alt">
       <div className="container sb center">
         <div className="tabs-alt__title">
-          <span>How It Works</span>
-          <h2>Your Journey starts with ICURe</h2>
+          <span>{caption}</span>
+          <h2>{title}</h2>
         </div>
         {/* tab buttons */}
           <div onClick={() => handleClick(1)} className={toggleState === 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
@@ -39,42 +39,23 @@ const TabsAlt = ({ TabsAlt, title, text }) => {
           </div>
 
         {/* tab content */}
-          
-        <div className={toggleState === 1 ? "tabs__content--active" : "tabs__content"}>
+                
+        {cards &&
+        cards.map((item, index) => (
+        <div className={toggleState === index + 1 ? "tabs__content--active" : "tabs__content"}>
           <div className="tabs__content__left">
-            <h2>Is ICURe right for you?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <h2>{delve(item, "contentTitle")}</h2>
+            <p>{delve(item, "contentText")}</p>
+            <button>Get in Contact</button>
           </div>     
           <div className="tabs__content__right">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg"
+              src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+              alt={delve(item, "image.data.attributes.alternativeText")}
             />
           </div>
         </div>
-
-        <div className={toggleState === 2 ? "tabs__content--active" : "tabs__content"}>
-          <div className="tabs__content__left">
-            <h2>Is ICURe right for you?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-          </div>     
-          <div className="tabs__content__right">
-            <img
-              src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"
-            />
-          </div>
-        </div>
-
-        <div className={toggleState === 3 ? "tabs__content--active" : "tabs__content"}>
-          <div className="tabs__content__left">
-            <h2>Is ICURe right for you?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-          </div>     
-          <div className="tabs__content__right">
-            <img
-              src="https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_1280.jpg"
-            />
-          </div>
-        </div>
+        ))}
           
       </div> 
     </section>

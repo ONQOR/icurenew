@@ -1,11 +1,17 @@
 import delve from 'dlv';
-import { useState } from 'react';
 import { getStrapiMedia } from '../../../utils';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useLoadScript } from '@react-google-maps/api';
-import Map from "./maps";
+import { useState, useMemo, useCallback, useRef } from "react";
+import {
+    GoogleMap,
+    Marker,
+    DirectionsRenderer,
+    Circle,
+    MarkerClusterer,
+} from "@react-google-maps/api";
 
 const Maps = ({ image, caption, value, text, subTitle, title }) => {
   const settings = {
@@ -17,6 +23,8 @@ const Maps = ({ image, caption, value, text, subTitle, title }) => {
     slidesToScroll: 1,
     className: 'clients__slider'
   };
+
+  const center = useMemo(() => ({lat: 43, lng: -80}), [])
 
   const { isLoaded } = useLoadScript ({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
@@ -34,13 +42,16 @@ const Maps = ({ image, caption, value, text, subTitle, title }) => {
       </div>
       {/* title end */}
 
-      {/* map start  */}
-        <Map />
-      {/* map end */}
-
       <div className="maps__container">
-        <div className="container">
+      {/* map start  */}
+        <div className="map">
+          <GoogleMap
+            zoom={10}
+            center={center}
+            mapContainerClassName="map-container"
+          >
           {/* user box start */}
+          <div></div>
           <div className="maps__box">   
             <div className="maps__box__boxbox">
               <img
@@ -57,8 +68,10 @@ const Maps = ({ image, caption, value, text, subTitle, title }) => {
             <button>Visible Website</button>
           </div>
           {/* user box end */}
-        </div> 
-      </div>
+          </GoogleMap>
+        </div>
+      {/* map end */}
+      </div> 
 
       {/* slider start */}
       <div className='clients'>

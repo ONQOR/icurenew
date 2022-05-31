@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_tabcontents",
+  "info": {
+    "displayName": "tabcontent",
+    "icon": "bed",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contentTitle": {
+      "type": "string"
+    },
+    "contentText": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

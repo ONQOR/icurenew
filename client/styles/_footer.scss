@@ -56,8 +56,14 @@
             text-align: center;
             margin: 0 auto 48px;
         }
-        span {
-            margin-bottom: 20px;
+        &__logo {
+            align-items: center;
+            display: flex;
+            svg {
+                margin: 0 0 45px 0;
+                z-index: 3;
+                height: 44px;
+            }
         }
         p {
             margin-bottom: 20px;
