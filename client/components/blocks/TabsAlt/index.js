@@ -18,26 +18,17 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
           <h2>{title}</h2>
         </div>
         {/* tab buttons */}
-          <div onClick={() => handleClick(1)} className={toggleState === 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
+        {cards &&
+        cards.map((item, index) => (
+          <div onClick={() => handleClick(index + 1)} className={toggleState === index + 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
             <img
+              src={getStrapiMedia(delve(item, "images.data.attributes.url"))}
+              alt={delve(item, "images.data.attributes.alternativeText")}
             />
-            <h3>LLP</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
+            <h3>{delve(item, "title")}</h3>
+            <p>{delve(item, "text")}</p>
           </div>
-          <div onClick={() => handleClick(2)} className={toggleState === 2 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
-            <img
-            />
-            <h3>LLP</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
-          </div>
-          
-          <div onClick={() => handleClick(3)} className={toggleState === 3 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
-            <img
-            />
-            <h3>LLP</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
-          </div>
-
+        ))}
         {/* tab content */}
                 
         {cards &&
