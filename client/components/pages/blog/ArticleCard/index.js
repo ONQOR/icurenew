@@ -1,6 +1,8 @@
 import delve from "dlv";
 import Link from "next/link";
 import { getStrapiMedia } from "../../../../utils";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const ArticleCard = ({ slug, title, category, seo, locale, image }) => {
   const description = delve(seo, "metaDescription");
@@ -20,9 +22,11 @@ const ArticleCard = ({ slug, title, category, seo, locale, image }) => {
           <div className='case--hover'>
               <h5> {title}</h5>
               <span>caption</span>
-              <span className='case--hover__time'>6 min</span>
-            </div>
+              <span className='case--hover__time'>7 min</span>
+              <FontAwesomeIcon icon={faArrowRight} />
           </div>
+
+        </div>
       <p className="">{description}</p>
       </a>
     </Link>

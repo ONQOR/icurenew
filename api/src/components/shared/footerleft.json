@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_footerlefts",
+  "info": {
+    "displayName": "footerleft",
+    "icon": "bacon"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

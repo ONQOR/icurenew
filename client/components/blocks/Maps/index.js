@@ -13,7 +13,8 @@ import {
     MarkerClusterer,
 } from "@react-google-maps/api";
 
-const Maps = ({ image, caption, value, text, subTitle, title }) => {
+const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
+  // slider js
   const settings = {
     dots: true,
     infinite: true,
@@ -24,12 +25,23 @@ const Maps = ({ image, caption, value, text, subTitle, title }) => {
     className: 'clients__slider'
   };
 
+  // map js
   const center = useMemo(() => ({lat: 43, lng: -80}), [])
-
   const { isLoaded } = useLoadScript ({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
   });
+
+  // map location onclick slider content onclick
+  const [mapState, setMap] = useState({lat: 43, lng: -80})
+  const [slideState, setSlide] = useState(1)
+  const mapClick = (location, count) => {
+    setMap(location)
+    setSlide(count)
+    console.log(mapState)
+    console.log(slideState)
+  }
+
 
   if (!isLoaded) 
   return <div>Loading...</div>;
@@ -47,27 +59,29 @@ const Maps = ({ image, caption, value, text, subTitle, title }) => {
         <div className="map">
           <GoogleMap
             zoom={10}
-            center={center}
+            center={mapState}
             mapContainerClassName="map-container"
           >
-          {/* user box start */}
-          <div></div>
-          <div className="maps__box">   
-            <div className="maps__box__boxbox">
-              <img
-                  src={getStrapiMedia(delve(image, "data.attributes.url"))}
-                  alt={delve(image, "data.attributes.alternativeText")}
-                  className="maps__box__boxbox__circle"
-              />
-              <div className="maps__box__boxbox__text">
-                <h3>{caption}</h3>
-                <span>{value}</span>
-              </div>
-            </div>
-            <p>{text}</p>
-            <button>Visible Website</button>
-          </div>
-          {/* user box end */}
+            {/* user box start */}
+            {cards &&
+              cards.map((item, index) => (
+                <div className={slideState === index + 1 ? "active maps__box" : "maps__box"}>   
+                  <div className="maps__box__boxbox">
+                    <img
+                        src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+                        alt={delve(item, "image.data.attributes.alternativeText")}
+                        className="maps__box__boxbox__circle"
+                    />
+                    <div className="maps__box__boxbox__text">
+                      <h3>{delve(item, "boxName")}</h3>
+                      <span>{delve(item, "boxCaption")}</span>
+                    </div>
+                  </div>
+                  <p>{delve(item, "boxText")}</p>
+                  <button src={delve(item, "btnUrl")}>{delve(item, "btnText")}</button>
+                </div>
+            ))}
+            {/* user box end */}
           </GoogleMap>
         </div>
       {/* map end */}
@@ -77,11 +91,17 @@ const Maps = ({ image, caption, value, text, subTitle, title }) => {
       <div className='clients'>
         <div className="container center">
           <Slider {...settings}>
-            <img />
-            <img />
-            <img />
-            <img />
-            <img />
+            {cards &&
+              cards.map((item, index) => (
+                <img 
+                  onClick={() => mapClick({lat: delve(item, "lat"), lng: delve(item, "lng")}, index + 1)} 
+                  key={`client-${index}`}
+                  src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+                  alt={delve(item, "image.data.attributes.alternativeText")}
+                  className={mapState === index + 1 ? "active" : ""}
+                  
+                />
+            ))}
           </Slider>
         </div> 
       </div>

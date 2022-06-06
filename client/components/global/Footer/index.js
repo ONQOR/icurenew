@@ -3,16 +3,21 @@ import { getStrapiMedia } from '../../../utils';
 import Nav from './nav';
 import Columns from './columns'; 
 import LogoDark from './logo-dark';
+import Socials from './socials';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-const Footer = ({ pageData, navigation, image, footer }) => {
+const Footer = ({ pageData, navigation, footer, caption, text}) => {  
+
   return (
 			<footer className="footer">	 
         <div className="footer__container">
-          {/* news col 1 */}
+          {/* global col 1 */}
           <div className="footer__news">
               <LogoDark />
-							<p>	Subscribe to ICURe Newsletter</p>
-              <p>Sign up to our newsletter to stay updated with everything ICURe related!</p>
+							<p>{caption}</p>
+              <p>{text}</p>
               <label>Email Address</label>
               <div>
                 <input type="email" placeholder="email"/>
@@ -40,15 +45,34 @@ const Footer = ({ pageData, navigation, image, footer }) => {
           {/* showcases col 4 */}
           <div className="footer__socials">
             <h4>Social</h4>
-            <ul className="menu_footer_showcases">
-              <li>hello </li>
+            <ul className="menu_footer_socials">
+              <Socials />
+              <div>
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                />
+                <FontAwesomeIcon icon="fa-brands fa-twitter" />
+                <p>twitter</p>
+              </div>
+              <div>
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                />
+                <p>linkedin</p>
+              </div>
+              <div>
+                <FontAwesomeIcon
+                  icon={faFacebookF}
+                />
+                <p>facebook</p>
+              </div>
             </ul>
 					</div>
         </div>
           {/* terms */}
           <div className="footer__terms">
               <div className="container sb">
-                <p className="footer__terms__date">© ImpactFlow 2022</p>
+                <p className="footer__terms__date">© iCURe 2022</p>
                 <p className="footer__terms__terms"><a href="<?php echo get_field('terms', 'option'); ?>" target="blank">Terms of Service</a></p>
               </div>
             </div>

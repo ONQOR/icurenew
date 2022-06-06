@@ -6,7 +6,7 @@ const Text = ({ text }) => {
   return (
     <section className="text">
       <div className="container">
-        <p>{text}</p>
+        {text}
       </div> 
     </section>
   );
