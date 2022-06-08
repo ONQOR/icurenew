@@ -1,4 +1,5 @@
 .maps {
+    overflow-x: hidden;
     .map-container {
         width: 100%;
         height: 700px;
@@ -6,6 +7,10 @@
         position: relative;
         align-items: center;
         justify-content: end;
+        @media screen and (max-width: $tablet) {
+            justify-content: center !important;
+            align-items: center !important;
+        }   
     }
     .box__container {
         max-width: 1164px;
@@ -24,10 +29,30 @@
         .container {
             z-index: 3;
             overflow: visible;
-            justify-content: end;           
+            justify-content: end;        
         }
     }
     &__box {
+        &.desk {
+            @media screen and (max-width: $tablet) {
+                display: none;
+            }
+        }
+        &.mob {
+            display: none;
+            @media screen and (max-width: $tablet) {
+                display: block;
+                position: relative;
+                max-width: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &.not-active {
+            display: none!important;
+        }
         max-width: 550px;
         background: radial-gradient(circle at right bottom, rgba(136, 66, 189, 1) 0%, rgba(52, 27, 97, 1) 100%);
         width: 100%;
@@ -38,6 +63,10 @@
         right: 10%;
         opacity: 0;
         transition: ease .7s;
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            right: unset;
+        }
         &.active {
             opacity: 1;
             transition: ease .7s;
@@ -64,6 +93,9 @@
             }
         }
         &__boxbox {
+            @media screen and (max-width: $tablet) {
+                width: 100%
+            }
             display: flex;
             align-items: center;
             padding: 0 0 22px 0;

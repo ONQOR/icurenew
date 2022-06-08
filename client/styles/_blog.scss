@@ -24,15 +24,15 @@
         margin: 48px 0 0;
         z-index: 2; 
         position: relative;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $tablet) {
             width: 48%;
         }
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: $mobile) {
             width: 100%;
             text-align: center;
         }
         .case {
-            width: fit-content;
+            width: 100%;
             height: 270px;
             position: relative;
             margin: 0 0 24px 0;

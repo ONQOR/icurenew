@@ -1,6 +1,7 @@
 import ArticleCard from '../../pages/blog/ArticleCard';
 
 const RelatedArticles = ({ articles, text, title, caption }) => {
+
   return (
       <div className="related-articles">
         <div className="container center related-articles__articles sb">
@@ -9,7 +10,7 @@ const RelatedArticles = ({ articles, text, title, caption }) => {
             <h2>{title}</h2>
             <p>{text}</p>
           </div>
-    
+
           {articles &&
             articles.data.map((article, index) => (
               <ArticleCard {...article.attributes} key={index} />

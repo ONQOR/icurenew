@@ -1,5 +1,6 @@
 .contact {
     padding: 100px 0;
+    overflow-x: hidden;
     &__right {
         width: 45%;
         display: flex;
@@ -7,13 +8,13 @@
         img {
             max-width: 170%;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $tablet) {
             display: none;
         }
     }
     &__left {
         width: 45%;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $tablet) {
             width: 100%;
             max-width: 350px;
             margin: auto;
@@ -33,6 +34,9 @@
         }
         .submit {
             margin: 40px 0;
+            @media screen and (max-width: $tablet) {
+                margin: 40px auto;
+            }
         }
         div {
             display: none;

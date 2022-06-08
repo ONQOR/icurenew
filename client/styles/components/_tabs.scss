@@ -25,7 +25,7 @@
             border-radius: 4px;
             width: inherit;
             max-width: 800px;
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: $mobile) {
                 flex-direction: column;
             }
         }
@@ -61,7 +61,7 @@
         &__left {
             width: 50%;
             text-align: left;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $tablet) {
                 width: 100%;
                 margin-bottom:  30px;
                 text-align: center;
@@ -101,7 +101,7 @@
         }
         &__right {
             width: 50%;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $tablet) {
                width: 100%;
             }
             img {

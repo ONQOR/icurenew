@@ -4,7 +4,7 @@ import { getStrapiMedia } from "../../../../utils";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-const ArticleCard = ({ slug, title, category, seo, locale, image }) => {
+const ArticleCard = ({ slug, title, seo, locale, image }) => {
   const description = delve(seo, "metaDescription");
 
   return (

@@ -8,7 +8,7 @@
     }
     img {
         height: 118px;
-        width: 88% !important;
+        width: fit-content !important;
         background-color: $purpleLight;
         transition: ease .2s;
         &:hover {

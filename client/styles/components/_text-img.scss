@@ -1,18 +1,19 @@
 .textImg {
     @include padding;
+    overflow-x: hidden;
     &__left {
         width: 50%;
         h2 {
             margin: 0 0 20px 0;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $tablet) {
             width: 100%;
             text-align: center;
         }
     }
     &__right {
         width: 40%;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $tablet) {
             width: 100%;
         }
         img {

@@ -22,7 +22,27 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
     loop: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    className: 'clients__slider'
+    className: 'clients__slider',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
   };
 
   // map js
@@ -65,7 +85,7 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
             {/* user box start */}
             {cards &&
               cards.map((item, index) => (
-                <div className={slideState === index + 1 ? "active maps__box" : "maps__box"}>   
+                <div className={slideState === index + 1 ? "active maps__box desk" : "maps__box desk not-active"}>   
                   <div className="maps__box__boxbox">
                     <img
                         src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
@@ -83,6 +103,26 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
             ))}
             {/* user box end */}
           </GoogleMap>
+          {/* user box start */}
+            {cards &&
+              cards.map((item, index) => (
+                <div className={slideState === index + 1 ? "active maps__box mob" : "maps__box mob not-active"}>   
+                  <div className="maps__box__boxbox">
+                    <img
+                        src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+                        alt={delve(item, "image.data.attributes.alternativeText")}
+                        className="maps__box__boxbox__circle"
+                    />
+                    <div className="maps__box__boxbox__text">
+                      <h3>{delve(item, "boxName")}</h3>
+                      <span>{delve(item, "boxCaption")}</span>
+                    </div>
+                  </div>
+                  <p>{delve(item, "boxText")}</p>
+                  <button src={delve(item, "btnUrl")}>{delve(item, "btnText")}</button>
+                </div>
+            ))}
+            {/* user box end */}
         </div>
       {/* map end */}
       </div> 

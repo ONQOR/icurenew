@@ -1,8 +1,9 @@
 import App from "next/app";
+import delve from "dlv";
 import ErrorPage from "next/error";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "tailwindcss/tailwind.css";
-import { getStrapiURL } from "../utils";
+import { getStrapiURL, handleRedirection } from "../utils";
 import { getLocalizedParams } from "../utils/localize";
 import styles from  '../styles/styles.scss'
 
@@ -32,7 +33,7 @@ MyApp.getInitialProps = async (appContext) => {
     const res = await fetch(
       getStrapiURL(
         `/global?populate[navigation][populate]=*&populate[footer][populate][footerColumns][populate]=*&locale=${locale}`
-      )
+      ),
     );
     const globalData = await res.json();
     const globalDataAttributes = globalData.data.attributes;

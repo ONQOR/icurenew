@@ -1,6 +1,6 @@
 .cohort {
     padding: 100px 0;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet) {
         .container {
             justify-content: center;
         }
@@ -24,7 +24,7 @@
         justify-content: space-between;
         padding: 45px;
         margin: 55px 0 0 0;
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: $mobile) {
             justify-content: center;
         }
         &:hover {
@@ -45,7 +45,7 @@
             width: max-content;
             display: flex;
             flex-direction: column;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $tablet) {
                 display: none;
             }
             .subTitle {
@@ -60,7 +60,7 @@
             }
             &-mob {
                 display: none;
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: $tablet) {
                     display: flex;
                 }
                 display: flex;
@@ -80,12 +80,12 @@
         .text {
             width: max-content;
             padding: 0;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $tablet) {
                 display: none;
             }
             &-mob {
                 display: none;
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: $tablet) {
                     display: block;
                     h3 {
                         font-size: 35px;
@@ -118,7 +118,7 @@
                 font-size: 18px;
                 border-radius: 4px;
                 transition: ease 0.2s;
-                @media screen and (max-width: 375px) {
+                @media screen and (max-width: $mobile) {
                     margin: 70px 0 0 0;
                 }
                 // &:hover {

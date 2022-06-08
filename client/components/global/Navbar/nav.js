@@ -1,19 +1,20 @@
 import delve from 'dlv';
 import Link from 'next/link';
+import { useRouter } from "next/router";
 
 const Nav = ({ links, locale }) => {
+  const router = useRouter();
+  console.log(router)
   return (
-    <nav className="nav__nav">
+    <nav className={router.asPath.startsWith("/blog") ? "nav__nav current-case ": "nav__nav"} >
       {links.map((link, index) => ( 
         <Link
           href={`${delve(link, 'href')}?lang=${locale || 'en'}`}
           key={`navigationLink-${index}`}
-          style={({ isActive }) => ({
-            color: isActive ? '#fff' : '#545e6f',
-            background: isActive ? '#7600dc' : '#f0f0f0',
-          })}
         >
-          <a className="md:mr-10 hover:text-gray-900" key={`link-${index}`}>
+          <a 
+            className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current" : ""} 
+            key={`link-${index}`}>
             {delve(link, 'label')}
           </a>
         </Link>

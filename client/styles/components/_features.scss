@@ -2,17 +2,17 @@
     @include padding;
     h2 {
         width: 100%;
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: $mobile) {
             text-align: center;
         }
     }
     &__item {
         width: 23.5%;
         margin: 48px 0 0;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $tablet) {
             width: 48%;
         }
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: $mobile) {
             width: 100%;
             text-align: center;
         }

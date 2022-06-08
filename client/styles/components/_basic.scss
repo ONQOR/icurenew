@@ -2,7 +2,7 @@
     @include padding;
     .container {
         flex-direction: column;
-        max-width: 768px;
+        max-width: $tablet;
     }
     img {
         width: 100%;
