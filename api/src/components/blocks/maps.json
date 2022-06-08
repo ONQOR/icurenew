@@ -32,6 +32,11 @@
     },
     "subTitle": {
       "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.clients"
     }
   }
 }

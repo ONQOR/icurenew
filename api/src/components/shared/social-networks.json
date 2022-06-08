@@ -2,13 +2,24 @@
   "collectionName": "components_shared_social_network",
   "info": {
     "displayName": "socialNetwork",
-    "icon": "network-wired"
+    "icon": "network-wired",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "url": {
       "type": "string",
       "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

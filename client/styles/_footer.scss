@@ -59,6 +59,9 @@
         &__logo {
             align-items: center;
             display: flex;
+            @media screen and (max-width: 768px) {
+               justify-content: center;
+            }
             svg {
                 margin: 0 0 45px 0;
                 z-index: 3;
@@ -110,10 +113,10 @@
             text-align: center;
             margin: 48px 0;
         }
-        p {
+        p, a {
             margin: 0;
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 400;
         }
     }
     // column 4
@@ -123,10 +126,28 @@
             width: 100%;
             text-align: center;
         }
-        p {
-            font-size: 18px;
-            font-weight: 600;
+        div {
+            display: flex;
+            align-items: center;
+            margin: 0 0 10px 0;
+            @media screen and (max-width: 768px) {
+                justify-content: center;
+            }
+            svg {
+                color: $purple;
+                border-radius: 50%;
+                border: 1px solid $purple;
+                padding: 10px;
+                width: 16px;
+                height: 16px;
+            }
         }
+        p {
+            margin: 0 0 0 10px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
     }
 }
 

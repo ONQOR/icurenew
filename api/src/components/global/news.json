@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_global_news",
+  "info": {
+    "displayName": "News",
+    "icon": "backspace"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

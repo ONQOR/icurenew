@@ -28,15 +28,61 @@
         p {
             font-size: 18px;
         }
-        div {
-            display: flex;
-            flex-direction: column;
-        }
         label {
             margin: 30px 0 10px 0;
         }
         .submit {
             margin: 40px 0;
+        }
+        div {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            &.active {
+                display: flex !important;
+            }
+            svg {
+                color: white;
+                background-color: $purple;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px; 
+                padding: 30px;
+                margin: 50px 0;
+            }
+            h3 {
+                margin: 0 0 16px 0;
+            }
+            p {
+                max-width: 400px;
+            }
+            button {
+                background-color: $purple;
+                padding: 12px 48px;
+                width: fit-content;
+                color: white;
+                font-size: 16px;
+                border-radius: 4px;
+                transition: ease 0.2s;
+                margin: 24px 0 0 0;
+                border: 1px solid white;
+                &:hover {
+                    cursor: pointer;
+                    background-color: white;
+                    color: $purple;
+                    transition: ease 0.2s;
+                    border: 1px solid $purple;
+                }
+            }
+        }
+        form {
+            flex-direction: column;
+            display: none;
+            &.active {
+                display: flex !important;
+            }
         }
     }
 }

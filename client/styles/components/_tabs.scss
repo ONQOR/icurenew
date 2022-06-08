@@ -61,12 +61,17 @@
         &__left {
             width: 50%;
             text-align: left;
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 768px) {
                 width: 100%;
                 margin-bottom:  30px;
                 text-align: center;
                 p {
                     margin: 24px 0 0 0 !important;
+                }
+                button {
+                    position: relative !important;
+                    bottom: 0 !important;
+                    margin-top: 30px;
                 }
             }
             h2 {
@@ -96,7 +101,7 @@
         }
         &__right {
             width: 50%;
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 768px) {
                width: 100%;
             }
             img {

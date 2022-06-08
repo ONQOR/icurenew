@@ -1,7 +1,31 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = ({ image, title, text }) => {
+  const form = useRef();
+  const [success, setSuccess] = useState(1);
+  const [errmsg, setErrmsg] = useState("");
+
+  const handleClick = (i) => {
+    setSuccess(i)
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_0fofleh', 'template_oaxvorw', form.current, 'M6vPRuNldmA6uFaF3')
+      .then((result) => {
+          console.log(result.text);
+          setSuccess(2);
+      }, (error) => {
+          console.log(error.text);
+          setErrmsg(`${error.text} happened`);
+      });
+      e.target.reset();
+  };
 
   return (
     <section className="contact">
@@ -9,23 +33,39 @@ const Contact = ({ image, title, text }) => {
             <div className="contact__left">
                 <h2>{title}</h2>
                 <p>{text}</p>
-                <div>
+                {/* form */}
+                <form 
+                  ref={form} 
+                  onSubmit={sendEmail}
+                  className={success === 1 ? "active" : ""}
+                  >
                     <label>Name</label>
-                    <input></input>
+                    <input required="required" type="text" name="name"></input>
 
                     <label>Email</label>
-                    <input></input>
+                    <input required="required" type="email" name="email"></input>
 
                     <label>Enquiry Type</label>
-                    <input></input>
+                    <input required="required" type="text" name="enquiry"></input>
 
                     <label>Background</label>
-                    <input></input>
+                    <input required="required" type="text" name="background"></input>
 
                     <label>Message</label>
-                    <textarea></textarea>
-
+                    <textarea name="message"></textarea>
+                    <h4>{errmsg}</h4>
                     <input className="submit" type="submit"></input>
+                </form>
+                {/* success */}
+                <div className={success === 2 ? "active" : ""}>
+                  <h3>Success!</h3>
+                  <p>Your message has been received,
+                  We’ll respond within 7 working days!</p>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                  />
+                  <p>Any other questions?</p>
+                  <button onClick={() => handleClick(1)}>Send Another Message</button>
                 </div>
             </div>
             {/* right */}

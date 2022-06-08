@@ -10,6 +10,14 @@
         height: 118px;
         width: 88% !important;
         background-color: $purpleLight;
+        transition: ease .2s;
+        &:hover {
+            cursor: pointer;
+        }
+        &.active {
+            background-color: $purple;
+            transition: ease .2s;
+        }
     }
     &__slider {
         margin-left: auto;
