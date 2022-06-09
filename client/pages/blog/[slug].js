@@ -30,9 +30,9 @@ export async function getServerSideProps(context) {
     : "";
   const res = await fetch(
     getStrapiURL(
-      `/articles?filters[slug]=${context.params.slug}&locale=${locale}${preview}&populate=localizations,image,author.picture,blocks.articles.image,blocks.faq,blocks.header`
-    )
-  );
+      `/articles?filters[slug]=${context.params.slug}&locale=${locale}${preview}&populate[blocks][populate]=*`
+    ) 
+  ); 
   const json = await res.json();
 
   if (!json.data.length) {

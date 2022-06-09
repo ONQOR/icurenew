@@ -134,7 +134,17 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
                     </div>
                   </div>
                   <p>{delve(item, "boxText")}</p>
-                  <button src={delve(item, "btnUrl")}>{delve(item, "btnText")}</button>
+                  <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
+                    <a>
+                      <button>
+                        {delve(item, "btnText")}
+                        <FontAwesomeIcon 
+                          icon={faArrowUpRightFromSquare} 
+                          className="arrow-square"  
+                        />
+                      </button> 
+                    </a>
+                  </Link>
                 </div>
             ))}
             {/* user box end */}

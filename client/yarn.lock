@@ -2376,6 +2376,11 @@ next@latest:
     vm-browserify "1.1.2"
     watchpack "2.1.1"
 
+nextjs-antd-breadcrumbs@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/nextjs-antd-breadcrumbs/-/nextjs-antd-breadcrumbs-1.2.2.tgz#4afd59ef48fb5b72327a72fa4b4b6b81ed77005d"
+  integrity sha512-DN4g6UUBiggVF2PrmEMqMjAoDYL59TZ1f/WKSORuGUK7KRpiRRdEoOcLbLVGYEO1feaXKT157Kqze5ZTa8Io9Q==
+
 node-emoji@^1.8.1:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.10.0.tgz#8886abd25d9c7bb61802a658523d1f8d2a89b2da"

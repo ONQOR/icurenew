@@ -1,8 +1,8 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import Link from 'next/link';
 
-const HeroAlt = ({ image, cards, title, text, caption }) => {
-console.log(cards)
+const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText }) => {
    return (
     <section className="hero-alt">
     <div className="container sb">
@@ -24,7 +24,13 @@ console.log(cards)
 
         </div>
         {/* left button */}
-        <button>Visit website</button>
+          <Link href={btnUrl} passHref={true}>
+              <a>
+                <button>
+                  {btnText}
+                </button> 
+              </a>
+          </Link>
       </div>
 
       {/* right */}
