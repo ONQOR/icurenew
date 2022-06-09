@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
 
 const Contact = ({ image, title, text }) => {
   const form = useRef();
@@ -53,6 +54,13 @@ const Contact = ({ image, title, text }) => {
 
                     <label>Message</label>
                     <textarea name="message"></textarea>
+
+                    <label className='radio'><input type="radio"></input>I accept ICURe's&nbsp; 
+                      <Link href="/privacy" passHref={true}>
+                        <a>terms and conditions</a>
+                      </Link>
+                    </label>
+                    
                     <h4>{errmsg}</h4>
                     <input className="submit" type="submit"></input>
                 </form>

@@ -18,6 +18,9 @@
     },
     "caption": {
       "type": "string"
+    },
+    "btnUrl": {
+      "type": "string"
     }
   }
 }

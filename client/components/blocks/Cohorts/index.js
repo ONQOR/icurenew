@@ -1,4 +1,5 @@
 import delve from 'dlv';
+import Link from 'next/link';
 
 const Cohort = ({ title, newer, cards }) => {
 
@@ -31,7 +32,9 @@ const Cohort = ({ title, newer, cards }) => {
               </div>
             </div>
             <div className="btn">
-              <button>Click to Apply</button>
+              <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
+                <a><button>Click to Apply</button></a>
+              </Link>
             </div>
           </div>
         ))}

@@ -53,6 +53,9 @@
         &.not-active {
             display: none!important;
         }
+        .arrow-square {
+            margin-left: 10px; 
+        }
         max-width: 550px;
         background: radial-gradient(circle at right bottom, rgba(136, 66, 189, 1) 0%, rgba(52, 27, 97, 1) 100%);
         width: 100%;

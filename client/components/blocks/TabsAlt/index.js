@@ -1,6 +1,7 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
 
@@ -36,7 +37,9 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
           <div className="tabs__content__left">
             <h2>{delve(item, "contentTitle")}</h2>
             <p>{delve(item, "contentText")}</p>
-            <button>Get in Contact</button>
+            <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
+              <a><button>Get in Contact</button></a>
+            </Link>
           </div>     
           <div className="tabs__content__right">
             <img

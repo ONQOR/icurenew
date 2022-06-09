@@ -4,7 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useLoadScript } from '@react-google-maps/api';
+import Link from 'next/link';
 import { useState, useMemo, useCallback, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import {
     GoogleMap,
     Marker,
@@ -84,8 +87,9 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
           >
             {/* user box start */}
             {cards &&
-              cards.map((item, index) => (
-                <div className={slideState === index + 1 ? "active maps__box desk" : "maps__box desk not-active"}>   
+              cards.map((item, index) => {
+                return (
+                  <div className={slideState === index + 1 ? "active maps__box desk" : "maps__box desk not-active"}>   
                   <div className="maps__box__boxbox">
                     <img
                         src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
@@ -98,9 +102,20 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
                     </div>
                   </div>
                   <p>{delve(item, "boxText")}</p>
-                  <button src={delve(item, "btnUrl")}>{delve(item, "btnText")}</button>
+                  <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
+                    <a>
+                      <button>
+                        {delve(item, "btnText")}
+                        <FontAwesomeIcon 
+                          icon={faArrowUpRightFromSquare} 
+                          className="arrow-square"  
+                        />
+                      </button> 
+                    </a>
+                  </Link>
                 </div>
-            ))}
+                )
+              })}
             {/* user box end */}
           </GoogleMap>
           {/* user box start */}
@@ -138,7 +153,7 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
                   key={`client-${index}`}
                   src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
                   alt={delve(item, "image.data.attributes.alternativeText")}
-                  className={mapState === index + 1 ? "active" : ""}
+                  className={slideState === index + 1 ? "active" : "else"}
                   
                 />
             ))}

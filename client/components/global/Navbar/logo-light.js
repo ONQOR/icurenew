@@ -28,7 +28,7 @@ const Logolight = ({ button, locale, props }) => {
             x1={-23.056}
             y1={89.467}
             x2={495.016}
-            y2={-18.967}
+            y2={-18.966}
         >
             <stop
             offset={0}

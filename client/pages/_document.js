@@ -23,7 +23,7 @@ class MyDocument extends Document {
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN6W52S" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             }}
           ></noscript>
-          <script
+          {/* <script
             type="text/javascript"
             src="https://static.typebot.io/typebot-1.0.0.js"
           ></script>
@@ -31,7 +31,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `var typebot = Typebot.Chat({publishId: "faq-mj24-mnn49",buttonColor: "#e27d60",buttonIconUrl: "",loadingColors: {chatBackground: "#ffffff",bubbleBackground: "#F7F8FF",typingDots: "#303235",},proactiveMessage: {avatar: "undefined",textContent: "Contact the sales team",delay: 60000,remember: true}});`,
             }}
-          ></script>
+          ></script> */}
           <script
             type="text/javascript"
             async

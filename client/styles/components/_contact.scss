@@ -33,7 +33,7 @@
             margin: 30px 0 10px 0;
         }
         .submit {
-            margin: 40px 0;
+            margin: 20px 0;
             @media screen and (max-width: $tablet) {
                 margin: 40px auto;
             }
@@ -86,6 +86,25 @@
             display: none;
             &.active {
                 display: flex !important;
+            }
+            .radio {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                input[type="radio"] {
+                    -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+                    -moz-appearance: checkbox;    /* Firefox */
+                    -ms-appearance: checkbox;     /* not currently supported */
+                    margin-right: 10px;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $purple !important;
+                    color: $purple;
+                }
+                a {
+                    color: $purple;
+                    text-decoration: underline;
+                }
             }
         }
     }

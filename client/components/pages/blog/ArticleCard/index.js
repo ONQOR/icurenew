@@ -20,7 +20,7 @@ const ArticleCard = ({ slug, title, seo, locale, image }) => {
         <h4>{title}</h4>
         <div className='case__filter'></div>
           <div className='case--hover'>
-              <h5> {title}</h5>
+              <h5>{title}</h5>
               <span>caption</span>
               <span className='case--hover__time'>7 min</span>
               <FontAwesomeIcon icon={faArrowRight} />
