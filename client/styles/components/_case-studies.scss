@@ -6,7 +6,7 @@
     .title {
         width: 100%;
         margin: 0 0 65px 40%;
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: 1130px) {
             margin: 0 0 65px 0;
             text-align: center;
             p {
@@ -14,7 +14,7 @@
                 margin: 20px auto 0;
             }
         }
-        @media screen and (min-width: $tablet) {
+        @media screen and (min-width: 1130px) {
            p {
                display: none;
            }
@@ -26,7 +26,7 @@
     }
     .colOne {
         transform: translateY(-200px);
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: 1130px) {
             transform: translateY(0px);
             justify-content: center;
         }
@@ -35,7 +35,7 @@
         width: 27%;
         display: flex;
         flex-wrap: wrap;
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: 1130px) {
             width: 100%;
             justify-content: center;
         }
@@ -130,7 +130,7 @@
     }
     .colThree {
         width: 46%;
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: 1130px) {
             width: 100%;
             display: none;
         }

@@ -1,6 +1,9 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import Shape from '../../shared/shape'
 
 const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText }) => {
    return (
@@ -28,16 +31,21 @@ const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText }) => {
               <a>
                 <button>
                   {btnText}
+                  <FontAwesomeIcon 
+                    icon={faArrowUpRightFromSquare} 
+                    className="arrow-square"  
+                  />
                 </button> 
               </a>
           </Link>
       </div>
 
       {/* right */}
-      <div className="hero__right">
+      <div className="hero-alt__right">
         <img
           src={getStrapiMedia(delve(image, "data.attributes.url"))}
         />
+        <Shape />
       </div>
 
     </div> 

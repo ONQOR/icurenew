@@ -1,7 +1,36 @@
 .hero-alt {
-    @include padding;
+    padding: 200px 0 100px 0;
     color: black;
     background-color: white;
+    @media screen and (max-width: $tablet) {
+        overflow: hidden;
+    }
+    &__right {
+        width: 40%;
+        align-items: center;
+        display: flex;
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            justify-content: center;
+            img {
+                margin: 50px 0 0 0;
+            }
+        }
+        img {
+            max-width: 100%;
+            z-index: 5;
+        }
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+        svg {
+            position: absolute;
+            z-index: 4;
+            bottom: -10%;
+            right: -5%;
+            transform: scaleX(-1);
+        }
+    }
     &__left {
         width: 50%;
         @media screen and (max-width: $tablet) {
@@ -15,6 +44,9 @@
         span {
             color: black;
         }
+        p {
+            margin: 0 0 26px 0;
+        }
         &__points {
             display: flex;
             flex-wrap: wrap;
@@ -24,6 +56,9 @@
                 justify-content: center;
             }
             div {
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
                 margin: 24px 0;
                 width: 30%;
                 display: flex;
@@ -39,6 +74,10 @@
         font-size: 16px;
         border-radius: 4px;
         font-weight: 600;
+        margin: 26px 0 0 0;
+        .arrow-square {
+            margin-left: 10px; 
+        }
         &:hover {
             color: white;
             background-color: $purple;

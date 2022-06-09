@@ -6,7 +6,7 @@ const Quote= ({ image, title, caption, text}) => {
    return (
     <section className="quote">
         <div className="container sb center">
-            <p>{text}</p>
+            <p>"{text}"</p>
             <img
               src={getStrapiMedia(delve(image, "data.attributes.url"))}
             />

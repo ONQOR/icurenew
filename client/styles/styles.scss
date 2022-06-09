@@ -89,7 +89,7 @@ button {
 // layout
 .container {
     position: relative;
-    max-width: 1164px;
+    max-width: $laptop;
     display: flex;
     flex-wrap: wrap;
     margin: auto;

@@ -2,7 +2,7 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
 import ArticleCard from '../../pages/blog/ArticleCard';
 
-const CaseStudies = ({ articles, image, title, caption, text, blogs }) => {
+const CaseStudies = ({ articles, title, caption, text }) => {
 
   return (
     <section className="caseStudies">
@@ -10,20 +10,20 @@ const CaseStudies = ({ articles, image, title, caption, text, blogs }) => {
             <div className="title">
                 <span>{caption}</span>
                 <h1>{title}</h1>
-                <p>{text} loremermsf sdfs df sdf sdf sdf dsf ds fs df dsf dsfssfdssdfsdfsdfsd sdfsdfsdfs sdfsdf sdfsfsf f f fsfdsfs</p>
+                <p>{text} </p>
             </div>
 
             <div className="colOne">
                 {articles &&
                 articles.data.map((article, index) => (
-                <ArticleCard {...article.attributes} key={index} />
+                <ArticleCard {...article.attributes} id={article.id} key={index} />
                 ))}
             </div>
       
             <div className="colTwo">
                 {articles &&
                 articles.data.map((article, index) => (
-                <ArticleCard {...article.attributes} key={index} />
+                <ArticleCard {...article.attributes} id={article.id} key={index} />
                 ))}
             </div>
 

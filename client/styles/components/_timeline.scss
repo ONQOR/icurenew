@@ -4,7 +4,7 @@
     color: white;
     position: relative;
     .container {
-        max-width: 1164px;
+        max-width: $laptop;
         flex-direction: column;
         position: relative;
     }
@@ -15,15 +15,17 @@
     &__item:nth-child(even) {
         flex-direction: row-reverse;
         justify-content: flex-start;
+        text-align: left;
         .timeline__item__shape-horozontal {
             transform: rotate(270deg) translateY(50%) translateX(15px);
         }
     }
     &__item {
         display: flex;
-        max-width: 700px;
+        max-width: 800px;
         width: 100%;
         align-items: center;
+        text-align: right;
         &__shape {
             position: absolute;
             left: 50%;
@@ -31,7 +33,7 @@
             &-vertical {
                 background-color: white;
                 width: 15px;
-                height: 200px;
+                height: 300px;
                 border-radius: 7.5px;
                 position: absolute;
             }
@@ -45,7 +47,13 @@
             }
         }
         &__text {
-            width: max-content;
+            width: 40%;
+            @media screen and (max-width: $tablet) {
+                width: 35%;
+            }
+            @media screen and (max-width: $mobile) {
+                width: 25%;
+            }
         }
     }
 }

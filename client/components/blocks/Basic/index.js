@@ -1,5 +1,6 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import Shape from '../../shared/shape'
 
 const Basic= ({ title, text, image}) => {
 
@@ -11,8 +12,8 @@ const Basic= ({ title, text, image}) => {
             <img
               src={getStrapiMedia(delve(image, "data.attributes.url"))}
               alt={delve(image, "data.attributes.alternativeText")}
-              className="relative mx-auto shadow-lg rounded-lg w-auto"
             />
+            <Shape />
         </div> 
     </section>
    )

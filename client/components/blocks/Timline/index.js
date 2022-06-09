@@ -1,45 +1,26 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Timeline= ({ }) => {
+const Timeline= ({ cards, title }) => {
 
    return (
     <section className="timeline">
         <div className="container center">
-            <h2>Key Milestones</h2>
+            <h2>{title}</h2>
 
-            <div className='timeline__item tester'>
-                <div className='timeline__item__shape'>
-                    <div className='timeline__item__shape-vertical'></div>
-                    <div className='timeline__item__shape-horozontal'></div>
-                </div>
-                <div className='timeline__item__text'>
-                    <h4>September 2018</h4>
-                    <p>Took part in iCURe £53k</p>
-                </div>
-            </div>
-          
-            <div className='timeline__item'>
-                <div className='timeline__item__shape'>
-                    <div className='timeline__item__shape-vertical'></div>
-                    <div className='timeline__item__shape-horozontal'></div>
-                </div>
-                <div className='timeline__item__text'>
-                    <h4>September 2018</h4>
-                    <p>Took part in iCURe £53k</p>
-                </div>
-            </div>
-          
-            <div className='timeline__item tester'>
-                <div className='timeline__item__shape'>
-                    <div className='timeline__item__shape-vertical'></div>
-                    <div className='timeline__item__shape-horozontal'></div>
-                </div>
-                <div className='timeline__item__text'>
-                    <h4>September 2018</h4>
-                    <p>Took part in iCURe £53k</p>
-                </div>
-            </div>      
+                {cards &&
+                    cards.map((item, index) => (
+                    <div className='timeline__item tester'>
+                        <div className='timeline__item__shape'>
+                            <div className='timeline__item__shape-vertical'></div>
+                            <div className='timeline__item__shape-horozontal'></div>
+                        </div>
+                        <div className='timeline__item__text'>
+                            <h4>{delve(item, "title")}</h4>
+                            <p>{delve(item, "text")}</p>
+                        </div>
+                    </div>
+                ))}
             
         </div> 
     </section>
