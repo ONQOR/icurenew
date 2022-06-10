@@ -13,7 +13,7 @@
         width: 31%;
         padding: 30px;
         transition: ease 0.2s; 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile) {
             width: 100%;
         }
         &--active {
@@ -24,7 +24,7 @@
             cursor: pointer;
         }
         p {
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $tablet) {
                 display: none;
             }
         }
@@ -36,7 +36,7 @@
         h3 {
             font-size: 35px;
             margin: 40px 0 20px 0;
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: $mobile) {
                 display: none;
             }
         }

@@ -4,29 +4,34 @@
         max-width: 966px;
         background-color: #FBFBFB;
         border: 1px solid #E1E1E1;
-        padding: 17px;
-    }
-    img {
-        height: 118px;
-        width: 88% !important;
-        background-color: $purpleLight;
-        transition: ease .2s;
-        &:hover {
-            cursor: pointer;
-        }
-        &.active {
-            background-color: $purple;
-            transition: ease .2s;
-        }
+        padding: 45px;
     }
     &__slider {
         margin-left: auto;
         margin-right: auto;
         width: 966px;
+        img {
+            height: 118px;
+            width: fit-content !important;
+            transition: ease .2s;
+            padding: 20px;
+            border-radius: 4px;
+            filter: grayscale(1) invert(30%);
+            &:hover {
+                cursor: pointer;
+            }
+            &.active {
+                background-color: $purple;
+                transition: ease .2s;
+                filter: unset;
+            }
+        }
         .slick-dots {
             bottom: -75px;
-            .slick-active button:before {
-                color: black;
+            .slick-active {
+                button:before {
+                    color: $purple;
+                }
             }
             button::before {
                 color: $purple;

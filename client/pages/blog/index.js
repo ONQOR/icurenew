@@ -9,6 +9,7 @@ import Container from "../../components/shared/Container";
 import Header from "../../components/shared/Header";
 import { getArticles, getData, getStrapiURL } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
+import React, { useEffect } from 'react';
 
 const Articles = ({
   global,

@@ -1,18 +1,15 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import Visual from "./media"
 
-const Media = ({ image, title, subTitle }) => {
+const Media = ({ image, title, subTitle, video }) => {
 
   return (
     <section className="media">
         <div className="container center">
             <span>{subTitle}</span>
             <h2>{title}</h2>
-            <img
-              src={getStrapiMedia(delve(image, "data.attributes.url"))}
-              alt={delve(image, "data.attributes.alternativeText")}
-              className="relative mx-auto shadow-lg rounded-lg w-auto"
-            />
+            <Visual image={image} video={video}/>
         </div>
     </section>
   );

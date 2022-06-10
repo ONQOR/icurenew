@@ -1,10 +1,12 @@
 import delve from 'dlv';
 import Link from 'next/link';
+import { useRouter } from "next/router";
 
 const Logo = ({ button, locale, props }) => {
+  const router = useRouter();
   return (
     <Link href={`${delve(button, 'href')}?lang=${locale || 'en'}`}>
-      <a className="nav__logo">
+      <a className={router.asPath.startsWith("/blog") ? "none nav__logo": "nav__logo"}>
       <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 513 116.8"

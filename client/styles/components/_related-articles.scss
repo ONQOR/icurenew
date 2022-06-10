@@ -10,8 +10,11 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            p, h2 {
+            p {
                 max-width: 750px;
+            }
+            h2 {
+                max-width: 500px;
             }
         }
     }

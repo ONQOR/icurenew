@@ -3,17 +3,22 @@ import Nav from './nav';
 import Cta from './cta';
 import LocalSwitch from './localSwitch';
 import Logo from './logo'
+import Logolight from './logo-light'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
+import { useRouter } from "next/router";
 
 const Navigation = ({ navigation, pageData  }) => {
   const [showMenu, setShowMenu] = useState(false)
-  
+  const router = useRouter();
+
   return (
     <header className="nav">
       <div className="container center">
         <Logo />
+        <Logolight />
         <div className={showMenu === true ? "active default" : "desk default"}>
           <div>
             <Nav

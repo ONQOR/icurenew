@@ -2,7 +2,7 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
 import Nav from './nav';
 import Columns from './columns'; 
-import LogoDark from './logo-dark';
+import Logonew from './logo-new';
 import Socials from './socials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -15,7 +15,7 @@ const Footer = ({ pageData, navigation, footer, caption, text}) => {
         <div className="footer__container">
           {/* global col 1 */}
           <div className="footer__news">
-              <LogoDark />
+              <Logonew />
 							<p>{caption}</p>
               <p>{text}</p>
               <label>Email Address</label>

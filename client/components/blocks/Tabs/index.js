@@ -20,9 +20,10 @@ const Tabs = ({cards, title, caption, text }) => {
 
         <div className="tabs__tab">
           <div>
-            <span onClick={() => handleClick(1)} className={toggleState === 1 ? "active" : ""}>tabs one</span>
-            <span onClick={() => handleClick(2)} className={toggleState === 2 ? "active" : ""}>tabs one</span>
-            <span onClick={() => handleClick(3)} className={toggleState === 3 ? "active" : ""}>tabs one</span>
+          {cards &&
+            cards.map((item, index) => (
+              <span onClick={() => handleClick(index + 1)} className={toggleState === index + 1 ? "active" : ""}>{delve(item, "title")}</span>
+            ))}
           </div>
         </div>
 

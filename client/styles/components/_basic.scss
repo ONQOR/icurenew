@@ -2,15 +2,26 @@
     @include padding;
     .container {
         flex-direction: column;
-        max-width: 768px;
+        max-width: $tablet;
     }
     img {
         width: 100%;
-        background-color: $purpleLight;
         height: 500px;
         margin: 150px 0 0;
     }
     h2 {
         margin: 0 0 48px 0;
+    }
+    p {
+        text-align: left;
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+    svg {
+        position: absolute;
+        z-index: 4;
+        bottom: -10%;
+        left: -30%;
     }
 }   

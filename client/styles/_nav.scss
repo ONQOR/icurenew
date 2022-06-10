@@ -46,20 +46,51 @@
     &__logo {
         align-items: center;
         display: flex;
+        &.none {
+            display: none;
+        }
         svg {
             position: absolute;
             left: 30px;
             z-index: 3;
             height: 28px;
+            top: 35px;
         }
     }
     &__nav {
         margin: auto;
+        &.current-case {
+            a {
+                color: $purple !important;
+                &.current {
+                    &:after {    
+                        background: $purple !important;
+                    }
+                }
+                &:after {    
+                    background: $purple;
+                }
+            }
+        }
         a {
             color: white !important;
             margin: 40px !important;
             display: inline-block;
             position: relative;
+            &.current {
+                &:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: -12px;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    position: absolute;
+                    background: #fff;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 100%;
+                    left: 0;
+                }
+            }
             &:after {    
                 background: none repeat scroll 0 0 transparent;
                 bottom: -12px;
@@ -79,6 +110,15 @@
         }
     }
     button {
+        &.current {
+            background-color: $purple;
+            border: 1px solid $purple;
+            color: white;
+            &:hover {
+                color: $purple;
+                background-color: white;
+            }
+        }
         background-color: white;
         border: 1px solid white;
         color: $purple;

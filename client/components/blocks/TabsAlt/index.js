@@ -1,6 +1,7 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
 
@@ -22,22 +23,23 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
         cards.map((item, index) => (
           <div onClick={() => handleClick(index + 1)} className={toggleState === index + 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
             <img
-              src={getStrapiMedia(delve(item, "images.data.attributes.url"))}
-              alt={delve(item, "images.data.attributes.alternativeText")}
+              src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
+              alt={delve(item, "image.data.attributes.alternativeText")}
             />
             <h3>{delve(item, "title")}</h3>
             <p>{delve(item, "text")}</p>
           </div>
         ))}
         {/* tab content */}
-                
         {cards &&
         cards.map((item, index) => (
         <div className={toggleState === index + 1 ? "tabs__content--active" : "tabs__content"}>
           <div className="tabs__content__left">
             <h2>{delve(item, "contentTitle")}</h2>
             <p>{delve(item, "contentText")}</p>
-            <button>Get in Contact</button>
+            <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
+              <a><button>Get in Contact</button></a>
+            </Link>
           </div>     
           <div className="tabs__content__right">
             <img

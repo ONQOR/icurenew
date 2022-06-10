@@ -31,6 +31,12 @@
         "videos",
         "audios"
       ]
+    },
+    "btnText": {
+      "type": "string"
+    },
+    "btnUrl": {
+      "type": "string"
     }
   }
 }
