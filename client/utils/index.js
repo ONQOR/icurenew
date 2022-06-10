@@ -7,12 +7,12 @@ export function getStrapiMedia(url) {
   if (url.startsWith('http') || url.startsWith('//')) {
     return url;
   }
-  return `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'}${url}`;
+  return `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}${url}`;
 }
 
 export function getStrapiURL(path) {
   return `${
-    process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'
+    process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
   }/api${path}`;
 }
 
