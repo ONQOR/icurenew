@@ -32,8 +32,8 @@ const Contact = ({ image, title, text }) => {
     <section className="contact">
         <div className="container sb">
             <div className="contact__left">
-                <h2>{title}</h2>
-                <p>{text}</p>
+                <h2 className={success === 1 ? "active" : "none"}>{title}</h2>
+                <p className={success === 1 ? "active" : "none"}>{text}</p>
                 {/* form */}
                 <form 
                   ref={form} 
