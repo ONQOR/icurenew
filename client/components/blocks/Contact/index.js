@@ -55,10 +55,14 @@ const Contact = ({ image, title, text }) => {
                     <label>Message</label>
                     <textarea name="message"></textarea>
 
-                    <label className='radio'><input type="radio"></input>I accept ICURe's&nbsp; 
-                      <Link href="/privacy" passHref={true}>
-                        <a>terms and conditions</a>
-                      </Link>
+                    <label className='radio'>
+                      <input type="checkbox"></input>
+                      <span>
+                        I accept ICURe's&nbsp; 
+                        <Link href="/privacy" passHref={true}>
+                          <a>terms and conditions</a>
+                        </Link>
+                      </span>
                     </label>
                     
                     <h4>{errmsg}</h4>

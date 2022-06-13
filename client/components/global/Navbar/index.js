@@ -10,7 +10,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 import { useRouter } from "next/router";
 
-const Navigation = ({ navigation, pageData  }) => {
+const Navigation = ({ navigation, pageData, hasChildren  }) => {
   const [showMenu, setShowMenu] = useState(false)
   const router = useRouter();
 

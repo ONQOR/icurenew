@@ -74,6 +74,9 @@
                     margin-top: 30px;
                 }
             }
+            .arrow-square {
+                margin-left: 10px;
+            }
             h2 {
                 font-size: 28px;
             }
@@ -81,20 +84,20 @@
                 margin: 24px 50px 0 0;
             }
             button {
-                background-color: $purple;
+                background-color: white;
                 border: 1px solid $purple;
                 position: absolute;
                 bottom: 50px;   
                 padding: 12px 48px;
                 width: fit-content;
-                color: white;
+                color: $purple;
                 font-size: 16px;
                 border-radius: 4px;
                 transition: ease 0.2s;
                 &:hover {
                     cursor: pointer;
-                    background-color: white;
-                    color: $purple;
+                    background-color: $purple;
+                    color: white;
                     transition: ease 0.2s;
                 }
             }
