@@ -164,7 +164,6 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
                   src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
                   alt={delve(item, "image.data.attributes.alternativeText")}
                   className={slideState === index + 1 ? "active" : "else"}
-                  
                 />
             ))}
           </Slider>

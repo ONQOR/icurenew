@@ -7,6 +7,7 @@ const Shape = ({ props }) => {
         width={251.907}
         height={264.177}
         {...props}
+        className="shape"
       >
         <defs>
           <filter

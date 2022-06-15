@@ -1,6 +1,6 @@
 .icons {
     height: auto;
-    padding: 100px 0 100px 0;
+   @include padding;
     &__title {
         margin: 0 0 60px 0;
         width: 100%;
@@ -8,23 +8,10 @@
             font-size: 55px;
         }
     }
-    &__icon {
-        height: auto;
+    .tabs-alt__icon {
         box-shadow: 0px 10px 20px #1D1D1D1A;
-        width: 31%;
-        padding: 30px;
-        @media screen and (max-width: $mobile) {
-            width: 100%;
-        }
-        h3 {
-            font-size: 35px;
-            margin: 40px 0 20px 0;
-        }
-        div {   
-            background-color: #D4BBE7;
-            width: 72px;
-            height: 72px;
-            margin: auto;
+        &:hover {
+            cursor: unset;
         }
     }
 }

@@ -36,6 +36,7 @@
                 height: 300px;
                 border-radius: 7.5px;
                 position: absolute;
+                transform: translateY(-50px);
             }
             &-horozontal {
                 background-color: white;
@@ -53,6 +54,9 @@
             }
             @media screen and (max-width: $mobile) {
                 width: 25%;
+                h4 {
+                    font-size: 20px;
+                }
             }
         }
     }

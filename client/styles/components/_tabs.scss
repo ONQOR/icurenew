@@ -1,5 +1,5 @@
 .tabs {
-    padding: 100px 0;
+    @include padding;
     &__top {
         display: flex;
         flex-direction: column;
@@ -57,6 +57,11 @@
             margin: 10px 0 0;
             border-radius: 10px;
             display: visible;
+            -webkit-animation: fadeIn 1.5s;
+            animation: fadeIn 1.5s;
+            @media screen and (max-width: $tablet) {
+                padding: 20px;  
+            }
         }
         &__left {
             width: 50%;

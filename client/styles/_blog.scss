@@ -55,11 +55,21 @@
                 height: 100%;
                 transition: ease 0.2s;
                 z-index: 1;
-                filter: invert(17%) sepia(72%) saturate(500%) hue-rotate(260deg) brightness(90%) contrast(60%);
+                filter: grayscale(100%);
                 &:hover {
                     cursor: pointer;
                     transition: ease 0.2s;
                 }
+            }
+            &__filter-img {
+                filter: invert(17%) sepia(72%) saturate(500%) hue-rotate(260deg) brightness(90%) contrast(60%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: red;
+                opacity: 0.4;
             }
             &:hover {
                 h4 {
@@ -88,8 +98,8 @@
             &__filter {
                 transform: translateX(100%);
                 transition: ease 0.2s;
-                background-color: $purple;
-                opacity: 0.5;
+                background-color: $purpleDark;
+                opacity: 0.95;
                 z-index: 3;
                 position: absolute;
                 top: 0;

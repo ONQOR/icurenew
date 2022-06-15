@@ -17,7 +17,7 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
     <section className="tabs-alt">
       <div className="container sb center">
         <div className="tabs-alt__title">
-          <span>{caption}</span>
+          <span className='caption'>{caption}</span>
           <h2>{title}</h2>
         </div>
         {/* tab buttons */}

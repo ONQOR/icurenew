@@ -34,6 +34,13 @@
             margin: 0;
             font-size: 10px;
         }
+        &__terms {
+            a {
+                text-decoration: underline;
+                &:hover {
+                   color: #B892FF;                }
+            }
+        }
     }
     &__onqor {
         width: 100%;
@@ -103,6 +110,9 @@
         a {
             margin: 0 0 24px 0;
             font-size: 16px;
+            &:hover {
+                color: $purple;
+            }
         }
         .child {
             display: none !important;
@@ -121,6 +131,11 @@
             font-size: 16px;
             font-weight: 400;
         }
+        a {
+            &:hover {
+                color: $purple;
+            }
+        }
     }
     // column 4
     &__socials {
@@ -138,6 +153,13 @@
             }
             &:hover {
                 cursor: pointer;
+                svg {
+                    background-color: $purple;
+                    color: white;
+                }
+                p {
+                    color: $purpleDark;
+                }
             }
             svg {
                 color: $purple;

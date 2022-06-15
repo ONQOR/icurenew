@@ -1,5 +1,5 @@
 .contact {
-    padding: 100px 0;
+    @include padding;
     overflow-x: hidden;
     &__right {
         width: 45%;
@@ -40,6 +40,21 @@
             @media screen and (max-width: $tablet) {
                 margin: 40px auto;
             }
+            background-color: $purple;
+            padding: 12px 48px;
+            width: fit-content;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: ease 0.2s;
+            border: 1px solid white;
+            &:hover {
+                cursor: pointer;
+                background-color: $purpleDark;
+                color: white;
+                transition: ease 0.2s;
+                border: 1px solid $purpleDark; 
+            }
         }
         div {
             display: none;
@@ -65,24 +80,6 @@
             p {
                 max-width: 400px;
             }
-            button {
-                background-color: $purple;
-                padding: 12px 48px;
-                width: fit-content;
-                color: white;
-                font-size: 16px;
-                border-radius: 4px;
-                transition: ease 0.2s;
-                margin: 24px 0 0 0;
-                border: 1px solid white;
-                &:hover {
-                    cursor: pointer;
-                    background-color: white;
-                    color: $purple;
-                    transition: ease 0.2s;
-                    border: 1px solid $purple;
-                }
-            }
         }
         form {
             flex-direction: column;
@@ -95,13 +92,31 @@
                 flex-direction: row;
                 align-items: center;
                 input[type="checkbox"] {
-                    -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
-                    -moz-appearance: checkbox;    /* Firefox */
-                    -ms-appearance: checkbox;     /* not currently supported */
-                    margin-right: 10px;
-                    width: 24px;
-                    height: 24px;
-                    
+                    display:none;
+                    &:disabled + span{
+                        cursor: not-allowed;
+                    }
+                    &+ span::before {
+                        display: inline-block;
+                        vertical-align: middle;
+                        align-items: center;
+                        justify-content: center;
+                        content: "";
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 8px;
+                        background-color: #fff;
+                        border: 1px solid $purpleLight;
+                        border-radius: 4px;
+                    }
+                    &:checked + span:before {
+                        content: "\2713";
+                        text-align: center;
+                        font-size: 15px;
+                        border: 1px solid $purple;
+                        color: #fff;
+                        background-color: $purple;
+                    }
                 }
                 a {
                     color: $purple;

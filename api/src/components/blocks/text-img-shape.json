@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_text_img_shapes",
+  "info": {
+    "displayName": "TextImgShape",
+    "icon": "balance-scale-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

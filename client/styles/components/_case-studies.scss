@@ -1,5 +1,5 @@
 .caseStudies {
-    padding: 100px 0;
+    @include padding;
     .item {
         width: 20%;
     }
@@ -10,7 +10,6 @@
             margin: 0 0 65px 0;
             text-align: center;
             p {
-                display: block;
                 margin: 20px auto 0;
             }
         }
@@ -93,8 +92,8 @@
             &__filter {
                 transform: translateX(100%);
                 transition: ease 0.2s;
-                background-color: $purple;
-                opacity: 0.5;
+                background-color: $purpleDark;
+                opacity: 0.9;
                 z-index: 3;
                 position: absolute;
                 top: 0;

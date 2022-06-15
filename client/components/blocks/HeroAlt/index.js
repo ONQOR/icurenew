@@ -4,14 +4,22 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Shape from '../../shared/shape'
+import { useRouter } from "next/router";
 
-const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText }) => {
+const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText, slug, locale }) => {
+  const router = useRouter();
    return (
     <section className="hero-alt">
     <div className="container sb">
 
       {/* left */}
       <div className="hero-alt__left">
+        <div className='hero-alt__left__breadcrumbs'>
+          {/* Home <span>/</span> Blog <span>/</span> Casestudy */}
+          <span>
+           
+          </span>
+        </div>
         <span>{caption}</span>
         <h1>{title}</h1>
         <p>{text}</p>
@@ -24,9 +32,8 @@ const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText }) => {
             <h3>{delve(item, "text")}</h3>
           </div>
         ))}
-
         </div>
-        {/* left button */}
+      {/* left button */}
           <Link href={btnUrl} passHref={true}>
               <a>
                 <button>
@@ -39,7 +46,6 @@ const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText }) => {
               </a>
           </Link>
       </div>
-
       {/* right */}
       <div className="hero-alt__right">
         <img

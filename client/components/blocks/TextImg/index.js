@@ -7,7 +7,7 @@ const TextImg = ({ caption, title, text, image }) => {
     <section className="textImg">
       <div className="container sb">
         <div className="textImg__left"> 
-          <span>{caption}</span>
+          <span className='caption'>{caption}</span>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>

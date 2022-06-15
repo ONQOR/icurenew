@@ -10,11 +10,13 @@
     "title": {
       "type": "string"
     },
-    "icons": {
-      "displayName": "icon",
+    "text": {
+      "type": "string"
+    },
+    "cards": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.icon"
+      "component": "shared.tab"
     }
   }
 }

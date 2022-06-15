@@ -7,7 +7,7 @@ const Media = ({ image, title, subTitle, video }) => {
   return (
     <section className="media">
         <div className="container center">
-            <span>{subTitle}</span>
+            <span className='caption'>{subTitle}</span>
             <h2>{title}</h2>
             <Visual image={image} video={video}/>
         </div>

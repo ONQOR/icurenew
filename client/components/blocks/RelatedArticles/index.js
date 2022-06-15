@@ -6,7 +6,7 @@ const RelatedArticles = ({ articles, text, title, caption }) => {
       <div className="related-articles">
         <div className="container center related-articles__articles sb">
           <div className='related-articles__articles__title center'>
-            <span>{caption}</span>
+            <span className='caption'>{caption}</span>
             <h2>{title}</h2>
             <p>{text}</p>
           </div>

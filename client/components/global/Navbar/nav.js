@@ -37,7 +37,7 @@ const Nav = ({ links, locale }) => {
                           } 
                       })}
                     </div>
-                    <span className='nav__chevron'></span>
+                    {/* <span className='nav__chevron'></span> */}
                   </a>
               )
             } else if (delve(link, 'isChild')) {

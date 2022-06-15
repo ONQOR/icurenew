@@ -1,5 +1,11 @@
 .textImg {
-    @include padding;
+    padding: 100px 0 0 0;
+    @media screen and (max-width: $tablet) {
+        padding: 75px 0 0 0;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 50px 0 0 0;
+    }
     overflow-x: hidden;
     &__left {
         width: 50%;
@@ -22,8 +28,54 @@
             }
         }
         img {
+            max-width: 170%;
+            object-fit: cover;
+            transform: translateY(-75px);
+        }
+    }
+}
+
+// text image shaope section 
+.textImgShape {
+    padding: 100px 0 150px 0;
+    @media (max-width: 768px) {
+        padding: 75px 0 112.5px;
+    }
+    @media (max-width: 375px) {
+        padding: 50px 0 75px;
+    }
+    overflow: hidden;
+    &__left {
+        width: 40%;
+        h2 {
+            margin: 0 0 20px 0;
+        }
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__right {
+        width: 50%;
+        display: flex;
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            img {
+                max-width: 100%;
+                margin-top: 50px;
+            }
+        }
+        img {
             max-width: 100%;
             object-fit: cover;
+        }
+        .shape {
+            position: absolute;
+            right: 10px;
+            bottom: -130px;
+        }
+        .shapeTwo {
+
         }
     }
 }

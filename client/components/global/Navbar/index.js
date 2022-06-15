@@ -16,7 +16,7 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
 
   return (
     <header className="nav">
-      <div className="container center">
+      <div className="container center sb">
         <Logo />
         <Logolight />
         <div className={showMenu === true ? "active default" : "desk default"}>
@@ -42,7 +42,7 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
         <FontAwesomeIcon
           icon={faBars}
           onClick={() => setShowMenu(!showMenu)}
-          className='nav__hamburger'
+          className={router.asPath.startsWith("/blog") ? "nav__hamburger current-case ": "nav__hamburger"}
         />
       </div>
     </header>
