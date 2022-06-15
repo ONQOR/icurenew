@@ -13,7 +13,7 @@ const Tabs = ({cards, title, caption, text }) => {
     <section className="tabs">
       <div className="container center">
         <div className="tabs__top">
-          <span>{caption}</span>
+          <span className='caption'>{caption}</span>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>

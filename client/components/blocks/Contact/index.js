@@ -32,8 +32,8 @@ const Contact = ({ image, title, text }) => {
     <section className="contact">
         <div className="container sb">
             <div className="contact__left">
-                <h2>{title}</h2>
-                <p>{text}</p>
+                <h2 className={success === 1 ? "active" : "none"}>{title}</h2>
+                <p className={success === 1 ? "active" : "none"}>{text}</p>
                 {/* form */}
                 <form 
                   ref={form} 
@@ -55,10 +55,14 @@ const Contact = ({ image, title, text }) => {
                     <label>Message</label>
                     <textarea name="message"></textarea>
 
-                    <label className='radio'><input type="radio"></input>I accept ICURe's&nbsp; 
-                      <Link href="/privacy" passHref={true}>
-                        <a>terms and conditions</a>
-                      </Link>
+                    <label className='radio'>
+                      <input required="required" type="checkbox"></input>
+                      <span>
+                        I accept ICURe's&nbsp; 
+                        <Link href="/privacy" passHref={true}>
+                          <a>terms and conditions</a>
+                        </Link>
+                      </span>
                     </label>
                     
                     <h4>{errmsg}</h4>

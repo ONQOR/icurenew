@@ -7,7 +7,7 @@ const Points = ({ title, text, caption, cards }) => {
     <section className="points">
       <div className="container sb">
         <div className="points__title">
-            <span>{caption}</span>
+            <span className='caption'>{caption}</span>
             <h2>{title}</h2>
             <p>{text}</p>
         </div>

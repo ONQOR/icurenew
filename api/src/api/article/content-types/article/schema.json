@@ -90,7 +90,8 @@
         "blocks.quote",
         "blocks.basic",
         "blocks.timeline",
-        "blocks.hero-alt"
+        "blocks.hero-alt",
+        "blocks.text-img-shape"
       ],
       "required": false
     },

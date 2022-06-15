@@ -10,16 +10,21 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 import { useRouter } from "next/router";
 
-const Navigation = ({ navigation, pageData  }) => {
+const Navigation = ({ navigation, pageData, hasChildren  }) => {
   const [showMenu, setShowMenu] = useState(false)
   const router = useRouter();
 
   return (
     <header className="nav">
-      <div className="container center">
+      <div className="container center sb">
         <Logo />
         <Logolight />
+        <div className={showMenu === true ? "filter" : "none"}>
+        </div>
         <div className={showMenu === true ? "active default" : "desk default"}>
+          <div className={showMenu === true ? "show" : "none"}>
+            <Logo />
+          </div>
           <div>
             <Nav
               links={delve(navigation, 'links')}
@@ -42,7 +47,7 @@ const Navigation = ({ navigation, pageData  }) => {
         <FontAwesomeIcon
           icon={faBars}
           onClick={() => setShowMenu(!showMenu)}
-          className='nav__hamburger'
+          className={router.asPath.startsWith("/blog") ? "nav__hamburger current-case ": "nav__hamburger"}
         />
       </div>
     </header>

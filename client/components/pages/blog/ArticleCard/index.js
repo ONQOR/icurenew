@@ -33,6 +33,7 @@ const ArticleCard = ({ slug, title, seo, locale, id }) => {
           src={getStrapiMedia(imgcard)}
         />
         <h4>{title}</h4>
+        <div className='case__filter-img'></div>
         <div className='case__filter'></div>
           <div className='case--hover'>
               <h5>{title}</h5>

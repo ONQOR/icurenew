@@ -1,5 +1,5 @@
 .media {
-    padding: 100px 0;
+    @include padding;
     .container {
         flex-direction: column;
     }
@@ -9,7 +9,6 @@
     }
     span {
         font-size: 18px;
-        color: black; 
     }
     img {
         border-radius: 0;

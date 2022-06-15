@@ -2,6 +2,8 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import { useState } from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
 
@@ -15,7 +17,7 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
     <section className="tabs-alt">
       <div className="container sb center">
         <div className="tabs-alt__title">
-          <span>{caption}</span>
+          <span className='caption'>{caption}</span>
           <h2>{title}</h2>
         </div>
         {/* tab buttons */}
@@ -38,7 +40,15 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
             <h2>{delve(item, "contentTitle")}</h2>
             <p>{delve(item, "contentText")}</p>
             <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
-              <a><button>Get in Contact</button></a>
+              <a>
+                <button>
+                  Get in Contact
+                  <FontAwesomeIcon 
+                    icon={faArrowRight} 
+                    className="arrow-square"  
+                  />
+                </button>
+              </a>
             </Link>
           </div>     
           <div className="tabs__content__right">

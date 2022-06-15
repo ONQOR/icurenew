@@ -10,6 +10,7 @@
         @media screen and (max-width: $tablet) {
             justify-content: center !important;
             align-items: center !important;
+            height: 350px;
         }   
     }
     .box__container {
@@ -47,6 +48,7 @@
                 align-items: center;
                 justify-content: center;
                 display: flex;
+                text-align: center;
                 flex-direction: column;
             }
         }
@@ -73,6 +75,8 @@
         &.active {
             opacity: 1;
             transition: ease .7s;
+            -webkit-animation: fadeIn 1.5s;
+            animation: fadeIn 1.5s;
         }
         p {
             color: white;
@@ -97,7 +101,8 @@
         }
         &__boxbox {
             @media screen and (max-width: $tablet) {
-                width: 100%
+                width: 100%;
+                justify-content: center;
             }
             display: flex;
             align-items: center;

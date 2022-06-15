@@ -2,12 +2,13 @@
   "collectionName": "components_blocks_texts",
   "info": {
     "displayName": "Text",
-    "icon": "audio-description"
+    "icon": "audio-description",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

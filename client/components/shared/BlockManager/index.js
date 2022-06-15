@@ -29,6 +29,7 @@ import Basic from '../../blocks/Basic';
 import TabsAlt from '../../blocks/TabsAlt';
 import Timeline from '../../blocks/Timline';
 import HeroAlt from '../../blocks/HeroAlt';
+import TextImgShape from '../../blocks/TextImgShape';
 
 const getBlockComponent = ({ __component, ...rest }, index) => {
   let Block;
@@ -126,6 +127,9 @@ const getBlockComponent = ({ __component, ...rest }, index) => {
       break;
     case 'blocks.timeline':
       Block = Timeline;
+      break;
+    case 'blocks.text-img-shape':
+      Block = TextImgShape;
       break;
   }
 

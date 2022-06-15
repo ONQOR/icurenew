@@ -1,38 +1,18 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Icons = ({ icons, title, text }) => {
+const Icons = ({ cards, title, text }) => {
 
   return (
     <section className="icons">
       <div className="container sb center">
         <div className="icons__title">
-          <span>How It Works</span>
-          <h2>Your Journey starts with ICURe</h2>
+          <span className='caption'>{title}</span>
+          <h2>{text}</h2>
         </div>
-          <div className="icons__icon">
-            <img
-            />
-            <h3>LLP</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-          </div>
-          <div className="icons__icon">
-            <img
-            />
-            <h3>LLP</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-          </div>
-          
-          <div className="icons__icon">
-            <img
-            />
-            <h3>LLP</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-          </div>
-          
-        {icons &&
-        icons.map((item, index) => (
-          <div className="icons__icon" key={`feature-${index}`}>
+        {cards &&
+        cards.map((item, index) => (
+          <div  className="tabs-alt__icon">
             <img
               src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
               alt={delve(item, "image.data.attributes.alternativeText")}
