@@ -12,6 +12,7 @@ const Nav = ({ links, locale }) => {
         {links.map((link, index) => {
             if (delve(link, 'hasChildren')) {
               return ( 
+                <>
                   <a 
                     className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current parent" : "parent"} 
                     key={`link-${index}`}
@@ -40,6 +41,7 @@ const Nav = ({ links, locale }) => {
                     </div>
                     {/* <span className='nav__chevron'></span> */}
                   </a>
+                </>
               )
             } else if (delve(link, 'isChild')) {
               return (

@@ -5,6 +5,17 @@
     h1 {
         color: white;
     }
+    // mobile onlcik start
+    .mob {
+        display: none;
+    }
+    .main {
+        display: block;
+        @media screen and (max-width: 1100px) {
+            display: none;
+        }
+    }
+    // end
     .container {
         align-items: flex-start;
     }
