@@ -19,7 +19,12 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
       <div className="container center sb">
         <Logo />
         <Logolight />
+        <div className={showMenu === true ? "filter" : "none"}>
+        </div>
         <div className={showMenu === true ? "active default" : "desk default"}>
+          <div className={showMenu === true ? "show" : "none"}>
+            <Logo />
+          </div>
           <div>
             <Nav
               links={delve(navigation, 'links')}

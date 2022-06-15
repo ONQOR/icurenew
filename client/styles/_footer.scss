@@ -49,6 +49,11 @@
         align-items: center;
         background-color: #121212;
         color: white;
+        .container {
+            @media screen and (max-width: $tablet) {
+                justify-content: center;
+            }
+        }
         p {
             margin: 0;
             font-size: 14px;
@@ -79,7 +84,7 @@
             margin-bottom: 20px;
             font-size: 16px;
         }
-        img {
+        .img {
             width: 100%;
             max-width: 203px;
             object-fit: cover;

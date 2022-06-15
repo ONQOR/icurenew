@@ -56,7 +56,7 @@ const Contact = ({ image, title, text }) => {
                     <textarea name="message"></textarea>
 
                     <label className='radio'>
-                      <input type="checkbox"></input>
+                      <input required="required" type="checkbox"></input>
                       <span>
                         I accept ICURe's&nbsp; 
                         <Link href="/privacy" passHref={true}>

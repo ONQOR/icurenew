@@ -19,6 +19,7 @@ const Nav = ({ links, locale }) => {
                     >
                     {delve(link, 'label')}
                     <div className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
+                      <div className='indicator'></div>
                       {links.map((link, index) => {
                           if (delve(link, 'isChild')) {
                             return (
