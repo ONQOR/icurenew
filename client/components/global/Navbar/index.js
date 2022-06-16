@@ -30,6 +30,8 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
             <Nav
               links={delve(navigation, 'links')}
               locale={delve(pageData, 'attributes.locale')}
+              showMenu={showMenu}
+              setShowMenu={setShowMenu}
             />
           </div>
           <div>
@@ -44,12 +46,7 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
             )}
           </div>
         </div>
-       
-        {/* <FontAwesomeIcon
-          icon={faBars}
-          onClick={() => setShowMenu(!showMenu)}
-          className={router.asPath.startsWith("/case-studies") ? "nav__hamburger current-case ": "nav__hamburger"}
-        /> */}
+      
         <div 
           id={showMenu === true ? "open" : ""}
           className={router.asPath.startsWith("/case-studies") ? "nav__hamburger current-case ": "nav__hamburger"}

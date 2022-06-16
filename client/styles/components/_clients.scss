@@ -5,6 +5,7 @@
         background-color: #FBFBFB;
         border: 1px solid #E1E1E1;
         padding: 45px;
+        overflow: hidden;
         @media screen and (max-width: $tablet) {
             padding: 15px;
         }

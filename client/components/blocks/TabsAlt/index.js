@@ -10,7 +10,6 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
   const [toggleState, setToggleState] = useState(1)
   const handleClick = (index) => {
     setToggleState(index)
-    console.log(index)
   }
 
   return (

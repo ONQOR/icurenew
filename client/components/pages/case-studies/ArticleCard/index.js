@@ -16,13 +16,11 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
       ) 
     ); 
     const json = await res.json();
-    console.log(json.data.attributes.image.data.attributes.url)
     const imgUrl = json.data.attributes.image.data.attributes.url
     setImgcard(imgUrl)
     return json
   }
   getServerSideProps(id)
-  console.log('this is the artciles card', id)
 
   return (
     <div className="articles__articles-item">

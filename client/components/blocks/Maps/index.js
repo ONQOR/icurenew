@@ -61,8 +61,6 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
   const mapClick = (location, count) => {
     setMap(location)
     setSlide(count)
-    console.log(mapState)
-    console.log(slideState)
   }
 
 

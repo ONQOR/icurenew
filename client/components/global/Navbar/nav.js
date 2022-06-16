@@ -1,9 +1,9 @@
 import delve from 'dlv';
 import Link from 'next/link';
 import { useRouter } from "next/router";
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Nav = ({ links, locale }) => {
+const Nav = ({ links, locale, setShowMenu, showMenu }) => {
   const router = useRouter();
   const [showDrop, setShowDrop] = useState(false)  
 
@@ -30,6 +30,7 @@ const Nav = ({ links, locale }) => {
                                 <a 
                                   className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current child" : "child"} 
                                   key={`link-${index}`}
+                                  onClick={() => setShowMenu(false)}
                                 >
                                   {delve(link, 'label')}
                                 </a>
@@ -59,6 +60,7 @@ const Nav = ({ links, locale }) => {
                                 <a 
                                   className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current child" : "child"} 
                                   key={`link-${index}`}
+                                  onClick={() => setShowMenu(false)}
                                 >
                                   {delve(link, 'label')}
                                 </a>
@@ -84,7 +86,9 @@ const Nav = ({ links, locale }) => {
                 >
                   <a 
                     className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current" : ""} 
-                    key={`link-${index}`}>
+                    key={`link-${index}`}
+                    onClick={() => setShowMenu(false)}
+                    >
                     {delve(link, 'label')}
                   </a>
                 </Link>
