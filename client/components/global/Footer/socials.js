@@ -19,7 +19,7 @@ const Socials = ({ twitter, linkedin, facebook }) => {
     </div>
   )} else {
     return(
-      <div></div>
+      <></>
     )
   }
 };

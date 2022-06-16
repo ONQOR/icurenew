@@ -3,13 +3,12 @@ import { getStrapiMedia } from '../../../utils';
 import Nav from './nav';
 import Columns from './columns'; 
 import Logonew from './logo-new';
-import Socials from './socials';
-import LogoDark from './logo-dark';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
+import Twitter from './socials/twitter';
+import Facebook from './socials/facebook';
+import Linkedin from './socials/linkedin'
 
-const Footer = ({ pageData, navigation, footer, caption, text}) => {  
+const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook, linkedin}) => {  
 
   return (
 			<footer className="footer">	 
@@ -47,26 +46,9 @@ const Footer = ({ pageData, navigation, footer, caption, text}) => {
           <div className="footer__socials">
             <h4>Social</h4>
             <ul className="menu_footer_socials">
-              <Socials />
-              <div>
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                />
-                <FontAwesomeIcon icon="fa-brands fa-twitter" />
-                <p>twitter</p>
-              </div>
-              <div>
-                <FontAwesomeIcon
-                  icon={faLinkedinIn}
-                />
-                <p>linkedin</p>
-              </div>
-              <div>
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                />
-                <p>facebook</p>
-              </div>
+              <Twitter twitter={twitter}/>
+              <Linkedin linkedin={linkedin}/>
+              <Facebook facebook={facebook}/>
             </ul>
 					</div>
         </div>
@@ -74,7 +56,11 @@ const Footer = ({ pageData, navigation, footer, caption, text}) => {
           <div className="footer__terms">
               <div className="container sb">
                 <p className="footer__terms__date">© iCURe 2022</p>
-                <p className="footer__terms__terms"><a href="<?php echo get_field('terms', 'option'); ?>" target="blank">Terms of Service</a></p>
+                <p className="footer__terms__terms">
+                  <Link href="/privacy" passHref={true}>
+                    <a target="blank">Terms of Service</a>
+                  </Link>
+                </p>
               </div>
             </div>
           {/* onqor */}
