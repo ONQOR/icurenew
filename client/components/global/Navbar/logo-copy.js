@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const LogoCopy = ({ button, locale, props, setShowMenu, showMenu }) => {
   const router = useRouter();
   return (
-    <Link href={`${delve(button, 'href')}?lang=${locale || 'en'}`}>
+    <Link href="/">
       <a 
         className={router.asPath.startsWith("/case-studies") ? "nav__logo": "nav__logo"}
         onClick={() => setShowMenu(false)}  
