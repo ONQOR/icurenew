@@ -20,12 +20,12 @@ const CaseStudies = ({ articles, title, caption, text }) => {
                 ))}
             </div>
       
-            <div className="colTwo">
+            {/* <div className="colTwo">
                 {articles &&
                 articles.data.map((article, index) => (
                 <ArticleCard {...article.attributes} id={article.id} key={index} />
                 ))}
-            </div>
+            </div> */}
 
             <div className="colThree">
                 <p>{text}</p>
