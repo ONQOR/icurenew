@@ -48,11 +48,11 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
         {/* <FontAwesomeIcon
           icon={faBars}
           onClick={() => setShowMenu(!showMenu)}
-          className={router.asPath.startsWith("/blog") ? "nav__hamburger current-case ": "nav__hamburger"}
+          className={router.asPath.startsWith("/case-studies") ? "nav__hamburger current-case ": "nav__hamburger"}
         /> */}
         <div 
           id={showMenu === true ? "open" : ""}
-          className={router.asPath.startsWith("/blog") ? "nav__hamburger current-case ": "nav__hamburger"}
+          className={router.asPath.startsWith("/case-studies") ? "nav__hamburger current-case ": "nav__hamburger"}
           onClick={() => setShowMenu(!showMenu)}
           >
           <span></span>

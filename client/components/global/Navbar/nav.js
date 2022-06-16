@@ -8,7 +8,7 @@ const Nav = ({ links, locale }) => {
   const [showDrop, setShowDrop] = useState(false)  
 
     return (
-      <nav className={router.asPath.startsWith("/blog") ? "nav__nav current-case ": "nav__nav"} >
+      <nav className={router.asPath.startsWith("/case-studies") ? "nav__nav current-case ": "nav__nav"} >
         {links.map((link, index) => {
             if (delve(link, 'hasChildren')) {
               return ( 

@@ -1,6 +1,6 @@
 import delve from "dlv";
 import Layout from "../../components/layout";
-import ArticleContent from "../../components/pages/blog/ArticleContent";
+import ArticleContent from "../../components/pages/case-studies/ArticleContent";
 import BlockManager from "../../components/shared/BlockManager";
 import { getStrapiURL, handleRedirection } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
@@ -36,7 +36,7 @@ export async function getServerSideProps(context) {
   const json = await res.json();
 
   if (!json.data.length) {
-    return handleRedirection(context.params.slug, context.preview, "blog");
+    return handleRedirection(context.params.slug, context.preview, "case-studies");
   }
 
   return {
