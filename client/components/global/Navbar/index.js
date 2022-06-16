@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 import LogoCopy from './logo-copy';
 
 const Navigation = ({ navigation, pageData, hasChildren  }) => {
-  const [showMenu, setShowMenu] = useState(true)
+  const [showMenu, setShowMenu] = useState(false)
   const router = useRouter();
 
   return (
