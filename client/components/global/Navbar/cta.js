@@ -7,7 +7,7 @@ const Cta = ({ href, target, label }) => {
   return (
     <button
       type="button"
-      className={router.asPath.startsWith("/blog") ? "current": ""}
+      className={router.asPath.startsWith("/case-studies") ? "current": ""}
     >
       <CustomLink href={href} target={target} label={label} isExternal={true} />
     </button>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import Layout from "../../components/layout";
 import NoResults from "../../components/no-results";
-import ArticleCard from "../../components/pages/blog/ArticleCard";
+import ArticleCard from "../../components/pages/case-studies/ArticleCard";
 import BlockManager from "../../components/shared/BlockManager";
 import Container from "../../components/shared/Container";
 import Header from "../../components/shared/Header";

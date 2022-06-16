@@ -1,4 +1,4 @@
-import ArticleCard from '../../pages/blog/ArticleCard';
+import ArticleCard from '../../pages/case-studies/ArticleCard';
 
 const RelatedArticles = ({ articles, text, title, caption }) => {
 

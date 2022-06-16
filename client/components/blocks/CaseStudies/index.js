@@ -1,6 +1,6 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
-import ArticleCard from '../../pages/blog/ArticleCard';
+import ArticleCard from '../../pages/case-studies/ArticleCard';
 
 const CaseStudies = ({ articles, title, caption, text }) => {
 
