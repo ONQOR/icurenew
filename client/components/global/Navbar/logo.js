@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const Logo = ({ button, locale, props }) => {
   const router = useRouter();
   return (
-    <Link href={`${delve(button, 'href')}?lang=${locale || 'en'}`}>
+    <Link href="/">
       <a className={router.asPath.startsWith("/case-studies") ? "none nav__logo": "nav__logo"}>
       <svg
     xmlns="http://www.w3.org/2000/svg"

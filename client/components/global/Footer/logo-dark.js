@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const LogoDark = ({ button, locale, props }) => {
   return (
-    <Link href={`${delve(button, 'href')}?lang=${locale || 'en'}`}>
+    <Link href="/">
       <a className="footer__news__logo">
         <svg
         xmlns="http://www.w3.org/2000/svg"
