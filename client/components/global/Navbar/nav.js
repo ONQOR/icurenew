@@ -1,9 +1,9 @@
 import delve from 'dlv';
 import Link from 'next/link';
 import { useRouter } from "next/router";
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Nav = ({ links, locale }) => {
+const Nav = ({ links, locale, setShowMenu, showMenu }) => {
   const router = useRouter();
   const [showDrop, setShowDrop] = useState(false)  
 
@@ -18,7 +18,9 @@ const Nav = ({ links, locale }) => {
                     key={`link-${index}`}
                     >
                     {delve(link, 'label')}
-                    <div className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
+                    <div 
+                      id={router.asPath.startsWith("/case-studies") ? "case-drop": ""}
+                      className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
                       <div className='indicator'></div>
                       {links.map((link, index) => {
                           if (delve(link, 'isChild')) {
@@ -30,6 +32,7 @@ const Nav = ({ links, locale }) => {
                                 <a 
                                   className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current child" : "child"} 
                                   key={`link-${index}`}
+                                  onClick={() => setShowMenu(false)}
                                 >
                                   {delve(link, 'label')}
                                 </a>
@@ -47,7 +50,9 @@ const Nav = ({ links, locale }) => {
                     onClick={() => setShowDrop(!showDrop)}
                     >
                     {delve(link, 'label')}
-                    <div className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
+                    <div 
+                    id={router.asPath.startsWith("/case-studies") ? "case-drop": ""}
+                    className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
                       <div className='indicator'></div>
                       {links.map((link, index) => {
                           if (delve(link, 'isChild')) {
@@ -59,6 +64,7 @@ const Nav = ({ links, locale }) => {
                                 <a 
                                   className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current child" : "child"} 
                                   key={`link-${index}`}
+                                  onClick={() => setShowMenu(false)}
                                 >
                                   {delve(link, 'label')}
                                 </a>
@@ -84,7 +90,9 @@ const Nav = ({ links, locale }) => {
                 >
                   <a 
                     className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current" : ""} 
-                    key={`link-${index}`}>
+                    key={`link-${index}`}
+                    onClick={() => setShowMenu(false)}
+                    >
                     {delve(link, 'label')}
                   </a>
                 </Link>

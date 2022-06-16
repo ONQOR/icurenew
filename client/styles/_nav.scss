@@ -131,7 +131,25 @@
         &.reveal {
             display: block ;
         }
-        background-color: $purple;
+        &#case-drop {
+            @media screen and (min-width: 1100px) {
+                background-color: $purple;
+            }
+            .child {
+                color: #fff !important;
+                &:hover {
+                    &:after {
+                        width: 100%;
+                        background: white;
+                        bottom: 0px;
+                    }
+                }
+            }
+            .indicator {
+                background-color: $purple;
+            }
+        }
+        background-color: white;
         padding: 7.5px;
         position: absolute;
         z-index: 4;
@@ -145,7 +163,7 @@
         .indicator {
             width: 20px;
             height: 20px;
-            background-color: $purple;
+            background-color: white;
             transform: rotate(45deg);
             position: absolute;
             top: -7px;
@@ -156,12 +174,16 @@
             display: block !important;
             margin:      0 !important;
             padding: 7.5px;
-            color: #fff !important;
+            @media screen and (min-width: 1100px) {
+                color: $purpleDark  !important;
+            }
+            color: white  !important;
             border-radius: 4px;
             &:hover {
-                background-color: $purpleDark;
                 &:after {
-                    display: none;
+                    width: 100%;
+                    background: $purpleDark;
+                    bottom: 0px;
                 }
             }
         }

@@ -7,7 +7,6 @@ const Tabs = ({cards, title, caption, text }) => {
   const [toggleState, setToggle] = useState(1)
   const handleClick = (index) => {
     setToggle(index)
-    console.log(index)
   }
   return (
     <section className="tabs">

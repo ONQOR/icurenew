@@ -3,7 +3,6 @@ import { getStrapiMedia } from '../../../utils';
 import delve from 'dlv';
 
 const Visual = ({ video, image }) => {
-console.log(video + "hello video")
   if (video) {
     return (
             <video controls>
