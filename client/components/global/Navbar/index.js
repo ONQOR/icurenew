@@ -9,9 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 import { useRouter } from "next/router";
+import LogoCopy from './logo-copy';
 
 const Navigation = ({ navigation, pageData, hasChildren  }) => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(true)
   const router = useRouter();
 
   return (
@@ -23,7 +24,7 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
         </div>
         <div className={showMenu === true ? "active default" : "desk default"}>
           <div className={showMenu === true ? "show" : "none"}>
-            <Logo />
+            <LogoCopy />
           </div>
           <div>
             <Nav
@@ -44,11 +45,21 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
           </div>
         </div>
        
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           icon={faBars}
           onClick={() => setShowMenu(!showMenu)}
           className={router.asPath.startsWith("/blog") ? "nav__hamburger current-case ": "nav__hamburger"}
-        />
+        /> */}
+        <div 
+          id={showMenu === true ? "open" : ""}
+          className={router.asPath.startsWith("/blog") ? "nav__hamburger current-case ": "nav__hamburger"}
+          onClick={() => setShowMenu(!showMenu)}
+          >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
   );
