@@ -18,7 +18,9 @@ const Nav = ({ links, locale, setShowMenu, showMenu }) => {
                     key={`link-${index}`}
                     >
                     {delve(link, 'label')}
-                    <div className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
+                    <div 
+                      id={router.asPath.startsWith("/case-studies") ? "case-drop": ""}
+                      className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
                       <div className='indicator'></div>
                       {links.map((link, index) => {
                           if (delve(link, 'isChild')) {
@@ -48,7 +50,9 @@ const Nav = ({ links, locale, setShowMenu, showMenu }) => {
                     onClick={() => setShowDrop(!showDrop)}
                     >
                     {delve(link, 'label')}
-                    <div className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
+                    <div 
+                    id={router.asPath.startsWith("/case-studies") ? "case-drop": ""}
+                    className={showDrop === true ? "reveal nav__dropdown" : "nav__dropdown"}>
                       <div className='indicator'></div>
                       {links.map((link, index) => {
                           if (delve(link, 'isChild')) {

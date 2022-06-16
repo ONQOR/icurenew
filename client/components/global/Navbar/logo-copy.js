@@ -2,11 +2,14 @@ import delve from 'dlv';
 import Link from 'next/link';
 import { useRouter } from "next/router";
 
-const LogoCopy = ({ button, locale, props }) => {
+const LogoCopy = ({ button, locale, props, setShowMenu, showMenu }) => {
   const router = useRouter();
   return (
     <Link href={`${delve(button, 'href')}?lang=${locale || 'en'}`}>
-      <a className={router.asPath.startsWith("/case-studies") ? "nav__logo": "nav__logo"}>
+      <a 
+        className={router.asPath.startsWith("/case-studies") ? "nav__logo": "nav__logo"}
+        onClick={() => setShowMenu(false)}  
+      >
       <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 513 116.8"

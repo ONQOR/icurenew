@@ -24,7 +24,10 @@ const Navigation = ({ navigation, pageData, hasChildren  }) => {
         </div>
         <div className={showMenu === true ? "active default" : "desk default"}>
           <div className={showMenu === true ? "show" : "none"}>
-            <LogoCopy />
+            <LogoCopy 
+              showMenu={showMenu}
+              setShowMenu={setShowMenu}
+            />
           </div>
           <div>
             <Nav
