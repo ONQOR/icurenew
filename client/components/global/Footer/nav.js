@@ -29,7 +29,6 @@ const Nav = ({ links, locale }) => {
                                 <a 
                                   className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current child" : "child"} 
                                   key={`link-${index}`}
-                                  target="_blank"
                                 >
                                   {delve(link, 'label')}
                                 </a>
