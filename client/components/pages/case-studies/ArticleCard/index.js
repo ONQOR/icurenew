@@ -1,13 +1,13 @@
 import delve from "dlv";
 import Link from "next/link";
-import { useState } from 'react';
+import { useState } from "react";
 import { getStrapiMedia, getStrapiURL } from "../../../../utils";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-​
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
   const description = delve(seo, "metaDescription");
-​
+
   const [imgcard, setImgcard] = useState("")
   async function getServerSideProps(apiId) {
     const res = await fetch(
@@ -21,7 +21,7 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
     return json
   }
   getServerSideProps(id)
-​
+
   return (
     <div className="articles__articles-item">
     <Link href={`/case-studies/${slug}?lang=${locale}`}>
@@ -39,7 +39,7 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
               <span className='case--hover__time'>{time}</span>
               <FontAwesomeIcon icon={faArrowRight} />
           </div>
-​
+
         </div>
       <p className="">{description}</p>
       </a>
@@ -47,5 +47,5 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
     </div>
   );
 };
-​
+
 export default ArticleCard;
