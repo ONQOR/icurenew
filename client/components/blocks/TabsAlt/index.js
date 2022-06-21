@@ -12,18 +12,6 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
     setToggleState(index)
   }
 
-  const [imgcard, setImgcard] = useState("")
-  async function getServerSideProps(apiId) {
-    const res = await fetch(
-      getStrapiURL(
-      ) 
-    ); 
-    const json = await res.json();
-    const imgUrl = json.data.attributes.image.data.attributes.url
-    setImgcard(imgUrl)
-    return json
-  }
-
   return (
     <section className="tabs-alt">
       <div className="container sb center">
