@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "article",
+    "displayName": "case studies",
     "description": ""
   },
   "options": {
@@ -37,7 +37,7 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -67,13 +67,10 @@
       "type": "dynamiczone",
       "components": [
         "blocks.related-articles",
-        "blocks.faq",
-        "blocks.cta-command-line",
         "blocks.case-studies",
         "blocks.cohort",
         "blocks.contact",
         "blocks.cta",
-        "blocks.features-with-images",
         "blocks.features",
         "blocks.hero-small",
         "blocks.hero",
@@ -81,11 +78,7 @@
         "blocks.journey",
         "blocks.maps",
         "blocks.media",
-        "blocks.pricing",
-        "blocks.related-restaurants",
         "blocks.tabs",
-        "blocks.team",
-        "blocks.testimonial",
         "blocks.text-img",
         "blocks.quote",
         "blocks.basic",

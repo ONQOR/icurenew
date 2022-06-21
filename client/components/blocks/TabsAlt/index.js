@@ -1,5 +1,5 @@
 import delve from 'dlv';
-import { getStrapiMedia } from '../../../utils';
+import { getStrapiMedia, getStrapiURL } from '../../../utils';
 import { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,6 +12,18 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
     setToggleState(index)
   }
 
+  const [imgcard, setImgcard] = useState("")
+  async function getServerSideProps(apiId) {
+    const res = await fetch(
+      getStrapiURL(
+      ) 
+    ); 
+    const json = await res.json();
+    const imgUrl = json.data.attributes.image.data.attributes.url
+    setImgcard(imgUrl)
+    return json
+  }
+
   return (
     <section className="tabs-alt">
       <div className="container sb center">
@@ -21,16 +33,18 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
         </div>
         {/* tab buttons */}
         {cards &&
-        cards.map((item, index) => (
-          <div onClick={() => handleClick(index + 1)} className={toggleState === index + 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
+        cards.map((item, index) => {
+          console.log(cards.data + " images")
+          return (
+            <div onClick={() => handleClick(index + 1)} className={toggleState === index + 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
             <img
-              src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
-              alt={delve(item, "image.data.attributes.alternativeText")}
+              src={getStrapiMedia(delve(item, "uploadsUrl"))}
             />
             <h3>{delve(item, "title")}</h3>
             <p>{delve(item, "text")}</p>
-          </div>
-        ))}
+            </div>
+          )
+        })}
         {/* tab content */}
         {cards &&
         cards.map((item, index) => (

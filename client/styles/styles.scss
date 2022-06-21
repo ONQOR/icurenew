@@ -29,32 +29,51 @@
 @import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 // fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
 // h1, h2, h3, h4, h5, h6 {
 
 // }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 h1 {
     font-size: 55px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 h2 {
     font-size: 44px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 h3 {
     font-size: 35px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 h4 {
     font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 h2 {
-    line-height: 66px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 p {
     font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
 }
 span {
     font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
 }
 label {
     font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
 }
 input {
     border: 1px solid $purpleLight;

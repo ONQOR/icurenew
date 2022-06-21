@@ -27,17 +27,6 @@
     "boxText": {
       "type": "string"
     },
-    "images": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "btnText": {
       "type": "string"
     },
@@ -49,6 +38,9 @@
     },
     "lng": {
       "type": "float"
+    },
+    "uploadsUrl": {
+      "type": "string"
     }
   }
 }
