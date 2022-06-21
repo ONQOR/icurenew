@@ -9,10 +9,8 @@ import FeaturesWithImages from '../../blocks/FeaturesWithImages';
 import Hero from '../../blocks/Hero';
 import Pricing from '../../blocks/Pricing';
 import RelatedArticles from '../../blocks/RelatedArticles';
-import RelatedRestaurants from '../../blocks/RelatedRestaurants';
 import Team from '../../blocks/Team';
 import Testimonial from '../../blocks/Testimonial';
-import RichContent from '../../pages/restaurant/RichContent';
 import HeroSmall from '../../blocks/HeroSmall';
 import TextImg from '../../blocks/TextImg';
 import Maps from '../../blocks/Maps';
@@ -56,17 +54,11 @@ const getBlockComponent = ({ __component, ...rest }, index) => {
     case 'blocks.testimonial':
       Block = Testimonial;
       break;
-    case 'restaurant.rich-content':
-      Block = RichContent;
-      break;
     case 'blocks.related-articles':
       Block = RelatedArticles;
       break;
     case 'blocks.cta-command-line':
       Block = CtaCommandLine;
-      break;
-    case 'blocks.related-restaurants':
-      Block = RelatedRestaurants;
       break;
     case 'blocks.features-with-images':
       Block = FeaturesWithImages;
