@@ -60,13 +60,10 @@
       },
       "type": "dynamiczone",
       "components": [
-        "blocks.cta-command-line",
         "blocks.cta",
         "blocks.case-studies",
         "blocks.cohort",
         "blocks.contact",
-        "blocks.faq",
-        "blocks.features-with-images",
         "blocks.features",
         "blocks.hero-small",
         "blocks.hero",
@@ -74,12 +71,8 @@
         "blocks.journey",
         "blocks.maps",
         "blocks.media",
-        "blocks.pricing",
         "blocks.related-articles",
-        "blocks.related-restaurants",
         "blocks.tabs",
-        "blocks.team",
-        "blocks.testimonial",
         "blocks.text-img"
       ]
     },
