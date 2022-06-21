@@ -1,13 +1,37 @@
-import Link from 'next/link';
 import { getStrapiMedia } from '../../../utils';
 import delve from 'dlv';
+import ReactPlayer from 'react-player';
+import React, { useRef, useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faP, faPlay } from '@fortawesome/free-solid-svg-icons'
 
 const Visual = ({ video, image }) => {
+  const [playing, setPlaying] = useState(false)
+  const [controller, setController] = useState(false)
+  const [btn, setBtn] = useState(1)
+  const btnClick = () => {
+    setController(true)
+    setPlaying(true)
+    setBtn(2)
+  }
   if (video) {
     return (
-            <video controls>
-                <source src={getStrapiMedia(delve(image, "data.attributes.url"))} type="video/mp4"></source>
-            </video> 
+      <div className='video__container center'>
+        <ReactPlayer 
+          url={getStrapiMedia(delve(image, "data.attributes.url"))}
+          playing={playing}
+          controls={controller}
+          width={"100%"}
+          height={'auto'}
+        >
+        </ReactPlayer>
+        <button 
+          onClick={() => btnClick()}
+          className={btn === 2 ? 'none' : '' }
+        >
+            <FontAwesomeIcon icon={faPlay} />
+        </button>
+      </div>
     );
   } else {
     return (

@@ -1,9 +1,9 @@
 import delve from "dlv";
 import Link from "next/link";
-import { useState } from 'react';
+import { useState } from "react";
 import { getStrapiMedia, getStrapiURL } from "../../../../utils";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
   const description = delve(seo, "metaDescription");

@@ -16,7 +16,24 @@
         height: auto;
         object-fit: cover; 
     }
-    video {
-        width: 100%;
+    .video__container {
+        display: flex;
+        video {
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            z-index: 4;
+            background-color: $purple;
+            border-radius: 50%; 
+            width: 70px; 
+            height: 70px;
+            padding: 0 !important;
+            color: white;
+            font-size: 30px;
+            &.none {
+                display: none;
+            }
+        }
     }
 }
