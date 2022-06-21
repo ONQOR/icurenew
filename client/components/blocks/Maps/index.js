@@ -90,8 +90,7 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
                   <div className={slideState === index + 1 ? "active maps__box desk" : "maps__box desk not-active"}>   
                   <div className="maps__box__boxbox">
                     <img
-                        src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
-                        alt={delve(item, "image.data.attributes.alternativeText")}
+                        src={getStrapiMedia(delve(item, "uploadsUrl"))}
                         className="maps__box__boxbox__circle"
                     />
                     <div className="maps__box__boxbox__text">
@@ -122,8 +121,8 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
                 <div className={slideState === index + 1 ? "active maps__box mob" : "maps__box mob not-active"}>   
                   <div className="maps__box__boxbox">
                     <img
-                        src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
-                        alt={delve(item, "image.data.attributes.alternativeText")}
+                        src={getStrapiMedia(delve(item, "images.data.attributes.url"))}
+                        alt={delve(item, "images.data.attributes.alternativeText")}
                         className="maps__box__boxbox__circle"
                     />
                     <div className="maps__box__boxbox__text">
