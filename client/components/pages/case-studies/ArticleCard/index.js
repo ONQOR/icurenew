@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { getStrapiMedia, getStrapiURL } from "../../../../utils";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
+​
 const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
   const description = delve(seo, "metaDescription");
-
+​
   const [imgcard, setImgcard] = useState("")
   async function getServerSideProps(apiId) {
     const res = await fetch(
@@ -16,21 +16,12 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
       ) 
     ); 
     const json = await res.json();
-
+    const imgUrl = json.data.attributes.image.data.attributes.url
+    setImgcard(imgUrl)
     return json
   }
-  getServerSideProps(id).then( response => {
-    console.log(`Received response:`, response);
-      const imgUrl = ''
-      if(response.data.attributes.image.data){
-        const imgUrl = response.data.attributes.image.data.attributes.url
-      }else{
-        const imgUrl = 'http://160.153.246.65:1337/uploads/thumbnail_apple_6d4f0369c9.jpg?updated_at=2022-05-03T12:46:36.504Z'
-      }
-      setImgcard(imgUrl)
-  });
-
-
+  getServerSideProps(id)
+​
   return (
     <div className="articles__articles-item">
     <Link href={`/case-studies/${slug}?lang=${locale}`}>
@@ -48,7 +39,7 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
               <span className='case--hover__time'>{time}</span>
               <FontAwesomeIcon icon={faArrowRight} />
           </div>
-
+​
         </div>
       <p className="">{description}</p>
       </a>
@@ -56,5 +47,5 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
     </div>
   );
 };
-
+​
 export default ArticleCard;
