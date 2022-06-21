@@ -81,11 +81,11 @@ const Articles = ({
         <NoResults status={status} length={delve(data, "articles").length} />
 
         <div className="grid md:grid-cols-2 grid-cols-1 gap-40 mt-24 px-4">
-          {status === "success" &&
+          {/* {status === "success" &&
             delve(data, "articles") &&
             data.articles.map((article, index) => (
               <ArticleCard {...article.attributes} locale={locale} key={index} />
-            ))}
+            ))} */}
         </div>
 
         {data.count > 0 && (

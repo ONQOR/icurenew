@@ -16,11 +16,20 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
       ) 
     ); 
     const json = await res.json();
-    const imgUrl = json.data.attributes.image.data.attributes.url
-    setImgcard(imgUrl)
+
     return json
   }
-  getServerSideProps(id)
+  getServerSideProps(id).then( response => {
+    console.log(`Received response:`, response);
+      const imgUrl = ''
+      if(response.data.attributes.image.data){
+        const imgUrl = response.data.attributes.image.data.attributes.url
+      }else{
+        const imgUrl = 'http://160.153.246.65:1337/uploads/thumbnail_apple_6d4f0369c9.jpg?updated_at=2022-05-03T12:46:36.504Z'
+      }
+      setImgcard(imgUrl)
+  });
+
 
   return (
     <div className="articles__articles-item">
