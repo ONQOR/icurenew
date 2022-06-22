@@ -20,6 +20,12 @@
     },
     "hide": {
       "type": "boolean"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "lng": {
+      "type": "string"
     }
   }
 }
