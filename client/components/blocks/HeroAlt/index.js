@@ -6,10 +6,10 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Shape from '../../shared/shape'
 import { useRouter } from "next/router";
 
-const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText, slug, locale }) => {
+const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText, slug, locale, hide }) => {
   const router = useRouter();
    return (
-    <section className="hero-alt">
+    <section className={hide ? "hide" : "hero-alt"}>
     <div className="container sb">
 
       {/* left */}

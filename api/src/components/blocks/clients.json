@@ -2,12 +2,16 @@
   "collectionName": "components_blocks_clients",
   "info": {
     "displayName": "Clients",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

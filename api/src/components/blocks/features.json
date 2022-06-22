@@ -14,6 +14,9 @@
     },
     "title": {
       "type": "string"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

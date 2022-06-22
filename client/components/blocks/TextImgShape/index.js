@@ -3,10 +3,10 @@ import { getStrapiMedia } from '../../../utils';
 import Shape from '../../shared/shape'
 import ShapeTwo from '../../shared/shape-two'
 
-const TextImgShape = ({ caption, title, text, image }) => {
+const TextImgShape = ({ caption, title, text, image, hide }) => {
 
   return (
-    <section className="textImgShape">
+    <section className={hide ? "hide" : "textImgshape"}>
       <div className="container sb">
         <div className="textImgShape__left"> 
           <span className='caption'>{caption}</span>

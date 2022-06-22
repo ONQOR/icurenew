@@ -2,10 +2,10 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import ReactMarkdown from 'react-markdown'
 
-const Text = ({ text }) => {
+const Text = ({ text, hide }) => {
 
   return (
-    <section className="text">
+    <section className={hide ? "hide" : "text"}>
       <div className="container">
         <ReactMarkdown>{text}</ReactMarkdown>
       </div> 

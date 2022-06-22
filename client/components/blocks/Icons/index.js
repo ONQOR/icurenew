@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Icons = ({ cards, title, text }) => {
+const Icons = ({ cards, title, text, hide }) => {
 
   return (
-    <section className="icons">
+    <section className={hide ? "hide" : "icons"}>
       <div className="container sb center">
         <div className="icons__title">
           <span className='caption'>{title}</span>

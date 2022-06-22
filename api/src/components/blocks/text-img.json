@@ -32,6 +32,9 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.group"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

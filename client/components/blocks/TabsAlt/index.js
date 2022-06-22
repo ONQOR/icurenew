@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
+const TabsAlt = ({ TabsAlt, title, caption, cards, hide }) => {
 
   const [toggleState, setToggleState] = useState(1)
   const handleClick = (index) => {
@@ -13,7 +13,7 @@ const TabsAlt = ({ TabsAlt, title, caption, cards,  }) => {
   }
 
   return (
-    <section className="tabs-alt">
+    <section className={hide ? "hide" : "tabs-alt"}>
       <div className="container sb center">
         <div className="tabs-alt__title">
           <span className='caption'>{caption}</span>

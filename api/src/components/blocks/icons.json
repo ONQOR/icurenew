@@ -17,6 +17,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.tab"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

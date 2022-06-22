@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const TextImg = ({ caption, title, text, image }) => {
+const TextImg = ({ caption, title, text, image, hide }) => {
 
   return (
-    <section className="textImg">
+    <section className={hide ? "hide" : "textImg"}>
       <div className="container sb">
         <div className="textImg__left"> 
           <span className='caption'>{caption}</span>

@@ -16,7 +16,7 @@ import {
     MarkerClusterer,
 } from "@react-google-maps/api";
 
-const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
+const Maps = ({ image, caption, value, text, subTitle, title, cards, hide }) => {
   // slider js
   const settings = {
     dots: true,
@@ -67,7 +67,7 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards }) => {
   if (!isLoaded) 
   return <div>Loading...</div>;
   return (
-    <section className="maps">
+    <section className={hide ? "hide" : "maps"}>
       {/* title start */}
       <div className="maps__container__title container center">
         <span>{subTitle}</span>

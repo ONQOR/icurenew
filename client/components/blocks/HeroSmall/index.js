@@ -1,9 +1,9 @@
 
 
-const HeroSmall = ({ title, text }) => {
+const HeroSmall = ({ title, text, hide }) => {
 
   return (
-    <section className="heroSmall">
+    <section className={hide ? "hide" : "heroSmall"}>
       <div className="container">
         <h1>{title}</h1>
         <p>{text}</p>

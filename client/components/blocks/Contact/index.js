@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 
-const Contact = ({ image, title, text }) => {
+const Contact = ({ image, title, text, hide }) => {
   const form = useRef();
   const [success, setSuccess] = useState(1);
   const [errmsg, setErrmsg] = useState("");
@@ -27,7 +27,7 @@ const Contact = ({ image, title, text }) => {
   };
 
   return (
-    <section className="contact">
+    <section className={hide ? "hide" : "contact"}>
         <div className="container sb">
             <div className="contact__left">
                 <h2 className={success === 1 ? "active" : "none"}>{title}</h2>

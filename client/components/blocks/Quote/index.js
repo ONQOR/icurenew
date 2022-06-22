@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Quote= ({ image, title, caption, text}) => {
+const Quote= ({ image, title, caption, text, hide }) => {
 
    return (
-    <section className="quote">
+    <section className={hide ? "hide" : "quote"}>
         <div className="container sb center">
             <p>"{text}"</p>
             <img

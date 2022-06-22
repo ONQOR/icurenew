@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import Link from 'next/link';
 
-const Cohort = ({ title, newer, cards }) => {
+const Cohort = ({ title, newer, cards, hide }) => {
 
   return (
-    <section className="cohort">
+    <section className={hide ? "hide" : "cohort"}>
       <div className="container">
         <div className="title">
           <h2>{title}</h2>

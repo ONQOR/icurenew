@@ -37,6 +37,9 @@
     },
     "btnUrl": {
       "type": "string"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

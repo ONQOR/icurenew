@@ -20,6 +20,9 @@
     },
     "caption": {
       "type": "string"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }
