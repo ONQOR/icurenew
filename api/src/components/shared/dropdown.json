@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_dropdowns",
+  "info": {
+    "displayName": "dropdown",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "string"
+    },
+    "enquire": {
+      "type": "string"
+    }
+  }
+}

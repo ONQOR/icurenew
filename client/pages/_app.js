@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
     return <ErrorPage statusCode={404} />;
   }
 
+  console.log(pageProps)
   return (
     <>
       <QueryClientProvider className={styles} client={queryClient}>

@@ -24,6 +24,11 @@
     "text": {
       "type": "string"
     },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.dropdown"
+    },
     "hide": {
       "type": "boolean"
     }
