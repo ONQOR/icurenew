@@ -6,8 +6,9 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Shape from '../../shared/shape'
 import { useRouter } from "next/router";
 
-const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText, slug, locale, hide }) => {
+const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, category }) => {
   const router = useRouter();
+  console.log(category)
    return (
     <section className={hide ? "hide" : "hero-alt"}>
     <div className="container sb">
@@ -20,7 +21,7 @@ const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText, slug, lo
            
           </span>
         </div>
-        <span>{caption}</span>
+        <span>{delve(category, "data.attributes.name")}</span>
         <h1>{title}</h1>
         <p>{text}</p>
         {/* left points */}
@@ -33,7 +34,7 @@ const HeroAlt = ({ image, cards, title, text, caption, btnUrl, btnText, slug, lo
           </div>
         ))}
         </div>
-      {/* left button */}
+        {/* left button */}
           <Link href={btnUrl} passHref={true}>
               <a>
                 <button>

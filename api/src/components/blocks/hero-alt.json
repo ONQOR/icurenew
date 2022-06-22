@@ -10,9 +10,6 @@
     "title": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
-    },
     "cards": {
       "type": "component",
       "repeatable": true,
@@ -37,6 +34,9 @@
     },
     "hide": {
       "type": "boolean"
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

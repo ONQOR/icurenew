@@ -18,11 +18,11 @@
       "relation": "oneToMany",
       "target": "api::article.article"
     },
-    "text": {
-      "type": "text"
-    },
     "hide": {
       "type": "boolean"
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

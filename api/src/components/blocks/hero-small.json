@@ -10,11 +10,11 @@
     "title": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
-    },
     "hide": {
       "type": "boolean"
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

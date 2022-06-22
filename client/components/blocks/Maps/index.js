@@ -52,7 +52,7 @@ const Maps = ({ subTitle, title, cards, hide, lat, lng }) => {
   });
 
   // map location onclick slider content onclick
-  const [mapState, setMap] = useState({lat: {lat}, lng: {lng}})
+  const [mapState, setMap] = useState({lat: lat, lng: lng})
   const [slideState, setSlide] = useState(1)
   const mapClick = (location, count) => {
     setMap(location)

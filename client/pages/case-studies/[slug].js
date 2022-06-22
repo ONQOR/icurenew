@@ -7,6 +7,7 @@ import { getLocalizedParams } from "../../utils/localize";
 
 const Article = ({ global, pageData, preview }) => {
   const blocks = delve(pageData, "attributes.blocks");
+  console.log(pageData)
   return (
     <>
       <Layout
@@ -30,7 +31,7 @@ export async function getServerSideProps(context) {
     : "";
   const res = await fetch(
     getStrapiURL(
-      `/articles?filters[slug]=${context.params.slug}&locale=${locale}${preview}&populate[blocks][populate]=*`
+      `/articles?filters[slug]=${context.params.slug}&locale=${locale}${preview}&populate[blocks][populate]=*&populate=category`
     ) 
   ); 
   const json = await res.json();
