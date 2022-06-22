@@ -10,13 +10,16 @@
     "title": {
       "type": "string"
     },
-    "text": {
+    "caption": {
       "type": "string"
     },
     "cards": {
       "type": "component",
       "repeatable": true,
       "component": "shared.tab"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

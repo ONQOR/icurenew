@@ -2,10 +2,10 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import Shape from '../../shared/shape'
 
-const Basic= ({ title, text, image}) => {
+const Basic= ({ title, text, image, hide}) => {
 
    return (
-    <section className="basic">
+    <section className={hide ? "hide" : "basic"}>
         <div className="container sb center">
             <h2>{title}</h2>
             <p>{text}</p>

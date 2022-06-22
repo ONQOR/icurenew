@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 
-const Contact = ({ image, title, text }) => {
+const Contact = ({ image, title, text, hide, cards }) => {
   const form = useRef();
   const [success, setSuccess] = useState(1);
   const [errmsg, setErrmsg] = useState("");
@@ -27,7 +27,7 @@ const Contact = ({ image, title, text }) => {
   };
 
   return (
-    <section className="contact">
+    <section id="contact" className={hide ? "hide" : "contact"}>
         <div className="container sb">
             <div className="contact__left">
                 <h2 className={success === 1 ? "active" : "none"}>{title}</h2>
@@ -44,11 +44,29 @@ const Contact = ({ image, title, text }) => {
                     <label>Email</label>
                     <input required="required" type="email" name="email"></input>
 
+                    {/* enquire dropdown */}
                     <label>Enquiry Type</label>
-                    <input required="required" type="text" name="enquiry"></input>
+                    <select name="enquiry" required="required" placeholder='select here'>
+                    <option value="" disabled selected>Select your option</option>
+                      {cards &&
+                        cards.map((item, index) => (
+                          <option class={delve(item, "enquire") ? "" : "hide"} value={delve(item, "enquire")}>
+                            {delve(item, "enquire")}
+                          </option>
+                      ))}
+                    </select>
 
+                    {/* background dropdown */}
                     <label>Background</label>
-                    <input required="required" type="text" name="background"></input>
+                    <select name="background" required="required" placeholder='select here'>
+                    <option value="" disabled selected>Select your option</option>
+                    {cards &&
+                        cards.map((item, index) => (
+                          <option class={delve(item, "background") ? "" : "hide"} value={delve(item, "background")}>
+                           {delve(item, "background")}
+                          </option>
+                      ))}
+                    </select>
 
                     <label>Message</label>
                     <textarea name="message"></textarea>

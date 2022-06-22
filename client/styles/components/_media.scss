@@ -15,6 +15,10 @@
         width: 100%;
         height: auto;
         object-fit: cover; 
+        z-index: 3;
+        &.none {
+            display: none;
+        }
     }
     .video__container {
         display: flex;

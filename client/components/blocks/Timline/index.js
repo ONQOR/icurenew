@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Timeline= ({ cards, title }) => {
+const Timeline= ({ cards, title, hide }) => {
 
    return (
-    <section className="timeline">
+    <section className={hide ? "hide" : "timeline"}>
         <div className="container center">
             <h2>{title}</h2>
 

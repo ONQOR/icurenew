@@ -25,7 +25,7 @@
       "type": "string"
     },
     "boxText": {
-      "type": "string"
+      "type": "text"
     },
     "btnText": {
       "type": "string"

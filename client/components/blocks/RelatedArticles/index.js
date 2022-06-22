@@ -1,9 +1,9 @@
 import ArticleCard from '../../pages/case-studies/ArticleCard';
 
-const RelatedArticles = ({ articles, text, title, caption }) => {
+const RelatedArticles = ({ articles, text, title, caption, hide }) => {
 
   return (
-      <div className="related-articles">
+      <div className={hide ? "hide" : "related-articles"}>
         <div className="container center related-articles__articles sb">
           <div className='related-articles__articles__title center'>
             <span className='caption'>{caption}</span>

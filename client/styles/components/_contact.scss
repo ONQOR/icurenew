@@ -87,6 +87,12 @@
             &.active {
                 display: flex !important;
             }
+            select {
+                height: 54px;
+                option:first {
+                    color: #999 !important;
+                }
+            }
             .radio {
                 display: flex;
                 flex-direction: row;

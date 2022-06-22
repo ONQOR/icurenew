@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React, { Component } from "react";
 
-const Clients = ({title}) => {
+const Clients = ({title, hide}) => {
     const settings = {
       dots: true,
       infinite: true,
@@ -15,7 +15,7 @@ const Clients = ({title}) => {
     };
 
     return (
-      <section className="clients">
+      <section className={hide ? "hide" : "clients"}>
         <div className="container center">
           <Slider {...settings}>
             <img />

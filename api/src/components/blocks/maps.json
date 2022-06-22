@@ -10,26 +10,6 @@
     "title": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "caption": {
-      "type": "string"
-    },
-    "value": {
-      "type": "string"
-    },
-    "text": {
-      "type": "string"
-    },
     "subTitle": {
       "type": "string"
     },
@@ -37,6 +17,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.clients"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

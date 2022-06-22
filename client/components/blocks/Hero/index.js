@@ -1,16 +1,16 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Hero = ({ header, text, featuredText, images, image, cards}) => {
-  const titlee = delve(header, 'title');
+const Hero = ({ header, text, featuredText, images, image, cards, hide}) => {
+  const title = delve(header, 'title');
 
    return (
-    <section className="hero">
+    <section className={hide ? "hide" : "hero"}>
     <div className="container sb">
 
       {/* left */}
       <div className="hero__left">
-        <h1>{titlee}</h1>
+        <h1>{title}</h1>
         <p>{text}</p>
         <span>{featuredText}</span>
         <img

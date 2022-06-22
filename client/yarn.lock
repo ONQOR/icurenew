@@ -2879,6 +2879,11 @@ raw-body@2.4.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-anchor-link-smooth-scroll@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.12.tgz#5cd49c73e74be6d20b4c05a5e5c72d07ebbedac7"
+  integrity sha512-aaY+9X0yh8YnC0jBfoTKpsiCLdO/Y6pCltww+VB+NnTBPDOvnIdnp1AlazajsDitc1j+cVSQ+yNtaVeTIMQbxw==
+
 react-code-blocks@^0.0.9-0:
   version "0.0.9-0"
   resolved "https://registry.yarnpkg.com/react-code-blocks/-/react-code-blocks-0.0.9-0.tgz#0c6d04d8a40b74cffe95f24f1a8e62a0fda8c014"

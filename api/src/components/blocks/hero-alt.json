@@ -10,15 +10,18 @@
     "title": {
       "type": "string"
     },
+    "text": {
+      "type": "text"
+    },
     "cards": {
       "type": "component",
       "repeatable": true,
       "component": "shared.info"
     },
-    "caption": {
+    "btnText": {
       "type": "string"
     },
-    "text": {
+    "btnUrl": {
       "type": "string"
     },
     "image": {
@@ -32,11 +35,8 @@
         "audios"
       ]
     },
-    "btnText": {
-      "type": "string"
-    },
-    "btnUrl": {
-      "type": "string"
+    "hide": {
+      "type": "boolean"
     }
   }
 }

@@ -7,13 +7,16 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "cards": {
       "type": "component",
       "repeatable": true,
       "component": "shared.card"
     },
-    "title": {
-      "type": "string"
+    "hide": {
+      "type": "boolean"
     }
   }
 }

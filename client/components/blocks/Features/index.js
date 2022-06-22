@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Features = ({ cards, title, image }) => {
+const Features = ({ cards, title, image, hide }) => {
 
   return (
-    <div className="features">
+    <div className={hide ? "hide" : "features"}>
       <div className="container sb">
         <h2>{title}</h2>
 

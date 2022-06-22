@@ -18,7 +18,6 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
               <Logonew />
 							<p>{caption}</p>
               <p>{text}</p>
-              <label>Email Address</label>
               <div>
                 <input type="email" placeholder="email"/>
                 <input type="submit" value="Sign Up"/>
@@ -58,7 +57,7 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
                 <p className="footer__terms__date">© iCURe 2022</p>
                 <p className="footer__terms__terms">
                   <Link href="/privacy" passHref={true}>
-                    <a target="blank">Terms of Service</a>
+                    <a target="_blank">Terms of Service</a>
                   </Link>
                 </p>
               </div>

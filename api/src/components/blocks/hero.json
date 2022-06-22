@@ -23,19 +23,15 @@
       "component": "shared.header"
     },
     "text": {
-      "type": "string"
-    },
-    "btnText": {
-      "type": "string"
+      "type": "text"
     },
     "featuredText": {
       "type": "string"
     },
-    "iconOne": {
-      "type": "string"
-    },
-    "iconTwo": {
-      "type": "string"
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image"
     },
     "image": {
       "type": "media",
@@ -48,10 +44,8 @@
         "audios"
       ]
     },
-    "cards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.image"
+    "hide": {
+      "type": "boolean"
     }
   }
 }

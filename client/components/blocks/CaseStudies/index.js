@@ -2,10 +2,10 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
 import ArticleCard from '../../pages/case-studies/ArticleCard';
 
-const CaseStudies = ({ articles, title, caption, text }) => {
+const CaseStudies = ({ articles, title, caption, text, hide }) => {
 
   return (
-    <section className="caseStudies">
+    <section className={hide ? "hide" : "caseStudies"}>
         <div className="container">
             <div className="title">
                 <span className='caption'>{caption}</span>

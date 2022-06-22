@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Slick = ({title, cards}) => {
+const Slick = ({title, cards, hide}) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -17,7 +17,7 @@ const Slick = ({title, cards}) => {
       };
 
     return (
-      <section className="slick">
+      <section className={hide ? "hide" : "slick"}>
         <div className="container center">
             <div>
                 <Slider {...settings}>

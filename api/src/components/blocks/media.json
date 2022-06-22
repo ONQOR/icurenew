@@ -24,9 +24,22 @@
         "audios"
       ]
     },
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "video": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

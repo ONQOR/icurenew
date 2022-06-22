@@ -1,10 +1,10 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Journey = ({ title, subTitle, rows }) => {
+const Journey = ({ title, subTitle, rows, hide }) => {
 
   return (
-    <section className="journey">
+    <section className={hide ? "hide" : "journey"}>
       <div className="container">
         <div className="title">
           <span>{subTitle}</span>

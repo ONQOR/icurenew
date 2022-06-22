@@ -2,14 +2,14 @@ import { useState } from 'react';
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 
-const Tabs = ({cards, title, caption, text }) => {
+const Tabs = ({cards, title, caption, text, hide }) => {
 
   const [toggleState, setToggle] = useState(1)
   const handleClick = (index) => {
     setToggle(index)
   }
   return (
-    <section className="tabs">
+    <section className={hide ? "hide" : "tabs"}>
       <div className="container center">
         <div className="tabs__top">
           <span className='caption'>{caption}</span>

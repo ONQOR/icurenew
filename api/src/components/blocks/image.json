@@ -2,19 +2,24 @@
   "collectionName": "components_blocks_images",
   "info": {
     "displayName": "image",
-    "icon": "arrows-alt"
+    "icon": "arrows-alt",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "hide": {
+      "type": "boolean"
     }
   }
 }

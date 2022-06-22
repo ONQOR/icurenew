@@ -7,14 +7,14 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "caption": {
       "type": "string"
     },
-    "text": {
+    "title": {
       "type": "string"
+    },
+    "text": {
+      "type": "text"
     },
     "image": {
       "type": "media",
@@ -27,11 +27,8 @@
         "audios"
       ]
     },
-    "groups": {
-      "displayName": "group",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.group"
+    "hide": {
+      "type": "boolean"
     }
   }
 }

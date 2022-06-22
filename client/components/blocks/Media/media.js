@@ -5,7 +5,7 @@ import React, { useRef, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faP, faPlay } from '@fortawesome/free-solid-svg-icons'
 
-const Visual = ({ video, image }) => {
+const Visual = ({ video, images, image }) => {
   const [playing, setPlaying] = useState(false)
   const [controller, setController] = useState(false)
   const [btn, setBtn] = useState(1)
@@ -14,6 +14,8 @@ const Visual = ({ video, image }) => {
     setPlaying(true)
     setBtn(2)
   }
+
+  console.log(delve(images, "data.attributes.url"))
   if (video) {
     return (
       <div className='video__container center'>
@@ -31,13 +33,16 @@ const Visual = ({ video, image }) => {
         >
             <FontAwesomeIcon icon={faPlay} />
         </button>
+        <img 
+          src={getStrapiMedia(delve(images, "data.attributes.url"))}
+          className={btn === 2 ? 'none' : '' }
+        />
       </div>
     );
   } else {
     return (
         <img
         src={getStrapiMedia(delve(image, "data.attributes.url"))}
-        alt={delve(image, "data.attributes.alternativeText")}
         className="relative mx-auto shadow-lg rounded-lg w-auto"
       />
     );
