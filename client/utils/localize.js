@@ -15,7 +15,7 @@ export function localizePath(localePage, type) {
     case 'restaurant':
       return `/restaurants/${slug}?lang=${locale}`;
     case 'article':
-      return `/blog/${slug}?lang=${locale}`;
+      return `/case-studies/${slug}?lang=${locale}`;
 
     default:
       return `/${slug}?lang=${locale}`;
@@ -28,8 +28,8 @@ function getUrl(type, localization, targetLocale) {
       return `/pages/${delve(localization, 'id')}`;
     case 'restaurant-page':
       return `/restaurant-page?locale=${targetLocale}`;
-    case 'blog-page':
-      return `/blog-page?locale=${targetLocale}`;
+    case 'case-studies-page':
+      return `/case-studies-page?locale=${targetLocale}`;
     case 'article':
       return `/articles/${delve(localization, 'id')}?locale=${targetLocale}`;
     case 'restaurant':

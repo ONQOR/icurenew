@@ -51,7 +51,7 @@ export function getData(slug, locale, apiID, kind, preview) {
     if (apiID == 'page') {
       prefix = ``;
     } else if (apiID == 'article') {
-      prefix = `/blog`;
+      prefix = `/case-studies`;
     }
     const slugToReturn = `${prefix}/${slug}?lang=${locale}`;
     const apiUrl = `/${pluralize(
@@ -67,7 +67,7 @@ export function getData(slug, locale, apiID, kind, preview) {
 
     if (apiID.includes('-page')) {
       const slugToReturn =
-        apiID == 'blog-page'
+        apiID == 'case-studies-page'
           ? `/${apiID.replace('-page', '')}?lang=${locale}`
           : `/${apiID.replace('-page', 's')}?lang=${locale}`;
       return {
