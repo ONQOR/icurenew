@@ -3,20 +3,17 @@ import { getStrapiMedia } from '../../../utils';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useLoadScript } from '@react-google-maps/api';
 import Link from 'next/link';
 import { useState, useMemo, useCallback, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import {
+    useLoadScript,
     GoogleMap,
-    Marker,
-    DirectionsRenderer,
-    Circle,
-    MarkerClusterer,
+    Marker
 } from "@react-google-maps/api";
 
-const Maps = ({ image, caption, value, text, subTitle, title, cards, hide }) => {
+const Maps = ({ subTitle, title, cards, hide, lat, lng }) => {
   // slider js
   const settings = {
     dots: true,
@@ -49,20 +46,18 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards, hide }) => 
   };
 
   // map js
-  const center = useMemo(() => ({lat: 43, lng: -80}), [])
   const { isLoaded } = useLoadScript ({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
   });
 
   // map location onclick slider content onclick
-  const [mapState, setMap] = useState({lat: 43, lng: -80})
+  const [mapState, setMap] = useState({lat: {lat}, lng: {lng}})
   const [slideState, setSlide] = useState(1)
   const mapClick = (location, count) => {
     setMap(location)
     setSlide(count)
   }
-
 
   if (!isLoaded) 
   return <div>Loading...</div>;
@@ -114,6 +109,7 @@ const Maps = ({ image, caption, value, text, subTitle, title, cards, hide }) => 
                 )
               })}
             {/* user box end */}
+            <Marker position={mapState} />
           </GoogleMap>
           {/* user box start */}
             {cards &&
