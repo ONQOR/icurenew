@@ -27,7 +27,7 @@ const Contact = ({ image, title, text, hide, cards }) => {
   };
 
   return (
-    <section className={hide ? "hide" : "contact"}>
+    <section id="contact" className={hide ? "hide" : "contact"}>
         <div className="container sb">
             <div className="contact__left">
                 <h2 className={success === 1 ? "active" : "none"}>{title}</h2>

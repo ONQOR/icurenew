@@ -7,19 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article"
+    "caption": {
+      "type": "string"
     },
     "title": {
       "type": "string"
     },
     "text": {
-      "type": "string"
+      "type": "text"
     },
-    "caption": {
-      "type": "string"
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
     },
     "hide": {
       "type": "boolean"

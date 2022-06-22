@@ -7,28 +7,19 @@
   },
   "options": {},
   "attributes": {
+    "caption": {
+      "type": "string"
+    },
     "title": {
       "type": "string"
+    },
+    "text": {
+      "type": "text"
     },
     "cards": {
       "type": "component",
       "repeatable": true,
       "component": "shared.tab"
-    },
-    "tabOne": {
-      "type": "string"
-    },
-    "tabTwo": {
-      "type": "string"
-    },
-    "tabThree": {
-      "type": "string"
-    },
-    "caption": {
-      "type": "string"
-    },
-    "text": {
-      "type": "string"
     },
     "hide": {
       "type": "boolean"

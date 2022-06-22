@@ -7,19 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "contentTitle": {
-      "type": "string"
-    },
-    "contentText": {
+    "uploadsUrl": {
       "type": "string"
     },
     "title": {
       "type": "string"
     },
     "text": {
+      "type": "text"
+    },
+    "contentTitle": {
       "type": "string"
     },
-    "btnUrl": {
+    "contentText": {
       "type": "string"
     },
     "image": {
@@ -33,8 +33,14 @@
         "audios"
       ]
     },
-    "uploadsUrl": {
+    "btnText": {
       "type": "string"
+    },
+    "btnUrl": {
+      "type": "string"
+    },
+    "anchor": {
+      "type": "boolean"
     }
   }
 }

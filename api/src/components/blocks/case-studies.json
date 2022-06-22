@@ -13,29 +13,13 @@
     "caption": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
     },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article"
-    },
     "text": {
-      "type": "string"
+      "type": "text"
     },
     "hide": {
       "type": "boolean"

@@ -24,10 +24,6 @@
         "audios"
       ]
     },
-    "video": {
-      "type": "boolean",
-      "default": false
-    },
     "images": {
       "type": "media",
       "multiple": false,
@@ -38,6 +34,9 @@
         "videos",
         "audios"
       ]
+    },
+    "video": {
+      "type": "boolean"
     },
     "hide": {
       "type": "boolean"

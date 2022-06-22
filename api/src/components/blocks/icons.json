@@ -10,7 +10,7 @@
     "title": {
       "type": "string"
     },
-    "text": {
+    "caption": {
       "type": "string"
     },
     "cards": {

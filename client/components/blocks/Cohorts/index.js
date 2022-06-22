@@ -14,20 +14,20 @@ const Cohort = ({ title, newer, cards, hide }) => {
         cards.map((item, index) => (
           <div className="row" key={`feature-${index}`}>
             <div className="index">
-              <span className="subTitle">{delve(item, "subTitle")}</span>
+              <span className="subTitle">{delve(item, "caption")}</span>
               <span className="date">{delve(item, "date")}</span>
             </div>
             <div className="text">
-              <span>{delve(item, "caption")}</span>
+              <span>{delve(item, "subTitle")}</span>
               <h3>{delve(item, "title")}</h3>
             </div>
             <div className="">
               <div className="index-mob">
-                <span className="subTitle">{delve(item, "subTitle")}</span>
+                <span className="subTitle">{delve(item, "caption")}</span>
                 <span className="date">{delve(item, "date")}</span>
               </div>
               <div className="text-mob">
-                <span>{delve(item, "caption")}</span>
+                <span>{delve(item, "subTitle")}</span>
                 <h3>{delve(item, "title")}</h3>
               </div>
             </div>

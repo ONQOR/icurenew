@@ -10,6 +10,14 @@
     "title": {
       "type": "string"
     },
+    "text": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.dropdown"
+    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -20,14 +28,6 @@
         "videos",
         "audios"
       ]
-    },
-    "text": {
-      "type": "string"
-    },
-    "cards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.dropdown"
     },
     "hide": {
       "type": "boolean"

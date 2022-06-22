@@ -4,8 +4,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const TabsAlt = ({ TabsAlt, title, caption, cards, hide }) => {
+const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
 
   const [toggleState, setToggleState] = useState(1)
   const handleClick = (index) => {
@@ -40,10 +41,14 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide }) => {
           <div className="tabs__content__left">
             <h2>{delve(item, "contentTitle")}</h2>
             <p>{delve(item, "contentText")}</p>
-            <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
+            <Link 
+              href={`${delve(item, 'btnUrl')}`} 
+              passHref={true}
+              className={delve(item, 'btnUrl') ? "" : "none"}
+              >
               <a>
                 <button>
-                  Get in Contact
+                  {delve(item, "btnText")}
                   <FontAwesomeIcon 
                     icon={faArrowRight} 
                     className="arrow-square"  
@@ -51,6 +56,19 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide }) => {
                 </button>
               </a>
             </Link>
+            <AnchorLink 
+              offset='-75'
+              href='#contact'
+              className={delve(item, 'btnUrl') ? "none" : ""}
+              >
+                <button>
+                  {delve(item, "btnText")}
+                  <FontAwesomeIcon 
+                    icon={faArrowRight} 
+                    className="arrow-square"  
+                  />
+                </button>
+            </AnchorLink>
           </div>     
           <div className="tabs__content__right">
             <img

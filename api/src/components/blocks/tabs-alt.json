@@ -7,10 +7,10 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "caption": {
       "type": "string"
     },
-    "caption": {
+    "title": {
       "type": "string"
     },
     "cards": {
