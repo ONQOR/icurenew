@@ -13,9 +13,6 @@
     "title": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
-    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
@@ -23,6 +20,9 @@
     },
     "hide": {
       "type": "boolean"
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

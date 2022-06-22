@@ -2,25 +2,27 @@
   "collectionName": "components_shared_tabs",
   "info": {
     "displayName": "tab",
-    "icon": "arrow-circle-up"
+    "icon": "arrow-circle-up",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
-    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

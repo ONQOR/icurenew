@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "text"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -29,6 +26,9 @@
     },
     "hide": {
       "type": "boolean"
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

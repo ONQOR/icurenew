@@ -22,9 +22,6 @@
       "repeatable": false,
       "component": "shared.header"
     },
-    "text": {
-      "type": "text"
-    },
     "featuredText": {
       "type": "string"
     },
@@ -46,6 +43,9 @@
     },
     "hide": {
       "type": "boolean"
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

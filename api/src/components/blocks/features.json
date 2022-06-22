@@ -17,6 +17,11 @@
     },
     "hide": {
       "type": "boolean"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }

@@ -19,9 +19,6 @@
     "contentTitle": {
       "type": "string"
     },
-    "contentText": {
-      "type": "string"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -41,6 +38,9 @@
     },
     "anchor": {
       "type": "boolean"
+    },
+    "contentText": {
+      "type": "richtext"
     }
   }
 }

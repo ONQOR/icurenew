@@ -22,10 +22,10 @@
       "type": "boolean"
     },
     "lat": {
-      "type": "string"
+      "type": "float"
     },
     "lng": {
-      "type": "string"
+      "type": "float"
     }
   }
 }

@@ -1,25 +1,18 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import CatCard from '../../pages/case-studies/CatCard';
 
-const Features = ({ cards, title, image, hide }) => {
-
+const Features = ({ cards, title, image, hide, articles }) => {
+   console.log(articles)
   return (
     <div className={hide ? "hide" : "features"}>
       <div className="container sb">
         <h2>{title}</h2>
 
-        {cards &&
-        cards.map((item, index) => (
-          <div className="features__item" key={`feature-${index}`}>
-              <img
-                src={getStrapiMedia(delve(item, "image.data.attributes.url"))}
-                alt={delve(item, "image.data.attributes.alternativeText")}
-              />
-              <h4>{delve(item, "title")}</h4>
-              <p>{delve(item, "text")}</p>
-          </div>
-        ))}
-
+           {articles &&
+                articles.data.map((article, index) => (
+                <CatCard {...article.attributes} id={article.id} key={index} />
+            ))}
 
       </div>
     </div>

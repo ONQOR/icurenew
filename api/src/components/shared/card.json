@@ -10,9 +10,6 @@
     "title": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -22,6 +19,9 @@
         "files",
         "videos"
       ]
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }
