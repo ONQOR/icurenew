@@ -1,6 +1,7 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils'; 
 import ArticleCard from '../../pages/case-studies/ArticleCard';
+import ReactMarkdown from 'react-markdown'
 
 const CaseStudies = ({ articles, title, caption, text, hide }) => {
 
@@ -10,7 +11,7 @@ const CaseStudies = ({ articles, title, caption, text, hide }) => {
             <div className="title">
                 <span className='caption'>{caption}</span>
                 <h2>{title}</h2>
-                <p>{text} </p>
+                <p><ReactMarkdown>{text}</ReactMarkdown></p>
             </div>
 
             <div className="colOne">

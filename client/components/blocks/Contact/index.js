@@ -5,8 +5,9 @@ import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown'
 
-const Contact = ({ image, title, text, hide, cards, twitter }) => {
+const Contact = ({ image, title, text, hide, cards }) => {
   const form = useRef();
   const [success, setSuccess] = useState(1);
   const [errmsg, setErrmsg] = useState("");
@@ -31,7 +32,7 @@ const Contact = ({ image, title, text, hide, cards, twitter }) => {
         <div className="container sb">
             <div className="contact__left">
                 <h2 className={success === 1 ? "active" : "none"}>{title}</h2>
-                <p className={success === 1 ? "active" : "none"}>{text}{twitter}</p>
+                <p className={success === 1 ? "active" : "none"}><ReactMarkdown>{text}</ReactMarkdown></p>
                 {/* form */}
                 <form 
                   ref={form} 
@@ -44,7 +45,7 @@ const Contact = ({ image, title, text, hide, cards, twitter }) => {
                     <label>Email</label>
                     <input required="required" type="email" name="email" placeholder="john.doe@email.com"></input>
 
-                    {/* enquire dropdown */}
+                    {/* enquire cards */}
                     <label>Enquiry Type</label>
                     <select name="enquiry" required="required" placeholder='select here'>
                     <option value="" disabled selected>Select your option</option>
@@ -56,7 +57,7 @@ const Contact = ({ image, title, text, hide, cards, twitter }) => {
                       ))}
                     </select>
 
-                    {/* background dropdown */}
+                    {/* background cards */}
                     <label>Background</label>
                     <select name="background" required="required" placeholder='select here'>
                     <option value="" disabled selected>Select your option</option>
