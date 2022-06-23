@@ -7,9 +7,9 @@ import Shape from '../../shared/shape'
 import { useRouter } from "next/router";
 import ReactMarkdown from 'react-markdown'
 
-const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide }) => {
-  const router = useRouter();
-  // console.log('RELATION',pageDate);
+const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, pageData }) => {
+const router = useRouter();
+
    return (
     <section className={hide ? "hide" : "hero-alt"}>
     <div className="container sb">
@@ -17,10 +17,7 @@ const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide }) => {
       {/* left */}
       <div className="hero-alt__left">
         <div className='hero-alt__left__breadcrumbs'>
-          {/* Home <span>/</span> Blog <span>/</span> Casestudy */}
-          <span>
-           
-          </span>
+          Home <span>/</span><Link href="/case-studies" passHref={true}><a>Index</a></Link><span>/</span>{title}
         </div>
    
         <h1>{title}</h1>
