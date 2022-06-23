@@ -42,7 +42,7 @@ const Articles = ({
   );
 
   const lastPage = Math.ceil(data.count / perPage) || 1;
-
+  console.log(data.articles);
   return (
     <>
     <Layout
@@ -86,6 +86,7 @@ const Articles = ({
           {status === "success" &&
             delve(data, "articles") &&
             data.articles.map((article, index) => (
+              
               <CaseCard {...article.attributes} locale={locale} key={index} />
             ))}
         </div>

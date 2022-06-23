@@ -7,9 +7,9 @@ import Shape from '../../shared/shape'
 import { useRouter } from "next/router";
 import ReactMarkdown from 'react-markdown'
 
-const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, category, attributes }) => {
+const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide }) => {
   const router = useRouter();
-
+  // console.log('RELATION',pageDate);
    return (
     <section className={hide ? "hide" : "hero-alt"}>
     <div className="container sb">
