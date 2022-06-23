@@ -13,7 +13,7 @@
     "contactText": {
       "type": "richtext"
     },
-    "cards": {
+    "dropdown": {
       "type": "component",
       "repeatable": true,
       "component": "shared.dropdown"
