@@ -153,6 +153,9 @@ button {
     flex-wrap: wrap;
     margin: auto;
     padding: 0 30px;
+    @media (min-width: 1920px) {
+        max-width: 1512px;
+    }
 }
 
 .center {

@@ -42,7 +42,7 @@ const Articles = ({
   );
 
   const lastPage = Math.ceil(data.count / perPage) || 1;
-  console.log(data.articles);
+  // console.log(data.articles);
   return (
     <>
     <Layout

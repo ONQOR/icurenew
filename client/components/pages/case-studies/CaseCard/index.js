@@ -12,7 +12,7 @@ const ArticleCard = ({ slug, title, seo, time, caption, image, category }) => {
   if(category.data){
     displayCategory = category.data.attributes.name
   }
-  console.log('category',category);
+  // console.log('category',category);
   return (
     <div className="articles__articles-item">
     <Link href={`/case-studies/${slug}`}>

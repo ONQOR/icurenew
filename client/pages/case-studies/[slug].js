@@ -7,7 +7,7 @@ import { getLocalizedParams } from "../../utils/localize";
 
 const Article = ({ global, pageData, preview }) => {
   const blocks = delve(pageData, "attributes.blocks");
-  console.log(pageData)
+  // console.log(pageData)
   return (
     <>
       <Layout

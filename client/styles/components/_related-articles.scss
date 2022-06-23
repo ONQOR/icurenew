@@ -12,6 +12,9 @@
             flex-direction: column;
             p {
                 max-width: 750px;
+                @media (min-width: 1920px) {
+                    max-width: 1039px;
+                }
             }
             h2 {
                 max-width: 500px;

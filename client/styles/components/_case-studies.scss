@@ -24,6 +24,9 @@
         }
     }
     .colOne {
+        @media (min-width: 1920px) {
+            transform: translateY(100px);
+        }
         .articles__articles-item:nth-child(odd) {
             transform: translateY(-200px);
             @media screen and (max-width: 1200px) {
@@ -61,6 +64,10 @@
             overflow: hidden;
             background-color: $purpleLight;
             transition: ease 0.2s;
+            @media (min-width: 1920px) {
+                width: 360px;
+                height: 360px;
+            }
             @media screen and (max-width: 1200px) {
                 margin: 0 0 36px 0;  
                 width: unset;

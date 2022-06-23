@@ -10,8 +10,8 @@ import Linkedin from './socials/linkedin';
 import Onqor from './onqor';
 
 const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook, linkedin}) => {  
-
   return (
+    <>
 			<footer className="footer">	 
         <div className="footer__container">
           {/* global col 1 */}
@@ -70,6 +70,7 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
               </div>
             </div>
 			</footer>
+      </>
   );
 };
 
