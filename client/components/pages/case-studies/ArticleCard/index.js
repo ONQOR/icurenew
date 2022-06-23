@@ -22,7 +22,6 @@ const ArticleCard = ({ slug, title, seo, id, caption, time }) => {
     if(json.data.attributes.category.data){
       setcardCategory(json.data.attributes.category.data.attributes.name);
     }
-    console.log(json);
     return json
   }
   getServerSideProps(id)

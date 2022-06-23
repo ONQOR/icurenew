@@ -32,12 +32,11 @@ MyApp.getInitialProps = async (appContext) => {
   try {
     const res = await fetch(
       getStrapiURL(
-        `/global?populate[navigation][populate]=*&populate[footer][populate][footerColumns][populate]=*&locale=${locale}`
+        `/global?populate[navigation][populate]=*&populate[footer][populate][footerColumns][populate]=*&populate[contact][populate]=*`
       ),
     );
     const globalData = await res.json();
     const globalDataAttributes = globalData.data.attributes;
-
     return { ...appProps, pageProps: { global: globalDataAttributes } };
   } catch (error) {
     return { ...appProps };

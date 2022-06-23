@@ -4,10 +4,11 @@ import ArticleContent from "../../components/pages/case-studies/ArticleContent";
 import BlockManager from "../../components/shared/BlockManager";
 import { getStrapiURL, handleRedirection } from "../../utils";
 import { getLocalizedParams } from "../../utils/localize";
+import CaseHero from "../../components/pages/case-studies/CaseHero";
 
 const Article = ({ global, pageData, preview }) => {
   const blocks = delve(pageData, "attributes.blocks");
-  console.log(pageData)
+  console.log(pageData, "json res")
   return (
     <>
       <Layout
@@ -16,6 +17,7 @@ const Article = ({ global, pageData, preview }) => {
         preview={preview}
         type="article"
       >
+        <CaseHero pageData={pageData}></CaseHero>
         <ArticleContent {...pageData} />
         {blocks && <BlockManager pageContent={pageData} blocks={blocks} />}
       </Layout>
@@ -32,7 +34,7 @@ export async function getServerSideProps(context) {
     : "";
   const res = await fetch(
     getStrapiURL(
-      `/articles?filters[slug]=${context.params.slug}&locale=${locale}${preview}&populate[blocks][populate]=*&populate=category`
+      `/articles?filters[slug]=${context.params.slug}&populate[blocks][populate]=*&populate=category,images,cards,heroHide`
     ) 
   ); 
   const json = await res.json();

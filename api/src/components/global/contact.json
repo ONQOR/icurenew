@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_global_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "baby",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contactTitle": {
+      "type": "string"
+    },
+    "contactText": {
+      "type": "richtext"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.dropdown"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "hide": {
+      "type": "boolean"
+    }
+  }
+}
