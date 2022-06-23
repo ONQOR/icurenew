@@ -7,11 +7,11 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown'
 
-const Contact = ({ contactTitle, contactText, image, cards, hide }) => {
+const Contact = ({  hide, contact }) => {
     const form = useRef();
     const [success, setSuccess] = useState(1);
     const [errmsg, setErrmsg] = useState("");
-  
+    console.log(contact)
     const handleClick = (i) => {
       setSuccess(i)
     }
@@ -31,8 +31,8 @@ const Contact = ({ contactTitle, contactText, image, cards, hide }) => {
       <section id="contact" className={hide ? "hide" : "contact"}>
           <div className="container sb">
               <div className="contact__left">
-                  <h2 className={success === 1 ? "active" : "none"}>{contactTitle}</h2>
-                  <p className={success === 1 ? "active" : "none"}><ReactMarkdown>{contactText}</ReactMarkdown></p>
+                  <h2 className={success === 1 ? "active" : "none"}>{delve(contact, 'contactTitle')}</h2>
+                  <p className={success === 1 ? "active" : "none"}><ReactMarkdown>{delve(contact, 'contactText')}</ReactMarkdown></p>
                   {/* form */}
                   <form 
                     ref={form} 
@@ -49,8 +49,8 @@ const Contact = ({ contactTitle, contactText, image, cards, hide }) => {
                       <label>Enquiry Type</label>
                       <select name="enquiry" required="required" placeholder='select here'>
                       <option value="" disabled selected>Select your option</option>
-                        {cards &&
-                          cards.map((item, index) => (
+                        {delve(contact, 'cards') &&
+                         delve(contact, 'cards').map((item, index) => (
                             <option class={delve(item, "enquire") ? "" : "hide"} value={delve(item, "enquire")}>
                               {delve(item, "enquire")}
                             </option>
@@ -61,8 +61,8 @@ const Contact = ({ contactTitle, contactText, image, cards, hide }) => {
                       <label>Background</label>
                       <select name="background" required="required" placeholder='select here'>
                       <option value="" disabled selected>Select your option</option>
-                      {cards &&
-                          cards.map((item, index) => (
+                      {delve(contact, 'cards') &&
+                          delve(contact, 'cards').map((item, index) => (
                             <option class={delve(item, "background") ? "" : "hide"} value={delve(item, "background")}>
                              {delve(item, "background")}
                             </option>
@@ -100,8 +100,7 @@ const Contact = ({ contactTitle, contactText, image, cards, hide }) => {
               {/* right */}
               <div className="contact__right">
               <img
-                src={getStrapiMedia(delve(image, "data.attributes.url"))}
-                alt={delve(image, "data.attributes.alternativeText")}
+                src={getStrapiMedia(delve(contact, "image.data.attributes.url"))}
               />
               </div>
           </div>
