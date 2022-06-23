@@ -10,7 +10,7 @@ const Universals = ({ global, pageData, preview }) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  const blocks = delve(pageData, "attributes.blocks");
+  const blocks = delve(pageData, "attributes.blocks", "attributes");
   return (
     <Layout global={global} pageData={pageData} type="pages" preview={preview}>
       {blocks && <BlockManager blocks={blocks} />}
