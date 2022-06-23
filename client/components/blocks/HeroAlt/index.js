@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, category, attributes }) => {
   const router = useRouter();
-  console.log(attributes)
+
    return (
     <section className={hide ? "hide" : "hero-alt"}>
     <div className="container sb">

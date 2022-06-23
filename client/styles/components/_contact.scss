@@ -94,7 +94,13 @@
                 background-repeat: no-repeat;
                 appearance: none;
                 background-size: 11px;
+                &:invalid {
+                    color: #999 !important;
+                }
                 option:first {
+                    color: #999 !important;
+                }
+                option:disabled {
                     color: #999 !important;
                 }
             }
