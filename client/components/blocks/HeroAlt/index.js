@@ -17,7 +17,7 @@ const router = useRouter();
       {/* left */}
       <div className="hero-alt__left">
         <div className='hero-alt__left__breadcrumbs'>
-          Home <span>/</span><Link href="/case-studies" passHref={true}><a>Index</a></Link><span>/</span>{title}
+        <Link href="/" passHref={true}><a>Home</a></Link><span>/</span><Link href="/case-studies" passHref={true}><a>Index</a></Link><span>/</span>{title}
         </div>
    
         <h1>{title}</h1>
