@@ -1,5 +1,6 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import ReactMarkdown from 'react-markdown'
 
 const Points = ({ title, text, caption, cards, hide }) => {
 
@@ -21,7 +22,7 @@ const Points = ({ title, text, caption, cards, hide }) => {
                     alt={delve(item, "image.data.attributes.alternativeText")}
                   />
                  <h4>{delve(item, "title")}</h4>
-                 <p>{delve(item, "text")}</p>
+                 <p><ReactMarkdown>{delve(item, "text")}</ReactMarkdown></p>
              </div>
         ))}
 

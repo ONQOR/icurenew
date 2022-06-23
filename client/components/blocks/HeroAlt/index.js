@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Shape from '../../shared/shape'
 import { useRouter } from "next/router";
+import ReactMarkdown from 'react-markdown'
 
 const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, category, attributes }) => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, category, a
         </div>
    
         <h1>{title}</h1>
-        <p>{text}</p>
+        <p><ReactMarkdown>{text}</ReactMarkdown></p>
         {/* left points */}
         <div className="hero-alt__left__points">
         {cards &&
@@ -36,7 +37,7 @@ const HeroAlt = ({ image, cards, title, text, btnUrl, btnText, hide, category, a
         </div>
         {/* left button */}
           <Link href={btnUrl} passHref={true}>
-              <a>
+              <a target="_blank">
                 <button>
                   {btnText}
                   <FontAwesomeIcon 

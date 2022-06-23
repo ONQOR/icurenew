@@ -1,4 +1,5 @@
 import ArticleCard from '../../pages/case-studies/ArticleCard';
+import ReactMarkdown from 'react-markdown'
 
 const RelatedArticles = ({ articles, text, title, caption, hide }) => {
 
@@ -8,7 +9,7 @@ const RelatedArticles = ({ articles, text, title, caption, hide }) => {
           <div className='related-articles__articles__title center'>
             <span className='caption'>{caption}</span>
             <h2>{title}</h2>
-            <p>{text}</p>
+            <p><ReactMarkdown>{text}</ReactMarkdown></p>
           </div>
 
           {articles &&

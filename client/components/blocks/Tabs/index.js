@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import ReactMarkdown from 'react-markdown'
 
 const Tabs = ({cards, title, caption, text, hide }) => {
 
@@ -14,7 +15,7 @@ const Tabs = ({cards, title, caption, text, hide }) => {
         <div className="tabs__top">
           <span className='caption'>{caption}</span>
           <h2>{title}</h2>
-          <p>{text}</p>
+          <p><ReactMarkdown>{text}</ReactMarkdown></p>
         </div>
 
         <div className="tabs__tab">
@@ -31,7 +32,7 @@ const Tabs = ({cards, title, caption, text, hide }) => {
             <div className={toggleState === index + 1 ? "tabs__content--active" : "tabs__content"} key={`feature-${index}`}>
               <div className="tabs__content__left">
                 <h2>{delve(item, "title")}</h2>
-                <p>{delve(item, "text")}</p>
+                <p><ReactMarkdown>{delve(item, "text")}</ReactMarkdown></p>
               </div>     
               <div className="tabs__content__right">
                 <img

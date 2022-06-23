@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import ReactMarkdown from 'react-markdown'
 
 const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
 
@@ -39,7 +40,7 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
         <div className={toggleState === index + 1 ? "tabs__content--active" : "tabs__content"}>
           <div className="tabs__content__left">
             <h2>{delve(item, "contentTitle")}</h2>
-            <p>{delve(item, "contentText")}</p>
+            <p><ReactMarkdown>{delve(item, "contentText")}</ReactMarkdown></p>
             <Link 
               href={`${delve(item, 'btnUrl')}`} 
               passHref={true}

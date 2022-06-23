@@ -1,12 +1,13 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import ReactMarkdown from 'react-markdown'
 
 const Quote= ({ image, title, caption, text, hide }) => {
 
    return (
     <section className={hide ? "hide" : "quote"}>
         <div className="container sb center">
-            <p>"{text}"</p>
+            <p>"<ReactMarkdown>{text}</ReactMarkdown>"</p>
             <img
               src={getStrapiMedia(delve(image, "data.attributes.url"))}
             />

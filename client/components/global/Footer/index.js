@@ -6,7 +6,8 @@ import Logonew from './logo-new';
 import Link from 'next/link';
 import Twitter from './socials/twitter';
 import Facebook from './socials/facebook';
-import Linkedin from './socials/linkedin'
+import Linkedin from './socials/linkedin';
+import Onqor from './onqor';
 
 const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook, linkedin}) => {  
 
@@ -64,8 +65,8 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
             </div>
           {/* onqor */}
             <div className="footer__onqor">
-              <div className="container sb">
-                <p>Site Designed &amp; Built By <a href="https://onqor.co.uk" target="_blank">ONQOR Ltd.</a></p>	
+              <div className="container">
+                <p>Site Designed &amp; Built By Site Designed &amp; Built by</p><a href="https://onqor.co.uk" target="_blank"><Onqor /></a>
               </div>
             </div>
 			</footer>

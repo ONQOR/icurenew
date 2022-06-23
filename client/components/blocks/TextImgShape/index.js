@@ -2,6 +2,7 @@ import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
 import Shape from '../../shared/shape'
 import ShapeTwo from '../../shared/shape-two'
+import ReactMarkdown from 'react-markdown'
 
 const TextImgShape = ({ caption, title, text, image, hide }) => {
 
@@ -11,7 +12,7 @@ const TextImgShape = ({ caption, title, text, image, hide }) => {
         <div className="textImgShape__left"> 
           <span className='caption'>{caption}</span>
           <h2>{title}</h2>
-          <p>{text}</p>
+          <p><ReactMarkdown>{text}</ReactMarkdown></p>
         </div>
         <div className="textImgShape__right">
         <ShapeTwo className="shapeTwo"/>

@@ -5,6 +5,7 @@
     h4 {
         font-size: 16px;
         margin: 0 0 24px 0;
+        font-weight: bold;
     }
     li {
         margin: 0 0 24px 0;
@@ -49,7 +50,17 @@
         align-items: center;
         background-color: #121212;
         color: white;
+        a {
+            display: contents;
+            svg {
+                max-height: 20px;
+                margin: 0 5px;
+                transform: translateY(3px);
+            }
+        }
         .container {
+            justify-content: flex-start;
+            flex-direction: row;
             @media screen and (max-width: $tablet) {
                 justify-content: center;
             }

@@ -1,4 +1,4 @@
-
+import ReactMarkdown from 'react-markdown'
 
 const HeroSmall = ({ title, text, hide }) => {
 
@@ -6,7 +6,7 @@ const HeroSmall = ({ title, text, hide }) => {
     <section className={hide ? "hide" : "heroSmall"}>
       <div className="container">
         <h1>{title}</h1>
-        <p>{text}</p>
+        <p><ReactMarkdown>{text}</ReactMarkdown></p>
       </div> 
     </section>
   );

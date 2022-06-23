@@ -13,6 +13,10 @@ const Nav = ({ links, locale, setShowMenu, showMenu }) => {
             if (delve(link, 'hasChildren')) {
               return ( 
                 <>
+                  <Link
+                    href="/case-studies"
+                    key={`navigationLink-${index}`}
+                  >
                   <a 
                     className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current parent main" : "parent main"} 
                     key={`link-${index}`}
@@ -43,7 +47,12 @@ const Nav = ({ links, locale, setShowMenu, showMenu }) => {
                     </div>
                     {/* <span className='nav__chevron'></span> */}
                   </a>
+                  </Link>
                   {/* mobile */}
+                  <Link
+                    href="/case-studies"
+                    key={`navigationLink-${index}`}
+                  >
                   <a 
                     className={router.asPath == `${delve(link, 'href')}?lang=${locale || 'en'}` ? "current parent mob" : "parent mob"} 
                     key={`link-${index}`}
@@ -75,6 +84,7 @@ const Nav = ({ links, locale, setShowMenu, showMenu }) => {
                     </div>
                     <span className={showDrop === true ? "nav__chevron nav__chevron__rotate" : "nav__chevron"}></span>
                   </a>
+                  </Link>
                   {/* end */}
                 </>
               )

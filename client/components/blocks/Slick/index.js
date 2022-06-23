@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import React, { Component } from "react";
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import ReactMarkdown from 'react-markdown'
 
 const Slick = ({title, cards, hide}) => {
     const settings = {
@@ -38,7 +39,7 @@ const Slick = ({title, cards, hide}) => {
                                 </div>
                             </div>
                             <div className="item__right">
-                                <p>{delve(item, "text")}</p>
+                                <p><ReactMarkdown>{delve(item, "text")}</ReactMarkdown></p>
                             </div>
                         </div>
                     </div>

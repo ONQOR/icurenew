@@ -1,5 +1,7 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import Link from 'next/link';
+import ReactMarkdown from 'react-markdown'
 
 const Hero = ({ header, text, featuredText, images, image, cards, hide}) => {
   const title = delve(header, 'title');
@@ -11,7 +13,7 @@ const Hero = ({ header, text, featuredText, images, image, cards, hide}) => {
       {/* left */}
       <div className="hero__left">
         <h1>{title}</h1>
-        <p>{text}</p>
+        <p><ReactMarkdown>{text}</ReactMarkdown></p>
         <span>{featuredText}</span>
         <img
           src={getStrapiMedia(delve(images, "data.attributes.url"))}

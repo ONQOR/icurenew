@@ -1,5 +1,6 @@
 import delve from 'dlv';
 import { getStrapiMedia } from '../../../utils';
+import ReactMarkdown from 'react-markdown'
 
 const TextImg = ({ caption, title, text, image, hide }) => {
 
@@ -9,7 +10,7 @@ const TextImg = ({ caption, title, text, image, hide }) => {
         <div className="textImg__left"> 
           <span className='caption'>{caption}</span>
           <h2>{title}</h2>
-          <p>{text}</p>
+          <p><ReactMarkdown>{text}</ReactMarkdown></p>
         </div>
         <div className="textImg__right">
           <img
