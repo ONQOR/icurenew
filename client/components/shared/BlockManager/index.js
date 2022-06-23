@@ -29,7 +29,7 @@ import Timeline from '../../blocks/Timline';
 import HeroAlt from '../../blocks/HeroAlt';
 import TextImgShape from '../../blocks/TextImgShape';
 
-const getBlockComponent = ({ __component, ...rest }, index) => {
+const getBlockComponent = ({ pageData, global, __component, ...rest }, index) => {
   let Block;
 
   switch (__component) {
@@ -125,7 +125,7 @@ const getBlockComponent = ({ __component, ...rest }, index) => {
       break;
   }
 
-  return Block ? <Block key={`index-${index}`} {...rest} /> : null;
+  return Block ? <Block key={`index-${index}`} pageData={pageData} {...global} {...rest} /> : null;
 };
 
 const BlockManager = ({ blocks }) => {

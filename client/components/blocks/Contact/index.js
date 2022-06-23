@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 
-const Contact = ({ image, title, text, hide, cards }) => {
+const Contact = ({ image, title, text, hide, cards, twitter }) => {
   const form = useRef();
   const [success, setSuccess] = useState(1);
   const [errmsg, setErrmsg] = useState("");
@@ -31,7 +31,7 @@ const Contact = ({ image, title, text, hide, cards }) => {
         <div className="container sb">
             <div className="contact__left">
                 <h2 className={success === 1 ? "active" : "none"}>{title}</h2>
-                <p className={success === 1 ? "active" : "none"}>{text}</p>
+                <p className={success === 1 ? "active" : "none"}>{text}{twitter}</p>
                 {/* form */}
                 <form 
                   ref={form} 
@@ -39,10 +39,10 @@ const Contact = ({ image, title, text, hide, cards }) => {
                   className={success === 1 ? "active" : ""}
                   >
                     <label>Name</label>
-                    <input required="required" type="text" name="name"></input>
+                    <input required="required" type="text" name="name" placeholder="John Doe"></input>
 
                     <label>Email</label>
-                    <input required="required" type="email" name="email"></input>
+                    <input required="required" type="email" name="email" placeholder="john.doe@email.com"></input>
 
                     {/* enquire dropdown */}
                     <label>Enquiry Type</label>
@@ -69,7 +69,7 @@ const Contact = ({ image, title, text, hide, cards }) => {
                     </select>
 
                     <label>Message</label>
-                    <textarea name="message"></textarea>
+                    <textarea name="message" placeholder="Message"></textarea>
 
                     <label className='radio'>
                       <input required="required" type="checkbox"></input>

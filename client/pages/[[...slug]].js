@@ -13,7 +13,7 @@ const Universals = ({ global, pageData, preview }) => {
   const blocks = delve(pageData, "attributes.blocks", "attributes");
   return (
     <Layout global={global} pageData={pageData} type="pages" preview={preview}>
-      {blocks && <BlockManager blocks={blocks} />}
+      {blocks && <BlockManager global={global} blocks={blocks} />}
     </Layout>
   );
 };

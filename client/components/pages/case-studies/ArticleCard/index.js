@@ -5,7 +5,7 @@ import { getStrapiMedia, getStrapiURL } from "../../../../utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
+const ArticleCard = ({ slug, title, seo, id, caption, time }) => {
   const description = delve(seo, "metaDescription");
 
   const [imgcard, setImgcard] = useState("")
@@ -24,7 +24,7 @@ const ArticleCard = ({ slug, title, seo, locale, id, caption, time }) => {
 
   return (
     <div className="articles__articles-item">
-    <Link href={`/case-studies/${slug}?lang=${locale}`}>
+    <Link href={`/case-studies/${slug}`}>
     <a className="">
       <div className="case">
         <img  

@@ -7,7 +7,6 @@ import { getLocalizedParams } from "../../utils/localize";
 
 const Article = ({ global, pageData, preview }) => {
   const blocks = delve(pageData, "attributes.blocks");
-  console.log(pageData)
   return (
     <>
       <Layout
@@ -17,8 +16,9 @@ const Article = ({ global, pageData, preview }) => {
         type="article"
       >
         <ArticleContent {...pageData} />
-        {blocks && <BlockManager blocks={blocks} />}
+        {blocks && <BlockManager pageContent={pageData} blocks={blocks} />}
       </Layout>
+
     </>
   );
 };

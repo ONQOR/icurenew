@@ -67,7 +67,7 @@ export function getData(slug, locale, apiID, kind, preview) {
 
     if (apiID.includes('-page')) {
       const slugToReturn =
-        apiID == 'case-studies-page'
+        apiID == 'blog-page'
           ? `/${apiID.replace('-page', '')}?lang=${locale}`
           : `/${apiID.replace('-page', 's')}?lang=${locale}`;
       return {

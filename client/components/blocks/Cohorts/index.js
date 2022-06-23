@@ -1,5 +1,7 @@
 import delve from 'dlv';
 import Link from 'next/link';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 const Cohort = ({ title, newer, cards, hide }) => {
 
@@ -32,9 +34,20 @@ const Cohort = ({ title, newer, cards, hide }) => {
               </div>
             </div>
             <div className="btn">
-              <Link href={`${delve(item, 'btnUrl')}`} passHref={true}>
-                <a><button>Click to Apply</button></a>
+              <Link 
+                href={`${delve(item, 'btnUrl')}`} 
+                passHref={true}
+                >
+                <a className={delve(item, 'btnUrl') ? "" : "hide"}><button>{delve(item, "btnText")}</button></a>
               </Link>
+              <AnchorLink 
+              offset='-75'
+              href='#contact'
+              >
+                <button className={delve(item, 'btnUrl') ? "hide" : ""}>
+                  {delve(item, "btnText")}
+                </button>
+              </AnchorLink>
             </div>
           </div>
         ))}

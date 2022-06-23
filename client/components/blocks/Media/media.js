@@ -15,7 +15,7 @@ const Visual = ({ video, images, image }) => {
     setBtn(2)
   }
 
-  console.log(delve(images, "data.attributes.url"))
+
   if (video) {
     return (
       <div className='video__container center'>

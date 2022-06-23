@@ -23,7 +23,6 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
         {/* tab buttons */}
         {cards &&
         cards.map((item, index) => {
-          console.log(cards.data + " images")
           return (
             <div onClick={() => handleClick(index + 1)} className={toggleState === index + 1 ? "tabs-alt__icon--active tabs-alt__icon" : "tabs-alt__icon"}>
             <img

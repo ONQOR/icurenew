@@ -3,7 +3,7 @@ import { getStrapiMedia } from '../../../utils';
 import CatCard from '../../pages/case-studies/CatCard';
 
 const Features = ({ cards, title, image, hide, articles }) => {
-   console.log(articles)
+ 
   return (
     <div className={hide ? "hide" : "features"}>
       <div className="container sb">
