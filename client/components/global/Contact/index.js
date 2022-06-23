@@ -28,7 +28,7 @@ const Contact = ({  hide, contact }) => {
     };
   
     return (
-      <section id="contact" className={hide ? "hide" : "contact"}>
+      <section id="contact" className={delve(contact, 'hide') ? "hide" : "contact"}>
           <div className="container sb">
               <div className="contact__left">
                   <h2 className={success === 1 ? "active" : "none"}>{delve(contact, 'contactTitle')}</h2>
