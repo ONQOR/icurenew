@@ -12,7 +12,7 @@ const CaseHero = ({ cards, pageData, }) => {
   const router = useRouter();
   console.log(pageData);
   const title = pageData.attributes.heroTitle;
-  const text = pageData.attributes.heroText;
+  const text = pageData.attributes.content;
   const btnUrl = pageData.attributes.heroBtnUrl;
   const btnText = pageData.attributes.heroBtnText
   const card = pageData.attributes
@@ -45,7 +45,7 @@ const CaseHero = ({ cards, pageData, }) => {
         ))}
         </div>
         {/* left button */}
-          <Link href={btnUrl} passHref={true}>
+          <Link href={btnUrl ? btnUrl : "/" } passHref={true}>
               <a target="_blank">
                 <button>
                   {btnText}
