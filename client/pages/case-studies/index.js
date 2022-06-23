@@ -77,6 +77,7 @@ const Articles = ({
               </select>
             </label>
         </div>
+<<<<<<< HEAD
         <NoResults status={status} length={delve(data, "articles").length} /> */}
         {/* filter dropdown end */}
        
@@ -87,6 +88,17 @@ const Articles = ({
             data.articles.map((article, index) => (
               <CaseCard {...article.attributes} locale={locale} key={index} />
             ))}
+=======
+
+        <NoResults status={status} length={delve(data, "articles").length} />
+
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-40 mt-24 px-4">
+          {/* {status === "success" &&
+            delve(data, "articles") &&
+            data.articles.map((article, index) => (
+              <ArticleCard {...article.attributes} locale={locale} key={index} />
+            ))} */}
+>>>>>>> 03d0281f279e595a0775f6494ba02da912225131
         </div>
         {/* article cards end */}
 
