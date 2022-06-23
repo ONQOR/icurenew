@@ -7,7 +7,7 @@ import { getLocalizedParams } from "../../utils/localize";
 
 const Article = ({ global, pageData, preview }) => {
   const blocks = delve(pageData, "attributes.blocks");
-  console.log('json after',blocks);
+  console.log(pageData)
   return (
     <>
       <Layout
@@ -35,12 +35,11 @@ export async function getServerSideProps(context) {
       `/articles?filters[slug]=${context.params.slug}&locale=${locale}${preview}&populate[blocks][populate]=*&populate=category`
     ) 
   ); 
-  const json = await res.json();  
-  
+  const json = await res.json();
+
   if (!json.data.length) {
     return handleRedirection(context.params.slug, context.preview, "case-studies");
   }
-
 
   return {
     props: { pageData: json.data[0], preview: context.preview || null },
