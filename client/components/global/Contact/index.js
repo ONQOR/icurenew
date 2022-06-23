@@ -49,10 +49,11 @@ const Contact = ({  hide, contact }) => {
                       <label>Enquiry Type</label>
                       <select name="enquiry" required="required" placeholder='select here'>
                       <option value="" disabled selected>Select your option</option>
-                        {delve(contact, 'dropdown') &&
-                         delve(contact, 'dropdown').map((item, index) => (
-                            <option class={delve(item, "enquire") ? "" : "hide"} value={delve(item, "enquire")}>
-                              {delve(item, "enquire")}
+                        {delve(contact, 'Enquiry') &&
+                         delve(contact, 'Enquiry').map((item, index) => (
+                            <option class={delve(item, "value") ? "" : "hide"} value={delve(item, "value")}>
+                              {delve(item, "label")}
+
                             </option>
                         ))}
                       </select>
@@ -61,10 +62,12 @@ const Contact = ({  hide, contact }) => {
                       <label>Background</label>
                       <select name="background" required="required" placeholder='select here'>
                       <option value="" disabled selected>Select your option</option>
-                      {delve(contact, 'dropdown') &&
-                          delve(contact, 'dropdown').map((item, index) => (
-                            <option class={delve(item, "background") ? "" : "hide"} value={delve(item, "background")}>
-                             {delve(item, "background")}
+
+                      {delve(contact, 'Background') &&
+                          delve(contact, 'Background').map((item, index) => (
+                            <option class={delve(item, "value") ? "" : "hide"} value={delve(item, "value")}>
+                             {delve(item, "label")}
+
                             </option>
                         ))}
                       </select>

@@ -101,6 +101,16 @@
           "localized": true
         }
       }
+    },
+    "Background": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.dropdown"
     }
   }
 }

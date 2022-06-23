@@ -13,7 +13,7 @@
     "contactText": {
       "type": "richtext"
     },
-    "dropdown": {
+    "Enquiry": {
       "type": "component",
       "repeatable": true,
       "component": "shared.dropdown"

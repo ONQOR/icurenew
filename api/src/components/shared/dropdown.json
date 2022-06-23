@@ -2,14 +2,15 @@
   "collectionName": "components_shared_dropdowns",
   "info": {
     "displayName": "dropdown",
-    "icon": "allergies"
+    "icon": "allergies",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "background": {
+    "label": {
       "type": "string"
     },
-    "enquire": {
+    "value": {
       "type": "string"
     }
   }
