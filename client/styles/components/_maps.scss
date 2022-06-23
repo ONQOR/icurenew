@@ -6,7 +6,7 @@
         display: flex;
         position: relative;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         @media screen and (max-width: $tablet) {
             justify-content: center !important;
             align-items: center !important;
@@ -30,7 +30,7 @@
         .container {
             z-index: 3;
             overflow: visible;
-            justify-content: end;        
+            justify-content: flex-end;        
         }
     }
     &__box {
