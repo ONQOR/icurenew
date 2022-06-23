@@ -19,7 +19,9 @@ const ArticleCard = ({ slug, title, seo, id, caption, time }) => {
     const json = await res.json();
     const imgUrl = json.data.attributes.image.data.attributes.url
     setImgcard(imgUrl);
-    setcardCategory(json.data.attributes.category.data.attributes.name);
+    if(json.data.attributes.category.data){
+      setcardCategory(json.data.attributes.category.data.attributes.name);
+    }
     console.log(json);
     return json
   }
