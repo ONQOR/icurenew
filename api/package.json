@@ -21,6 +21,7 @@
     "lodash": "^4.17.21",
     "lodash.set": "^4.3.2",
     "sqlite3": "5.0.2",
+    "strapi-plugin-import-export-content": "^0.4.2",
     "unzip-stream": "^0.3.1",
     "uuid-v4": "^0.1.0"
   },
