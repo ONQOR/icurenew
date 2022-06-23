@@ -12,8 +12,9 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
   const [toggleState, setToggleState] = useState(1)
   const handleClick = (index) => {
     setToggleState(index)
+    console.log('cards',cards);
   }
-
+  
   return (
     <section className={hide ? "hide" : "tabs-alt"}>
       <div className="container sb center">
@@ -40,7 +41,8 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
         <div className={toggleState === index + 1 ? "tabs__content--active" : "tabs__content"}>
           <div className="tabs__content__left">
             <h2>{delve(item, "contentTitle")}</h2>
-            <p><ReactMarkdown>{delve(item, "contentText")}</ReactMarkdown></p>
+            <ReactMarkdown>{delve(item, "contentText")}</ReactMarkdown>
+            {item.anchor ?
             <Link 
               href={`${delve(item, 'btnUrl')}`} 
               passHref={true}
@@ -56,6 +58,7 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
                 </button>
               </a>
             </Link>
+            :
             <AnchorLink 
               offset='-75'
               href='#contact'
@@ -69,6 +72,7 @@ const TabsAlt = ({ TabsAlt, title, caption, cards, hide, btnText }) => {
                   />
                 </button>
             </AnchorLink>
+            }
           </div>     
           <div className="tabs__content__right">
             <img

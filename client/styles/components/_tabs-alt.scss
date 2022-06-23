@@ -49,4 +49,9 @@
     .none {
         display: none;
     }
+    &__content{
+        p{
+            padding-bottom: 70px;
+        }
+    }
 }

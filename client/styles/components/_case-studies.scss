@@ -41,8 +41,15 @@
         @media screen and (max-width: 1200px) {
             width: fit-content;
             justify-content: space-evenly;
-            .articles__articles-item {
-                width: 27%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            div.articles__articles-item {
+                width: 43% !important;
+            }
+        }
+        @media screen and (max-width: 731px) {
+            div.articles__articles-item {
+                width: 100% !important;
             }
         }
         .articles__articles {

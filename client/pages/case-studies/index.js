@@ -42,7 +42,7 @@ const Articles = ({
   );
 
   const lastPage = Math.ceil(data.count / perPage) || 1;
-  console.log(data.articles);
+  // console.log(data.articles);
   return (
     <>
     <Layout
@@ -52,7 +52,8 @@ const Articles = ({
       preview={preview}
     >
     <div className="archive">
-        <Header {...header} />
+        {/* <Header {...header} /> */}
+       
         {/* filter dropdown start */}
         {/* <div className="container">
             <label className="text-gray-700">
@@ -82,6 +83,7 @@ const Articles = ({
         {/* filter dropdown end */}
        
         {/* article cards start */}
+        <div className="container sb"> <h2>Case studies</h2></div>
         <div className="container sb">
           {status === "success" &&
             delve(data, "articles") &&
