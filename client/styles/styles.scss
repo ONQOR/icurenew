@@ -87,6 +87,9 @@ input, select {
         border: 2px solid $purpleDark;
         outline: none;
     }
+    &::placeholder {
+        color: #C4C4C4;
+    }
 }
 input[type="text"],
 input[type="email"]
@@ -111,6 +114,9 @@ textarea {
     &:focus-visible {
         border: 2px solid $purpleDark;
         outline: none;
+    }
+    &::placeholder {
+        color: #C4C4C4;
     }
 }
 input[type="submit"] {
@@ -168,5 +174,5 @@ button {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }

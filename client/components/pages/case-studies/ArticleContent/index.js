@@ -15,24 +15,6 @@ const ArticleContent = ({ attributes }) => {
   const locale = delve(attributes, "locale");
   return (
     <Container>
-      <section className="blog">
-        <div className="container">
-
-          {/* <div className="">
-            <ReactMarkdown
-              children={content}
-              remarkPlugins={[gfm]}
-              linkTarget="_blank"
-              components={{
-                img: ({ node, ...props }) => (
-                  <img src={getStrapiMedia(delve(props, "src"))} />
-                ),
-              }}
-            ></ReactMarkdown>
-          </div> */}
-    
-        </div>
-      </section>
     </Container>
   );
 };

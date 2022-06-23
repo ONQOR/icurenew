@@ -28,8 +28,8 @@ function getUrl(type, localization, targetLocale) {
       return `/pages/${delve(localization, 'id')}`;
     case 'restaurant-page':
       return `/restaurant-page?locale=${targetLocale}`;
-    case 'case-studies-page':
-      return `/case-studies-page?locale=${targetLocale}`;
+    case 'blog-page':
+      return `/blog-page?locale=${targetLocale}`;
     case 'article':
       return `/articles/${delve(localization, 'id')}?locale=${targetLocale}`;
     case 'restaurant':

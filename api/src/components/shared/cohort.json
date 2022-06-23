@@ -21,6 +21,9 @@
     },
     "btnUrl": {
       "type": "string"
+    },
+    "btnText": {
+      "type": "string"
     }
   }
 }

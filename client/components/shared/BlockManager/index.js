@@ -124,7 +124,7 @@ const getBlockComponent = ({ __component, ...rest }, index) => {
       Block = TextImgShape;
       break;
   }
-
+  console.log(rest)
   return Block ? <Block key={`index-${index}`} {...rest} /> : null;
 };
 

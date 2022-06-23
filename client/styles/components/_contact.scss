@@ -89,6 +89,11 @@
             }
             select {
                 height: 54px;
+                background-image: url(../chevron.png);
+                background-position: 98% center;
+                background-repeat: no-repeat;
+                appearance: none;
+                background-size: 11px;
                 option:first {
                     color: #999 !important;
                 }

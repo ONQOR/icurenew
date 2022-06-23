@@ -17,8 +17,9 @@ const Article = ({ global, pageData, preview }) => {
         type="article"
       >
         <ArticleContent {...pageData} />
-        {blocks && <BlockManager blocks={blocks} />}
+        {blocks && <BlockManager pageContent={pageData} blocks={blocks} />}
       </Layout>
+
     </>
   );
 };

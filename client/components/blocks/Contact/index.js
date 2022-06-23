@@ -39,10 +39,10 @@ const Contact = ({ image, title, text, hide, cards }) => {
                   className={success === 1 ? "active" : ""}
                   >
                     <label>Name</label>
-                    <input required="required" type="text" name="name"></input>
+                    <input required="required" type="text" name="name" placeholder="John Doe"></input>
 
                     <label>Email</label>
-                    <input required="required" type="email" name="email"></input>
+                    <input required="required" type="email" name="email" placeholder="john.doe@email.com"></input>
 
                     {/* enquire dropdown */}
                     <label>Enquiry Type</label>
@@ -69,7 +69,7 @@ const Contact = ({ image, title, text, hide, cards }) => {
                     </select>
 
                     <label>Message</label>
-                    <textarea name="message"></textarea>
+                    <textarea name="message" placeholder="Message"></textarea>
 
                     <label className='radio'>
                       <input required="required" type="checkbox"></input>

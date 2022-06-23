@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import Layout from "../../components/layout";
 import NoResults from "../../components/no-results";
-import ArticleCard from "../../components/pages/case-studies/ArticleCard";
+import CaseCard from "../../components/pages/case-studies/CaseCard";
 import BlockManager from "../../components/shared/BlockManager";
 import Container from "../../components/shared/Container";
 import Header from "../../components/shared/Header";
@@ -44,19 +44,20 @@ const Articles = ({
   const lastPage = Math.ceil(data.count / perPage) || 1;
 
   return (
+    <>
     <Layout
       global={global}
       pageData={pageData}
       type="blog-page"
       preview={preview}
     >
-      <Container>
+    <div className="archive">
         <Header {...header} />
-        <div className="flex flex-col md:flex-row gap-2 my-24 px-4">
-          <div>
+        {/* filter dropdown start */}
+        {/* <div className="container">
             <label className="text-gray-700">
               <select
-                className="block w-52 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                className=""
                 onChange={(value) => setCategoryId(value.target.value)}
               >
                 <option value="">
@@ -75,41 +76,35 @@ const Articles = ({
                   ))}
               </select>
             </label>
-          </div>
         </div>
-
-        <NoResults status={status} length={delve(data, "articles").length} />
-
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-40 mt-24 px-4">
+        <NoResults status={status} length={delve(data, "articles").length} /> */}
+        {/* filter dropdown end */}
+       
+        {/* article cards start */}
+        <div className="container sb">
           {status === "success" &&
             delve(data, "articles") &&
             data.articles.map((article, index) => (
-              <ArticleCard {...article.attributes} locale={locale} key={index} />
+              <CaseCard {...article.attributes} locale={locale} key={index} />
             ))}
         </div>
+        {/* article cards end */}
 
-        {data.count > 0 && (
-          <div className="grid grid-cols-3 gap-4 my-24">
-            <div className="col-start-2 col-end-3">
-              <div className="flex items-center">
-                <button
+        {/* next/prev start */}
+        {/* {data.count > 0 && (
+            <div className="archive__buttons">
+              <div className="container">
+                {/* next */}
+                {/* <button
                   type="button"
-                  className={`${
-                    pageNumber <= 1 ? "cursor-not-allowed opacity-50" : ""
-                  } w-full p-4 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100 focus:outline-none`}
                   onClick={() => setPageNumber(pageNumber - 1)}
                   disabled={pageNumber <= 1}
                 >
                   Previous
-                </button>
-
-                <button
+                </button> */}
+                {/* previous */}
+                {/* <button
                   type="button"
-                  className={`${
-                    pageNumber >= lastPage
-                      ? "cursor-not-allowed opacity-50"
-                      : ""
-                  } w-full p-4 border-t border-b border-r text-base rounded-r-xl text-gray-600 bg-white hover:bg-gray-100 focus:outline-none`}
                   onClick={() => setPageNumber(pageNumber + 1)}
                   disabled={pageNumber >= lastPage}
                 >
@@ -117,11 +112,12 @@ const Articles = ({
                 </button>
               </div>
             </div>
-          </div>
-        )}
-      </Container>
+        )} */}
+        {/* next/prev end */}
       <BlockManager blocks={blocks} />
+      </div>
     </Layout>
+    </>
   );
 };
 
