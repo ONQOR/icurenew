@@ -2,15 +2,11 @@
   "collectionName": "components_global_footers",
   "info": {
     "displayName": "footer",
-    "icon": "align-right"
+    "icon": "align-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "footerColumns": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.footer-columns"
-    },
     "socialNetworks": {
       "type": "component",
       "repeatable": true,
@@ -23,6 +19,16 @@
     },
     "label": {
       "type": "string"
+    },
+    "FooterLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "showCase": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
     }
   }
 }

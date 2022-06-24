@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_header_menu_sub_items",
+  "info": {
+    "displayName": "headerMenuSubItem",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "case_studies": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

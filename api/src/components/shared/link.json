@@ -9,11 +9,11 @@
   "attributes": {
     "href": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "label": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "target": {
       "type": "enumeration",
@@ -26,11 +26,15 @@
       "default": false,
       "required": false
     },
-    "hasChildren": {
-      "type": "boolean"
+    "case_study": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
     },
-    "isChild": {
-      "type": "boolean"
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
     }
   }
 }

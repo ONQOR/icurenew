@@ -4,12 +4,101 @@ import Nav from './nav';
 import Columns from './columns'; 
 import Logonew from './logo-new';
 import Link from 'next/link';
+import React, { useState, useEffect } from 'react'
 import Twitter from './socials/twitter';
 import Facebook from './socials/facebook';
 import Linkedin from './socials/linkedin';
 import Onqor from './onqor';
+import { getStrapiURL, handleRedirection } from "../../../utils";
 
 const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook, linkedin}) => {  
+  var currentYear = new Date().getFullYear();  
+  const [pageItem, setPageItem] = useState('');
+  const [showCase, setShowCase] = useState('');
+  async function getNav() {
+    
+    const res = await fetch(
+      getStrapiURL(
+        `/global?populate[footer][populate][FooterLinks][populate]=*` 
+      ) 
+    ).then((response) => response.json())
+    .then(item => {
+       
+        var count = -1;
+        var pearentIndex = '';
+        var siteMap = [];
+        var showCaseAry = [];
+        console.log('footer', item.data.attributes.footer);
+        if(item.data.attributes.footer.FooterLinks){
+          Object.values(item.data.attributes.footer.FooterLinks).forEach(element => {
+
+            if(element.case_study.data){
+              siteMap.push({ 
+                pageUrl: '/case-studies/' + element.case_study.data.attributes.slug, 
+                label: element.case_study.data.attributes.title,
+              });
+            }if(element.page.data){
+              siteMap.push({ 
+                pageUrl: '/' + element.page.data.attributes.slug, 
+                label: element.page.data.attributes.title,    
+              });
+            }else if( element.href ){
+              siteMap.push({ 
+                pageUrl: element.href, 
+                label: element.label,    
+              });
+            }
+          });
+        }
+
+        // console.log('cleanArray', cleanTheArray);
+        setPageItem(siteMap);
+        
+    });
+
+    const resShowCase = await fetch(
+      getStrapiURL(
+        `/global?populate[footer][populate][showCase][populate]=*` 
+      ) 
+    ).then((response) => response.json())
+    .then(item => {
+       
+        var count = -1;
+        var pearentIndex = '';
+        var siteMap = [];
+        var showCaseAry = [];
+        console.log('footer', item.data.attributes.footer);
+        if(item.data.attributes.footer.showCase){
+          Object.values(item.data.attributes.footer.showCase).forEach(element => {
+      
+            if(element.case_study.data){
+              showCaseAry.push({ 
+                pageUrl: '/case-studies/' + element.case_study.data.attributes.slug, 
+                label: element.case_study.data.attributes.title,
+              });
+            }if(element.page.data){
+              showCaseAry.push({ 
+                pageUrl: '/' + element.page.data.attributes.slug, 
+                label: element.page.data.attributes.title,    
+              });
+            }else if( element.href ){
+              showCaseAry.push({ 
+                pageUrl: element.href, 
+                label: element.label,    
+              });
+            }
+          });
+        }
+        // console.log('cleanArray', cleanTheArray);
+        
+        setShowCase(showCaseAry);
+    });
+
+  }
+
+  useEffect(()=>{
+    getNav();
+  }, [])
   return (
     <>
 			<footer className="footer">	 
@@ -28,19 +117,17 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
           <div  className="footer__nav">
             <h4>Sitemap</h4>
               <Nav
-                links={delve(navigation, 'links')}
-                locale={delve(pageData, 'attributes.locale')}
+                links={pageItem}
               />
 					</div>
           {/* showcases col 3 */}
 					<div className="footer__showcases">
             <h4>Showcases</h4>
-            <ul className="menu_footer_showcases">
-            <Columns
-              columns={delve(footer, 'footerColumns')}
-              locale={delve(pageData, 'attributes.locale')}
-            />
-            </ul>
+           
+              <Nav
+                links={showCase}
+              />
+
 					</div>
           {/* showcases col 4 */}
           <div className="footer__socials">
@@ -55,7 +142,7 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
           {/* terms */}
           <div className="footer__terms">
               <div className="container sb">
-                <p className="footer__terms__date">© iCURe 2022</p>
+                <p className="footer__terms__date">© ICURe {currentYear}</p>
                 <p className="footer__terms__terms">
                   <Link href="/privacy" passHref={true}>
                     <a target="_blank">Terms of Service</a>

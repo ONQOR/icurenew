@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_global_header_navigations",
+  "info": {
+    "displayName": "headerNavigation",
+    "icon": "digital-tachograph",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "case_study": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "customURL": {
+      "type": "string"
+    },
+    "hasChildren": {
+      "type": "boolean"
+    },
+    "isChild": {
+      "type": "boolean"
+    },
+    "label": {
+      "type": "string"
+    },
+    "newTab": {
+      "type": "boolean"
+    }
+  }
+}

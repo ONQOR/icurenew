@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_header_menus",
+  "info": {
+    "displayName": "HeaderMenu",
+    "icon": "credit-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "case_studies": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "newTab": {
+      "type": "boolean"
+    },
+    "subItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.header-menu-sub-item"
+    }
+  }
+}
