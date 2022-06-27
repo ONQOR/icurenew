@@ -80,6 +80,9 @@
                 flex-wrap: wrap;
                 align-items: center;
                 max-width: 240px;
+                @media (max-width: 423px) {
+                    justify-content: center;
+                 }
                 img {
                     width: 75px;
                     height: 75px;
