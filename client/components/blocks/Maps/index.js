@@ -139,8 +139,7 @@ const Maps = ({ subTitle, title, cards, hide, lat, lng }) => {
                   <div className="maps__box__boxbox">
                   <div >
                     <img
-                        src={getStrapiMedia(delve(item, "images.data.attributes.url"))}
-                        alt={delve(item, "images.data.attributes.alternativeText")}
+                        src={getStrapiMedia(delve(item, "uploadsUrl"))}
                         className="maps__box__boxbox__circle"
                     />
                     </div>

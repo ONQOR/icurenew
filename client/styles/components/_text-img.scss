@@ -20,6 +20,8 @@
     &__right {
         width: 40%;
         display: flex;
+        align-items: center;
+        justify-content: center;
         @media screen and (max-width: $tablet) {
             width: 100%;
             img {
@@ -28,7 +30,7 @@
             }
         }
         img {
-            max-width: 170%;
+            max-width: 100%;
             object-fit: cover;
             // transform: translateY(-75px);
         }

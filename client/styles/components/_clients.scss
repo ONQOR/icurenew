@@ -15,9 +15,11 @@
         width: 966px;
         img {
             height: 118px;
-            width: fit-content !important;
+            width: 100% !important;
+            max-width: 300px;
             transition: ease .2s;
             padding: 20px;
+            object-fit: contain;
             border-radius: 4px;
             filter: grayscale(1) invert(30%);
             &:hover {

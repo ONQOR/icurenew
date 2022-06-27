@@ -153,7 +153,8 @@ const Footer = ({ pageData, navigation, footer, caption, text, twitter, facebook
           {/* onqor */}
             <div className="footer__onqor">
               <div className="container">
-                <p>Site Designed &amp; Built By Site Designed &amp; Built by</p><a href="https://onqor.co.uk" target="_blank"><Onqor /></a>
+                <p>Site Designed &amp; Built By Site Designed &amp; Built by</p>
+                <Onqor />
               </div>
             </div>
 			</footer>
