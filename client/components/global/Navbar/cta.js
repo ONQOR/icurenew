@@ -5,12 +5,12 @@ import Link from 'next/link';
 const Cta = ({ href, target, label }) => {
   const router = useRouter();
   return (
-    <button
-      type="button"
-      className={router.asPath.startsWith("/case-studies") ? "current": ""}
-    >
+    // <button
+    //   type="button"
+    //   className={router.asPath.startsWith("/case-studies") ? "current": ""}
+    // >
       <CustomLink href={href} target={target} label={label} isExternal={true} />
-    </button>
+    // </button>
   );
 };
 
